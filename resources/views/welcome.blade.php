@@ -1,1 +1,2 @@
 @extends("front.template")
+lol
