@@ -1,0 +1,2 @@
+@extends("front.template")
+
