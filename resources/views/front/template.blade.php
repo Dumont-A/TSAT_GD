@@ -88,7 +88,7 @@ URL: http://gettemplates.co
 									<li><a href="#">Histoire</a></li>
 									<li><a href="#">Paslmarès</a></li>
 									<li><a href="#">Membres</a></li>
-									<li><a href="#">Photos</a></li>
+									<li><a href="#">Photoss</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
