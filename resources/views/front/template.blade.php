@@ -83,7 +83,7 @@ URL: http://gettemplates.co
 							<li class="active"><a href="index.html">Accueil</a></li>
 							<li><a href="about.html">à propos de nous</a></li>
 							<li class="has-dropdown">
-								<a href="services.html">Le club</a>
+								<a href="services.html">Le club test kevin</a>
 								<ul class="dropdown">
 									<li><a href="#">Histoire</a></li>
 									<li><a href="#">Paslmarès</a></li>
