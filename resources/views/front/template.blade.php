@@ -9,9 +9,7 @@ URL: http://gettemplates.co
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
-		@section("tittle")
 			TSAT GD
-		@show
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
@@ -91,6 +89,7 @@ URL: http://gettemplates.co
 									<li><a href="#">Photos</a></li>
 								</ul>
 							</li>
+							<a href="{{route('competitions.index')}}">Compétitions</a>
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>
 								<ul class="dropdown">
@@ -100,6 +99,7 @@ URL: http://gettemplates.co
 									<li><a href="#">Réserver un court</a></li>
 								</ul>
 							</li>
+							<li><a href="#">Galerie</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -115,8 +115,17 @@ URL: http://gettemplates.co
 					<div class="col-md-12 col-md-offset-0 text-left">
 						<div class="display-t">
 							<div class="display-tc">
-								<h1 class="animate-box" data-animate-effect="fadeInUp">Tennis Club TSATGD</h1><br />
-								<h2 class="animate-box" data-animate-effect="fadeInUp">Tavaux Saint-Aubin Grand Dole</h2>
+
+								<h1 class="animate-box" data-animate-effect="fadeInUp">
+									@section('title')
+										Tennis Club TSATGD
+									@show
+								</h1><br />
+								<h2 class="animate-box" data-animate-effect="fadeInUp">
+									@section('subtitle')
+										Tavaux Saint-Aubin Grand Dole
+									@show
+								</h2>
 							</div>
 						</div>
 					</div>
