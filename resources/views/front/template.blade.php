@@ -81,7 +81,7 @@ URL: http://gettemplates.co
 							<li class="active"><a href="index.html">Accueil</a></li>
 							<li><a href="about.html">à propos de nous</a></li>
 							<li class="has-dropdown">
-								<a href="services.html">Le club test kevin</a>
+								<a href="services.html">Le club</a>
 								<ul class="dropdown">
 									<li><a href="#">Histoire</a></li>
 									<li><a href="#">Paslmarès</a></li>
@@ -99,6 +99,7 @@ URL: http://gettemplates.co
 									<li><a href="#">Réserver un court</a></li>
 								</ul>
 							</li>
+							<li><a href="#">Galerie</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
