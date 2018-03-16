@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('competitions','CompetitionController@index')->name("competitions.index");
+Route::resource('competitions', 'CompetitionController');

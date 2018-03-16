@@ -9,9 +9,7 @@ URL: http://gettemplates.co
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
-		@section("tittle")
 			TSAT GD
-		@show
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
@@ -81,26 +79,28 @@ URL: http://gettemplates.co
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
-							<li><a href="about.html">à propos de nous</a></li>
+							<li><a href="about.html">A propos de nous</a></li>
 							<li class="has-dropdown">
 								<a href="services.html">Le club</a>
 								<ul class="dropdown">
 									<li><a href="#">Histoire</a></li>
-									<li><a href="#">Paslmarès</a></li>
+									<li><a href="#">Palmarès</a></li>
 									<li><a href="#">Membres</a></li>
 									<li><a href="#">Photos</a></li>
 								</ul>
 							</li>
+							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
-								<a href="#">Infos Adhérents</a>
+								<a href="#">Infos Pratiques</a>
 								<ul class="dropdown">
-									<li><a href="#">L'équipe pédagogique</a></li>
-									<li><a href="#">L'école de tennis</a></li>
-									<li><a href="#">Les cours collectifs adultes</a></li>
-									<li><a href="#">Réserver un court</a></li>
+									<li><a href="#">Horaires</a></li>
+									<li><a href="#">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
 								</ul>
 							</li>
 							<li><a href="#">Galerie</a></li>
+							<li><a href="{{route('front.liens_utiles')}}">Liens utiles</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -116,15 +116,23 @@ URL: http://gettemplates.co
 					<div class="col-md-12 col-md-offset-0 text-left">
 						<div class="display-t">
 							<div class="display-tc">
-								<h1 class="animate-box" data-animate-effect="fadeInUp">Tennis Club TSATGD</h1><br />
-								<h2 class="animate-box" data-animate-effect="fadeInUp">Tavaux Saint-Aubin Grand Dole</h2>
+
+								<h1 class="animate-box" data-animate-effect="fadeInUp">
+									@section('title')
+										Tennis Club TSATGD
+									@show
+								</h1><br />
+								<h2 class="animate-box" data-animate-effect="fadeInUp">
+									@section('subtitle')
+										Tavaux Saint-Aubin Grand Dole
+									@show
+								</h2>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-
 		<div id="gtco-features-3">
 			<div class="gtco-container">
 				<div class="gtco-flex">
