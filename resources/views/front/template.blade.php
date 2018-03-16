@@ -92,12 +92,12 @@ URL: http://gettemplates.co
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a href="#">Infos Adhérents</a>
+								<a href="#">Infos Pratiques</a>
 								<ul class="dropdown">
-									<li><a href="#">L'équipe pédagogique</a></li>
-									<li><a href="#">L'école de tennis</a></li>
-									<li><a href="#">Les cours collectifs adultes</a></li>
-									<li><a href="#">Réserver un court</a></li>
+									<li><a href="#">Horaires</a></li>
+									<li><a href="#">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact</a></li>
