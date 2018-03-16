@@ -100,6 +100,7 @@ URL: http://gettemplates.co
 									<li><a href="#">Réserver un court</a></li>
 								</ul>
 							</li>
+							<li><a href="#">Galerie</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
