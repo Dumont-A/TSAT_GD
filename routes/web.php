@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

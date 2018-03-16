@@ -89,7 +89,7 @@ URL: http://gettemplates.co
 									<li><a href="#">Photos</a></li>
 								</ul>
 							</li>
-							<a href="{{route('competitions.index')}}">Compétitions</a>
+							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>
 								<ul class="dropdown">
@@ -132,7 +132,6 @@ URL: http://gettemplates.co
 				</div>
 			</div>
 		</header>
-
 		<div id="gtco-features-3">
 			<div class="gtco-container">
 				<div class="gtco-flex">
