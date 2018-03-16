@@ -79,12 +79,12 @@ URL: http://gettemplates.co
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
-							<li><a href="about.html">à propos de nous</a></li>
+							<li><a href="about.html">A propos de nous</a></li>
 							<li class="has-dropdown">
 								<a href="services.html">Le club</a>
 								<ul class="dropdown">
 									<li><a href="#">Histoire</a></li>
-									<li><a href="#">Paslmarès</a></li>
+									<li><a href="#">Palmarès</a></li>
 									<li><a href="#">Membres</a></li>
 									<li><a href="#">Photos</a></li>
 								</ul>
@@ -100,6 +100,7 @@ URL: http://gettemplates.co
 								</ul>
 							</li>
 							<li><a href="#">Galerie</a></li>
+							<li><a href="{{route('front.liens_utiles')}}">Liens utiles</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>

@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
+
+Route::get('front/liens_utiles','FrontController@liens_utiles')->name("front.liens_utiles");
+Route::resource('front', 'FrontController');
