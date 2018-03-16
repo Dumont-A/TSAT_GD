@@ -5,14 +5,22 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
+<<<<<<< HEAD
                 <div class="panel-heading">Login</div>
+=======
+                <div class="panel-heading">Identifiant</div>
+>>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+<<<<<<< HEAD
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+=======
+                            <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
+>>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -26,7 +34,11 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+<<<<<<< HEAD
                             <label for="password" class="col-md-4 control-label">Password</label>
+=======
+                            <label for="password" class="col-md-4 control-label">Mot de passe</label>
+>>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -52,11 +64,19 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
+<<<<<<< HEAD
                                     Login
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
+=======
+                                    Connexion
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Mot de passe oublié?
+>>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
                                 </a>
                             </div>
                         </div>
