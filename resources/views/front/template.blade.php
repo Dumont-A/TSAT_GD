@@ -88,7 +88,17 @@ URL: http://gettemplates.co
 							</li>
 							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
+<<<<<<< HEAD
 								<a href="#">Infos Adhérents</a>
+=======
+								<a href="#">Infos Pratiques</a>
+								<ul class="dropdown">
+									<li><a href="#">Horaires</a></li>
+									<li><a href="{{route('devenir_membre')}}">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
+								</ul>
+>>>>>>> b7d35286a5337977438f3c1c81cee80443888cc0
 							</li>
 							<li><a href="">Galerie</a></li>
 							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
