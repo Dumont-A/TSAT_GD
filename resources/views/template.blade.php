@@ -79,25 +79,55 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4 col-xs-12">
+					<div class="col-sm-3 col-xs-12">
 						<img src="images/logo_png.png" alt="logo transparent" height="250" width="250">
 					</div>
-					<div class="col-xs-8 text-right menu-1">
+					<div class="col-xs-9 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
-							<li><a href="about.html">à propos de nous</a></li>
 							<li class="has-dropdown">
-								<a href="{{route('club')}}">Le club</a>
+								<a href="{{route('competitions.index')}}">Club</a>
+								<ul class="dropdown">
+									<li><a href="#">Historique du club</a></li>
+									<li><a href="#">Le comité</a></li>
+									<li><a href="#">Installations</a></li>
+									<li><a href="#">Partenaires</a></li>
+								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a href="#">Infos Adhérents</a>
+								<a href="{{route('competitions.index')}}">Compétitions</a>
+								<ul class="dropdown">
+									<li><a href="#">Tournois</a></li>
+									<li><a href="#">Les équipes</a></li>
+									<li><a href="#">Les arbitres</a></li>
+									<li><a href="#">Résultats</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="#">Infos Pratiques</a>
+								<ul class="dropdown">
+									<li><a href="#">Horaires</a></li>
+									<li><a href="{{route('devenir_membre')}}">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="#">L'enseignement</a>
+								<ul class="dropdown">
+									<li><a href="#">L'équipe pédagogique</a></li>
+									<li><a href="#">L'école de tennis</a></li>
+									<li><a href="#">Les cours collectifs adultes</a></li>
+									<li><a href="#">Les stages</a></li>
+								</ul>
 							</li>
 							<li><a href="">Galerie</a></li>
+							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
+
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</nav>
 

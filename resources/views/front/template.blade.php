@@ -90,14 +90,6 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 <<<<<<< HEAD
 								<a href="#">Infos Adhérents</a>
-							</li>
-							<li><a href="#">Galerie</a></li>
-							<li><a href="#">Liens utiles</a></li>
-
-							<li><a href="">Galerie</a></li>
-=======
-<<<<<<< HEAD
-								<a href="#">Infos Adhérents</a>
 =======
 								<a href="#">Infos Pratiques</a>
 								<ul class="dropdown">
@@ -106,7 +98,6 @@ URL: http://gettemplates.co
 									<li><a href="#">Réservation</a></li>
 									<li><a href="#">Tarifs</a></li>
 								</ul>
->>>>>>> b7d35286a5337977438f3c1c81cee80443888cc0
 							</li>
 							<li><a href="">Galerie</a></li>
 							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
