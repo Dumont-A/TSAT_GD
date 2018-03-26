@@ -7,7 +7,7 @@ URL: http://gettemplates.co
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" ="IE=edge">
 	<title>
 			TSAT GD
 	</title>
@@ -66,6 +66,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
+							<li><a id="connect" href="#">Se connecter</a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 							<li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -484,6 +485,7 @@ URL: http://gettemplates.co
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	@section('scripts')
+	@show
 </body>
 </html>
