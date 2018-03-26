@@ -7,7 +7,7 @@ URL: http://gettemplates.co
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" ="IE=edge">
 	<title>
 			TSAT GD
 	</title>
@@ -30,13 +30,16 @@ URL: http://gettemplates.co
 	<!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 
 	<!-- Animate.css -->
+
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
+
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Themify Icons-->
 	<link rel="stylesheet" href="css/themify-icons.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/icontennis.css">
 
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
@@ -66,6 +69,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
+							<li><a id="connect" href="#">Se connecter</a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 							<li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -79,33 +83,19 @@ URL: http://gettemplates.co
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
-							<li><a href="about.html">A propos de nous</a></li>
 							<li class="has-dropdown">
-								<a href="services.html">Le club</a>
-								<ul class="dropdown">
-									<li><a href="#">Histoire</a></li>
-									<li><a href="#">Palmarès</a></li>
-									<li><a href="#">Membres</a></li>
-									<li><a href="#">Photos</a></li>
-								</ul>
+								<a href="{{route('club')}}">Le club</a>
 							</li>
 							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
-								<a href="#">Infos Pratiques</a>
-								<ul class="dropdown">
-									<li><a href="#">Horaires</a></li>
-									<li><a href="#">Devenir Membre</a></li>
-									<li><a href="#">Réservation</a></li>
-									<li><a href="#">Tarifs</a></li>
-								</ul>
+								<a href="#">Infos Adhérents</a>
 							</li>
-							<li><a href="#">Galerie</a></li>
-							<li><a href="{{route('front.liens_utiles')}}">Liens utiles</a></li>
+							<li><a href="">Galerie</a></li>
+							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</nav>
 
@@ -132,253 +122,150 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 			</div>
+			</div>
 		</header>
-		<div id="gtco-features-3">
-			<div class="gtco-container">
-				<div class="gtco-flex">
-					<div class="feature feature-1 animate-box" data-animate-effect="fadeInUp">
-						<div class="feature-inner">
-							<span class="icon">
-								<i class="ti-clipboard"></i>
-							</span>
-							<h3>Réservations</h3>
-							<p>Réservez vos courts de tennis</p>
-							<p><a href="#" class="btn btn-white btn-outline">Voir</a></p>
-						</div>
-					</div>
-					<div class="feature feature-2 animate-box" data-animate-effect="fadeInUp">
-						<div class="feature-inner">
-							<span class="icon">
-								<i class="ti-announcement"></i>
-							</span>
-							<h3>Compétitions</h3>
-							<p>Les résultats de tous les matchs centralisés et en direct</p>
-							<p><a href="#" class="btn btn-white btn-outline">Voir</a></p>
-						</div>
-					</div>
-					<div class="feature feature-3 animate-box" data-animate-effect="fadeInUp">
-						<div class="feature-inner">
-							<span class="icon">
-								<i class="ti-tablet"></i>
-							</span>
-							<h3>Accessibilité</h3>
-							<p>Accèdez à toutes les informations très rapidement, depuis votre mobile</p>
-							<p><a href="#" class="btn btn-white btn-outline">Voir</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div id="gtco-features">
-			<div class="gtco-container">
+<div id="gtco-features" class="gtco-features-3">
+					<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2>Nos atouts</h2>
-						<p>Le plus grand club de la région de Dole et ses alentours</p>
+						<h2>@yield("tittle1")</h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
 						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<span class="icon">
-								<i class="ti-vector"></i>
-							</span>
-							<h3>Grandes infrastructures</h3>
-							<p>De nombreux courts à votre disposition</p>
+							<a href="#content1" ><span class="icon">
+								@yield("menu_1")
+							</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<span class="icon">
-								<i class="ti-tablet"></i>
-							</span>
-							<h3>Leçons de qualité</h3>
-							<p>Nos professeurs sauront vous enseigner ce sport</p>
+							<a href="#content2" ><span class="icon">
+								@yield("menu_2")
+							</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<span class="icon">
-								<i class="ti-settings"></i>
-							</span>
-							<h3>Ecole de tennis</h3>
-							<p>Pour que les plus jeunes puissent pratiquer cette activité à tout âge</p>
+							<a href="#content3"><span class="icon">
+								@yield("menu_3")
+							</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<span class="icon">
-								<i class="ti-ruler-pencil"></i>
-							</span>
-							<h3>Espace membre</h3>
-							<p>De nombreuses fonctionnalités pour les adhérents</p>
+							<a href="#content4"><span class="icon">
+								@yield("menu_4")
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+<div id="content1">
 		<div id="gtco-portfolio" class="gtco-section">
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2>Nos derniers articles</h2>
-						<p>N'hésitez pas à aller voir nos albums photos !</p>
+			<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+						@yield("content1")
 					</div>
-				</div>
-
-				<div class="row row-pb-md">
-					<div class="col-md-12">
-						<ul id="gtco-portfolio-list">
-							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur1.jpg); ">
-								<a href="#" class="color-1">
-									<div class="case-studies-summary">
-										<span>Journée 7</span>
-										<h2>Magnifique partie de Adrien Perriguey</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur2.jpg); ">
-								<a href="#" class="color-2">
-									<div class="case-studies-summary">
-										<span>Championnat 2017</span>
-										<h2>Alexandre Dumont sacré vainqueur en solo</h2>
-									</div>
-								</a>
-							</li>
-
-
-							<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur3.jpg); ">
-								<a href="#" class="color-3">
-									<div class="case-studies-summary">
-										<span>Journée 6</span>
-										<h2>Notre joueur Hugo Buffard accusé de tricherie</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur4.jpg); ">
-								<a href="#" class="color-4">
-									<div class="case-studies-summary">
-										<span>Journée 5</span>
-										<h2>De superbes résultats pour notre duo</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/joueurtennis5.jpg); ">
-								<a href="#" class="color-5">
-									<div class="case-studies-summary">
-										<span>Journée 4</span>
-										<h2>Victoire écrasante de l'équipe de Tavaux</h2>
-									</div>
-								</a>
-							</li>
-							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur6.jpg); ">
-								<a href="#" class="color-6">
-									<div class="case-studies-summary">
-										<span>Championnat 2016</span>
-										<h2>Des résultats mitigés</h2>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-4 col-md-offset-4 text-center animate-box">
-						<a href="#" class="btn btn-white btn-outline btn-lg btn-block">Voir les articles</a>
-					</div>
-				</div>
-
-
 			</div>
 		</div>
-
+	</div>
+	<div id="content2">
 		<div id="gtco-counter" class="gtco-section">
 			<div class="gtco-container">
-
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2>Quelques chiffres sur nous</h2>
-						<p>Il est possible que les données ne soient pas totalement à jour</p>
+					<div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+						@yield("content2")
 					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="feature-center">
-							<span class="icon">
-								<i class="ti-settings"></i>
-							</span>
-							<span class="counter js-counter" data-from="0" data-to="211" data-speed="6000" data-refresh-interval="50">1</span>
-							<span class="counter-label">Inscrits</span>
-
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="feature-center">
-							<span class="icon">
-								<i class="ti-face-smile"></i>
-							</span>
-							<span class="counter js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="50">1</span>
-							<span class="counter-label">Entraineurs</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="feature-center">
-							<span class="icon">
-								<i class="ti-briefcase"></i>
-							</span>
-							<span class="counter js-counter" data-from="0" data-to="59" data-speed="5000" data-refresh-interval="50">1</span>
-							<span class="counter-label">Coupes remportées</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="feature-center">
-							<span class="icon">
-								<i class="ti-time"></i>
-							</span>
-							<span class="counter js-counter" data-from="0" data-to="719566" data-speed="6000" data-refresh-interval="50">1</span>
-							<span class="counter-label">Balles perdues</span>
-
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
-
+	</div>
+	<div id="content3">
 		<div id="gtco-products">
 			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2>Nos photos</h2>
-						<p>Allez voir nos albums dans le menu en haut du site</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="owl-carousel owl-carousel-carousel">
-						<div class="item">
-							<img src="images/album1.jpg" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-						</div>
-						<div class="item">
-							<img src="images/album2.jpg" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-						</div>
-						<div class="item">
-							<img src="images/tennis2.jpg" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-						</div>
-						<div class="item">
-							<img src="images/joueurtennis5.jpg" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-						</div>
-					</div>
-				</div>
+				@yield("content3")
 			</div>
 		</div>
 
+	</div>
+	<div id="content4">
+		 <div id="gtco-portfolio">
+			<div class="gtco-container">
 
+@yield("content4")
+			</div>
+		</div>
+	</div>
+
+	{{--
+pour des tuiles d'images
+		<div class="row">
+							<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+								<h2>Les Installations</h2>
+							</div>
+						</div>
+
+						<div class="row row-pb-md">
+							<div class="col-md-12">
+								<ul id="gtco-portfolio-list">
+									<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur1.jpg); ">
+										<a href="#" class="color-1">
+											<div class="case-studies-summary">
+												<span>Journée 7</span>
+												<h2>Magnifique partie de Adrien Perriguey</h2>
+											</div>
+										</a>
+									</li>
+									<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur2.jpg); ">
+										<a href="#" class="color-2">
+											<div class="case-studies-summary">
+												<span>Championnat 2017</span>
+												<h2>Alexandre Dumont sacré vainqueur en solo</h2>
+											</div>
+										</a>
+									</li>
+
+
+									<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur3.jpg); ">
+										<a href="#" class="color-3">
+											<div class="case-studies-summary">
+												<span>Journée 6</span>
+												<h2>Notre joueur Hugo Buffard accusé de tricherie</h2>
+											</div>
+										</a>
+									</li>
+									<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur4.jpg); ">
+										<a href="#" class="color-4">
+											<div class="case-studies-summary">
+												<span>Journée 5</span>
+												<h2>De superbes résultats pour notre duo</h2>
+											</div>
+										</a>
+									</li>
+
+									<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/joueurtennis5.jpg); ">
+										<a href="#" class="color-5">
+											<div class="case-studies-summary">
+												<span>Journée 4</span>
+												<h2>Victoire écrasante de l'équipe de Tavaux</h2>
+											</div>
+										</a>
+									</li>
+									<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur6.jpg); ">
+										<a href="#" class="color-6">
+											<div class="case-studies-summary">
+												<span>Championnat 2016</span>
+												<h2>Des résultats mitigés</h2>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div> --}}
+		{{-- pour s'inscrire , non utilisé
 
 		<div id="gtco-subscribe">
 			<div class="gtco-container">
@@ -411,7 +298,7 @@ URL: http://gettemplates.co
 				</div>
 			</div>
 		</div>
-
+--}}
 		<footer id="gtco-footer" role="contentinfo">
 			<div class="gtco-container">
 				<div class="row row-p	b-md">
@@ -485,6 +372,7 @@ URL: http://gettemplates.co
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	@section('scripts')
+	@show
 </body>
 </html>
