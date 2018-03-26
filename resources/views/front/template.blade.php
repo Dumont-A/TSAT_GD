@@ -88,7 +88,10 @@ URL: http://gettemplates.co
 							</li>
 							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b26f8e385f1cf7afda585b7ee8aafa3fd3f677e
 								<a href="#">Infos Adhérents</a>
 
 								<a href="#">Infos Pratiques</a>

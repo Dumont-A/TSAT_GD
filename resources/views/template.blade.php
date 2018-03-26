@@ -86,6 +86,7 @@ URL: http://gettemplates.co
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
 							<li class="has-dropdown">
+<<<<<<< HEAD:resources/views/template.blade.php
 								<a href="{{route('competitions.index')}}">Club</a>
 								<ul class="dropdown">
 									<li><a href="#">Historique du club</a></li>
@@ -93,6 +94,9 @@ URL: http://gettemplates.co
 									<li><a href="#">Installations</a></li>
 									<li><a href="#">Partenaires</a></li>
 								</ul>
+=======
+								{{-- <a href="{{route('club')}}">Le club</a> --}}
+>>>>>>> 4b26f8e385f1cf7afda585b7ee8aafa3fd3f677e:resources/views/welcome.blade.php
 							</li>
 							<li class="has-dropdown">
 								<a href="{{route('competitions.index')}}">Compétitions</a>
