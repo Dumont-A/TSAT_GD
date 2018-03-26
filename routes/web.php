@@ -15,11 +15,34 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('club','FrontController@club')->name("club");
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+=======
+<<<<<<< HEAD
+>>>>>>> 4ebfa1eb02f2bd4df56569772da12709bc921931
+>>>>>>> febd0648d5f323872b5cc44e63d12b9167e0b76f
+Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
+
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
+
+Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
+=======
+
+
+Route::get('competitions','CompetitionController@index')->name("competitions.index");
+Route::resource('competitions', 'CompetitionController');
+>>>>>>> febd0648d5f323872b5cc44e63d12b9167e0b76f

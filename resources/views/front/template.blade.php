@@ -7,7 +7,7 @@ URL: http://gettemplates.co
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" ="IE=edge">
 	<title>
 			TSAT GD
 	</title>
@@ -69,6 +69,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
+							<li><a id="connect" href="#">Se connecter</a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 							<li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -87,12 +88,29 @@ URL: http://gettemplates.co
 							</li>
 							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
+<<<<<<< HEAD
 								<a href="#">Infos Adhérents</a>
 							</li>
 							<li><a href="#">Galerie</a></li>
 							<li><a href="#">Liens utiles</a></li>
 
 							<li><a href="">Galerie</a></li>
+=======
+<<<<<<< HEAD
+								<a href="#">Infos Adhérents</a>
+=======
+								<a href="#">Infos Pratiques</a>
+								<ul class="dropdown">
+									<li><a href="#">Horaires</a></li>
+									<li><a href="{{route('devenir_membre')}}">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
+								</ul>
+>>>>>>> b7d35286a5337977438f3c1c81cee80443888cc0
+							</li>
+							<li><a href="">Galerie</a></li>
+							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
+>>>>>>> a881a5cfdf624986b91e190bb41f9815b28032b6
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -367,6 +385,7 @@ pour des tuiles d'images
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	@section('scripts')
+	@show
 </body>
 </html>

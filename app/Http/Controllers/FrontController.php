@@ -12,4 +12,9 @@ class FrontController extends Controller
        return view('front.club');
    }
 
+   public function liens_utiles()
+   {
+       return view('front.liens_utiles');
+   }
+
 }
