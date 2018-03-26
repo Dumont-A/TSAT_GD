@@ -6,10 +6,14 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div class="panel-heading">Register</div>
 =======
                 <div class="panel-heading">S'enregistrer</div>
 >>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
+=======
+                <div class="panel-heading"><b>Devenez membre!</b></div>
+>>>>>>> b7d35286a5337977438f3c1c81cee80443888cc0
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
