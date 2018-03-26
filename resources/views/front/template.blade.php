@@ -94,7 +94,7 @@ URL: http://gettemplates.co
 								<a href="#">Infos Pratiques</a>
 								<ul class="dropdown">
 									<li><a href="#">Horaires</a></li>
-									<li><a href="#">Devenir Membre</a></li>
+									<li><a href="{{route('devenir_membre')}}">Devenir Membre</a></li>
 									<li><a href="#">Réservation</a></li>
 									<li><a href="#">Tarifs</a></li>
 								</ul>
