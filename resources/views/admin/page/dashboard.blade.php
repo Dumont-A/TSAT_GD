@@ -4,10 +4,10 @@
 <div class="page-header">
     <div class="container">
         <div class="row">
-            <a class="navbar-brand" href="{{ route('index') }}"><img src="img/logo_tavaux.jpg" alt="Chania"></a>
-            <h1>Accueil - Administration du site Tennis Tavaux</h1>   
+            <a class="navbar-brand" href="#"><img src="img/logo_tavaux.jpg" alt="Chania"></a>
+            <h1>Accueil - Administration du site Tennis Tavaux</h1>
         </div>
-    </div>    
+    </div>
 </div>
 @stop
 
@@ -16,11 +16,9 @@
 <div class="col-md-12">
     <div class="container">
         <div class="row">
-            
-        </div>        
+
+        </div>
     </div>
 </div>
 
 @stop
-
-

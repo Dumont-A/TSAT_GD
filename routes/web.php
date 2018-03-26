@@ -12,43 +12,16 @@
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
     return view('template');
 });
 
-Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-//com test
-
-Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-
-=======
-    return view('welcome');
-})->name('welcome');
-
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-//com test
->>>>>>> 4b26f8e385f1cf7afda585b7ee8aafa3fd3f677e
-Route::get('competitions','CompetitionController@index')->name("competitions.index");
+
 Route::resource('competitions', 'CompetitionController');
 
-Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
-
-<<<<<<< HEAD
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-=======
-Auth::routes();
-
-
-Route::get('competitions','CompetitionController@index')->name("competitions.index");
-Route::resource('competitions', 'CompetitionController');
+//Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
 
 // Routes pour le Back-office
 Route::group(['prefix' => 'admin'], function() {
@@ -108,4 +81,3 @@ Route::group(['prefix' => 'admin'], function() {
 
 
 });
->>>>>>> 4b26f8e385f1cf7afda585b7ee8aafa3fd3f677e
