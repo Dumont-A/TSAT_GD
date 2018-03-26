@@ -50,7 +50,7 @@ URL: http://gettemplates.co
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="css/MyStyle.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -76,10 +76,10 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4 col-xs-12">
+					<div class="col-sm-3 col-xs-12">
 						<img src="images/logo_png.png" alt="logo transparent" height="250" width="250">
 					</div>
-					<div class="col-xs-8 text-right menu-1">
+					<div class="col-xs-9 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
 							<li class="has-dropdown">
@@ -89,12 +89,10 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>
 							</li>
-<<<<<<< HEAD
 							<li><a href="#">Galerie</a></li>
 							<li><a href="#">Liens utiles</a></li>
-=======
+
 							<li><a href="">Galerie</a></li>
->>>>>>> 220a1da745fa43d84a911382a24d8ae57f8eb32d
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -110,17 +108,49 @@ URL: http://gettemplates.co
 						<div class="display-t">
 							<div class="display-tc">
 
-								<h1 class="animate-box" data-animate-effect="fadeInUp">
-									@section('title')
-										Tennis Club TSATGD
-									@show
-								</h1><br />
-								<h2 class="animate-box" data-animate-effect="fadeInUp">
-									@section('subtitle')
-										Tavaux Saint-Aubin Grand Dole
-									@show
-								</h2>
+								<div id="gtco-features" class="gtco-features-3">
+									<div id="menu">
+													<div class="gtco-container">
+
+												<div class="row">
+													<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+														<h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle1")</h1>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-3 col-sm-6">
+														<div class="feature-center animate-box" data-animate-effect="fadeIn">
+															<a href="#content1" ><span class="icon iconMyStyle">
+																@yield("menu_1")
+															</a>
+														</div>
+													</div>
+													<div class="col-md-3 col-sm-6">
+														<div class="feature-center animate-box" data-animate-effect="fadeIn">
+															<a href="#content2" ><span class="icon iconMyStyle">
+																@yield("menu_2")
+															</a>
+														</div>
+													</div>
+													<div class="col-md-3 col-sm-6">
+														<div class="feature-center animate-box" data-animate-effect="fadeIn">
+															<a href="#content3"><span class="icon iconMyStyle">
+																@yield("menu_3")
+															</a>
+														</div>
+													</div>
+													<div class="col-md-3 col-sm-6">
+														<div class="feature-center animate-box" data-animate-effect="fadeIn">
+															<a href="#content4"><span class="icon iconMyStyle">
+																@yield("menu_4")
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 							</div>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -128,45 +158,7 @@ URL: http://gettemplates.co
 			</div>
 		</header>
 
-<div id="gtco-features" class="gtco-features-3">
-					<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2>@yield("tittle1")</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<a href="#content1" ><span class="icon">
-								@yield("menu_1")
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<a href="#content2" ><span class="icon">
-								@yield("menu_2")
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<a href="#content3"><span class="icon">
-								@yield("menu_3")
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="feature-center animate-box" data-animate-effect="fadeIn">
-							<a href="#content4"><span class="icon">
-								@yield("menu_4")
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
 <div id="content1">
 		<div id="gtco-portfolio" class="gtco-section">
 			<div class="row">
