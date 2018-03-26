@@ -13,30 +13,81 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-=======
-<<<<<<< HEAD
->>>>>>> 4ebfa1eb02f2bd4df56569772da12709bc921931
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 //com test
-=======
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
 
 Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
 
->>>>>>> b7d35286a5337977438f3c1c81cee80443888cc0
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
+
+// Routes pour le Back-office
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', function () {
+                return view('admin.page.dashboard');
+            })
+            ->name('admin.dashboard');
+    Route::get('dashboard', function () {
+        route('admin.dashboard');
+    });
+
+    // Galerie
+    Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
+    Route::post('photo', 'PhotoController@store')->name('photo.store');
+    Route::delete('photo/{id}', 'PhotoController@destroy')->name('photo.destroy')->where('id', '[0-9]+');
+    //Route::resource('photo', 'PhotoController');
+    Route::resource('album', 'AlbumController');
+    Route::resource('partenaire', 'PartenaireController');
+
+    // Utilisateurs / Profil
+    //
+    Route::resource('user', 'UserController');
+
+    // Documents
+    //
+    Route::get('document', 'DocumentController@home')->name('document.home');
+    Route::get('document/create', 'DocumentController@acreate')->name('document.acreate');
+    Route::post('document/store', 'DocumentController@astore')->name('document.astore');
+    Route::delete('document/destroy','DocumentController@adestroy')->name('document.adestroy');
+
+    // Articles
+    //
+    Route::resource('article', 'ArticleController');
+
+    // Equipes et Rencontres
+    //
+    Route::resource('equipe', 'EquipeController');
+    Route::resource('rencontre', 'RencontreController');
+    Route::get('rencontre/index/{id}', 'RencontreController@index')->name('rencontre.index')->where('id', '[0-9]+');
+    Route::get('rencontre/createR/{id}', 'RencontreController@createR')->name('rencontre.createR')->where('id', '[0-9]+');
+    Route::get('rencontre/convoquer/{id}', 'RencontreController@convoquer')->name('rencontre.convoquer')->where('id', '[0-9]+');
+    Route::post('rencontre/convoquerstore/{id}', 'RencontreController@convoquerstore')->name('rencontre.convoquerstore');
+
+    // Coordonnees
+    //
+    Route::resource('coordonnee', 'CoordonneeController');
+    Route::post('coordonnee/addUserStatut/{id}', 'CoordonneeController@addUserStatut')->name('add_user_statut');
+    Route::delete('coordonnee/deleteStatut/{id}', 'CoordonneeController@deleteStatut')->name('deleteStatut');
+
+    // Contenu
+    //
+    Route::get('contenu/edit/{page}', 'ContenuController@edit')->name('contenu.edit');
+
+    // Message
+    //
+    Route::resource('message', 'MessageController');
+
+
+});
