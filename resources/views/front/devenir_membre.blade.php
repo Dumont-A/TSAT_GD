@@ -5,3 +5,9 @@
 @section('subtitle')
   Devenir Membre - Vue faite pour le moment par Hugo Buffard
 @stop
+
+{!!Form::open(['route' => 'promotions.store']) !!}
+        {!! Form::text('libelle', 'nom promo') !!}
+        {!! Form::select('statut',$lesStatuts) !!}
+        {!!Form::submit('ok')!!}
+{!! Form::close() !!}

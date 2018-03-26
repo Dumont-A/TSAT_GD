@@ -84,21 +84,16 @@ URL: http://gettemplates.co
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
 							<li class="has-dropdown">
-								<a href="{{route('club')}}">Le club</a>
+								{{-- <a href="{{route('club')}}">Le club</a> --}}
 							</li>
 							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
-<<<<<<< HEAD
 								<a href="#">Infos Adhérents</a>
 							</li>
 							<li><a href="#">Galerie</a></li>
 							<li><a href="#">Liens utiles</a></li>
-
 							<li><a href="">Galerie</a></li>
-=======
-<<<<<<< HEAD
 								<a href="#">Infos Adhérents</a>
-=======
 								<a href="#">Infos Pratiques</a>
 								<ul class="dropdown">
 									<li><a href="#">Horaires</a></li>
@@ -106,11 +101,9 @@ URL: http://gettemplates.co
 									<li><a href="#">Réservation</a></li>
 									<li><a href="#">Tarifs</a></li>
 								</ul>
->>>>>>> b7d35286a5337977438f3c1c81cee80443888cc0
 							</li>
 							<li><a href="">Galerie</a></li>
 							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
->>>>>>> a881a5cfdf624986b91e190bb41f9815b28032b6
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
