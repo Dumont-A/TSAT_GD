@@ -89,12 +89,8 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>
 							</li>
-<<<<<<< HEAD
-							<li><a href="#">Galerie</a></li>
-							<li><a href="#">Liens utiles</a></li>
-=======
 							<li><a href="">Galerie</a></li>
->>>>>>> 220a1da745fa43d84a911382a24d8ae57f8eb32d
+							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>

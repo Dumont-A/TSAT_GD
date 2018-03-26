@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('club','FrontController@club')->name("club");
+Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 
 Auth::routes();
 
