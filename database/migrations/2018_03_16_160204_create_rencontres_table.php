@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+class CreateRencontresTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('rencontres', function(Blueprint $table)
+		{
+			$table->integer('id', true);
+			$table->date('dte');
+			$table->dateTime('heure')->nullable();
+			$table->string('lieu');
+			$table->string('victoire')->nullable();
+			$table->integer('id_equipes')->index('FK_rencontres_id_equipes');
+			$table->integer('id_albums')->index('FK_rencontres_id_albums');
+		});
+	}
+
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('rencontres');
+	}
+
+}

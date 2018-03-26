@@ -15,5 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('club','FrontController@club')->name("club");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
