@@ -69,7 +69,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
-							<li><a id="connect" href="#">Se connecter</a></li>
+							<li><button type="button" id="connect">Se connecter</button></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 							<li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -90,19 +90,15 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>
 							</li>
-<<<<<<< HEAD
 							<li><a href="#">Galerie</a></li>
 							<li><a href="#">Liens utiles</a></li>
-=======
 							<li><a href="">Galerie</a></li>
->>>>>>> 220a1da745fa43d84a911382a24d8ae57f8eb32d
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</nav>
-
 		<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(images/tennis3.jpg);">
 			<div class="overlay"></div>
 			<div class="gtco-container">

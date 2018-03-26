@@ -190,6 +190,5 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-
     </body>
     </html>
