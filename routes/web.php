@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-
+//com test
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
