@@ -86,7 +86,7 @@ URL: http://gettemplates.co
 							<li class="active"><a href="index.html">Accueil</a></li>
 							<li><a href="about.html">à propos de nous</a></li>
 							<li class="has-dropdown">
-								<a href="{{route('club')}}">Le club</a>
+								{{-- <a href="{{route('club')}}">Le club</a> --}}
 							</li>
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>

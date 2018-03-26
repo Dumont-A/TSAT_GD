@@ -15,11 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('club','FrontController@club')->name("club");
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 
 Route::get('competitions','CompetitionController@index')->name("competitions.index");
 Route::resource('competitions', 'CompetitionController');
+
+Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
