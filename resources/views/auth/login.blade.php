@@ -1,89 +1,78 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-<<<<<<< HEAD
-                <div class="panel-heading">Login</div>
-=======
-                <div class="panel-heading">Identifiant</div>
->>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+          <div class="panel-heading">Identifiant</div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-<<<<<<< HEAD
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-=======
-                            <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
->>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+          <div class="panel-body">
+            <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+              {{ csrf_field() }}
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+              <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-<<<<<<< HEAD
-                            <label for="password" class="col-md-4 control-label">Password</label>
-=======
-                            <label for="password" class="col-md-4 control-label">Mot de passe</label>
->>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
+                <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                <div class="col-md-6">
+                  <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-<<<<<<< HEAD
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-=======
-                                    Connexion
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Mot de passe oublié?
->>>>>>> 1f0d2016fbb1024ddf2f97cb8ab5a57270581f9f
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+                  @if ($errors->has('email'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                  @endif
                 </div>
-            </div>
+              </div>
+
+              <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+
+
+                <label for="password" class="col-md-4 control-label">Mot de passe</label>
+
+
+                <div class="col-md-6">
+                  <input id="password" type="password" class="form-control" name="password" required>
+
+                  @if ($errors->has('password'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                  @endif
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-6 col-md-offset-4">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-8 col-md-offset-4">
+
+                  <button type="submit" class="btn btn-primary">
+                    Connexion
+                  </button>
+
+                  <a class="btn btn-link" href="{{ route('password.request') }}">
+                    Mot de passe oublié?
+
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 @endsection
