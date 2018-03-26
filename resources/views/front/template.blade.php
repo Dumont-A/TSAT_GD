@@ -82,37 +82,23 @@ URL: http://gettemplates.co
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Accueil</a></li>
-							<li><a href="about.html">A propos de nous</a></li>
 							<li class="has-dropdown">
 								<a href="{{route('club')}}">Le club</a>
-								<a href="services.html">Le club</a>
-								<ul class="dropdown">
-									<li><a href="#">Histoire</a></li>
-									<li><a href="#">Palmarès</a></li>
-									<li><a href="#">Membres</a></li>
-									<li><a href="#">Photos</a></li>
-								</ul>
 							</li>
 							<li><a href="{{route('competitions.index')}}">Compétitions</a></li>
 							<li class="has-dropdown">
 								<a href="#">Infos Adhérents</a>
 							</li>
-							<li><a href="">Galerie</a></li>
-								<a href="#">Infos Pratiques</a>
-								<ul class="dropdown">
-									<li><a href="#">Horaires</a></li>
-									<li><a href="#">Devenir Membre</a></li>
-									<li><a href="#">Réservation</a></li>
-									<li><a href="#">Tarifs</a></li>
-								</ul>
-							</li>
+<<<<<<< HEAD
 							<li><a href="#">Galerie</a></li>
-							<li><a href="{{route('front.liens_utiles')}}">Liens utiles</a></li>
+							<li><a href="#">Liens utiles</a></li>
+=======
+							<li><a href="">Galerie</a></li>
+>>>>>>> 220a1da745fa43d84a911382a24d8ae57f8eb32d
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</nav>
 
@@ -139,41 +125,6 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 			</div>
-		</header>
-		<div id="gtco-features-3">
-			<div class="gtco-container">
-				<div class="gtco-flex">
-					<div class="feature feature-1 animate-box" data-animate-effect="fadeInUp">
-						<div class="feature-inner">
-							<span class="icon">
-								<i class="ti-clipboard"></i>
-							</span>
-							<h3>Réservations</h3>
-							<p>Réservez vos courts de tennis</p>
-							<p><a href="#" class="btn btn-white btn-outline">Voir</a></p>
-						</div>
-					</div>
-					<div class="feature feature-2 animate-box" data-animate-effect="fadeInUp">
-						<div class="feature-inner">
-							<span class="icon">
-								<i class="ti-announcement"></i>
-							</span>
-							<h3>Compétitions</h3>
-							<p>Les résultats de tous les matchs centralisés et en direct</p>
-							<p><a href="#" class="btn btn-white btn-outline">Voir</a></p>
-						</div>
-					</div>
-					<div class="feature feature-3 animate-box" data-animate-effect="fadeInUp">
-						<div class="feature-inner">
-							<span class="icon">
-								<i class="ti-tablet"></i>
-							</span>
-							<h3>Accessibilité</h3>
-							<p>Accèdez à toutes les informations très rapidement, depuis votre mobile</p>
-							<p><a href="#" class="btn btn-white btn-outline">Voir</a></p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</header>
 
