@@ -80,7 +80,7 @@ URL: http://gettemplates.co
 				</div>
 				<div class="row">
 					<div class="col-sm-3 col-xs-12">
-						<img src="images/logo_png.png" alt="logo transparent" height="250" width="250">
+						<img src="images/logo_png.png" alt="logo transparent" height="200" width="200" style="margin-top:-50px;">
 					</div>
 					<div class="col-xs-9 text-right menu-1">
 						<ul>
@@ -411,5 +411,6 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+
     </body>
     </html>
