@@ -11,9 +11,13 @@ class ClubController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function pageClub()
+     {
+         return view('front.club');
+     }
+
     public function index()
     {
-        //
     }
 
     /**
