@@ -71,17 +71,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #17B794;
+  background: #D2007B;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #17B794;
+  background: #D2007B;
 }
 
 ::selection {
   color: #fff;
-  background: #17B794;
+  background: #D2007B;
 }
 
 .gtco-container {
@@ -1256,9 +1256,9 @@ form label {
 }
 
 .btn-primary {
-  background: #17B794;
+  background: #D2007B;
   color: #fff;
-  border: 2px solid #17B794 !important;
+  border: 2px solid #D2007B !important;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #1acea6 !important;
@@ -1420,7 +1420,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #17B794;
+  border-color: #D2007B;
 }
 
 .row-pb-md {
