@@ -82,3 +82,5 @@ Route::group(['prefix' => 'admin'], function() {
 
 
 });
+//route pour la page club
+Route::get('club','ClubController@pageClub')->name("club");
