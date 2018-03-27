@@ -81,4 +81,32 @@ class InfoController extends Controller
     {
         //
     }
+
+    //
+    //FONCTION POUR CHAQUE SOUS PARTIE
+    //
+
+    public function horaires()
+    {
+        //
+        return view('infos_pratiques');
+    }
+
+    public function devenir_membre()
+    {
+        //
+        return view('infos_pratiques');
+    }
+
+    public function reservation()
+    {
+        //
+        return view('infos_pratiques');
+    }
+
+    public function tarifs()
+    {
+        //
+        return view('infos_pratiques');
+    }
 }

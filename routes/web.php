@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
+Route::get('contact','FrontController@contact')->name("contact");
+Route::get('galerie','FrontController@galerie')->name("galerie");
+
 
 Route::resource('competitions', 'CompetitionController');
 
@@ -82,3 +85,9 @@ Route::group(['prefix' => 'admin'], function() {
 
 
 });
+//route pour la page club
+Route::get('club','ClubController@pageClub')->name("club");
+Route::get('club#content1','ClubController@pageClub')->name("club#content1");
+Route::get('club#content2','ClubController@pageClub')->name("club#content2");
+Route::get('club#content3','ClubController@pageClub')->name("club#content3");
+Route::get('club#content4','ClubController@pageClub')->name("club#content4");

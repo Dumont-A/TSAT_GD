@@ -1,4 +1,4 @@
-@extends("front.template")
+@extends("template")
 @section("tittle")
     @parent - Club
 @stop
@@ -68,7 +68,7 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
     <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
       <div class="feature-center">
         <span class="icon">
-          <i class="icon-home"></i>
+          <i class="ti-home"></i>
         </span>
         <span class="counter js-counter" data-from="0" data-to="3" data-speed="5000" data-refresh-interval="50">1</span>
         <span class="counter-label">Gymnases</span>
@@ -87,7 +87,7 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
     <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
       <div class="feature-center">
         <span class="icon">
-          <i class="icon-users"></i>
+          <i class="ti-user"></i>
         </span>
         <span class="counter js-counter" data-from="0" data-to="12" data-speed="5000" data-refresh-interval="50">1</span>
         <span class="counter-label">Entraineurs</span>
