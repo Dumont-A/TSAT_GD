@@ -150,7 +150,7 @@ URL: http://gettemplates.co
 			</div>
 			</div>
 		</header>
-
+@section("content")@show
     <footer id="gtco-footer" role="contentinfo">
       <div class="gtco-container">
         <div class="row row-p	b-md">

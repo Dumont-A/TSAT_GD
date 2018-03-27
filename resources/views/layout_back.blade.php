@@ -86,38 +86,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown messages-menu">
-                                <!-- Menu toggle button -->
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-envelope-o"></i>
-                                    @if (count($messages) > 0)
-                                    <span class="label label-danger">{{count($messages)}}</span>
-                                    @endif
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">Vous avez {{count($messages)}} message(s)</li>
-                                    <li>
-                                        <!-- inner menu: contains the messages -->
-                                        <ul class="menu">
-                                            @foreach ($messages as $unMessage)
-                                            <li><!-- start message -->    
-                                                <a href="{{action('MessageController@show', $unMessage->id ) }}">
-                                                    <!-- Message title and timestamp -->
-                                                    <h4>
-                                                        <small><i class="fa fa-clock-o"></i> {{$unMessage->created_at->format('d/m/Y')}}</small>
-                                                    </h4>
-                                                    <!-- The message -->
-                                                    <p>{{$unMessage->titre}}</p>
-                                                </a>
-                                            </li>
-                                            @endforeach
-                                            <!-- end message -->
-                                        </ul>
-                                        <!-- /.menu -->
-                                    </li>
-                                    <li class="footer"><a href="{{ route("message.index") }}">Voir toutes les message(s)</a></li>
-                                </ul>
-                            </li>
+                           
                             <!-- /.messages-menu -->
 
                             <!-- Notifications Menu -->
@@ -186,7 +155,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <!-- The user image in the navbar-->
                                     <img src="{{url('img/profil-default.png') }}" class="user-image" alt="User Image">
                                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                    <span class="hidden-xs">{!!Auth::user()->nom!!}&nbsp {!!Auth::user()->prenom!!}</span>
+                                    <span class="hidden-xs">{!!Auth::user()->nom !!}&nbsp {!!Auth::user()->prenom!!}</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
@@ -195,7 +164,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                         <p>
                                             {!!Auth::user()->nom!!}&nbsp {!!Auth::user()->prenom!!}
-                                            <small>Inscrit le : {!!Auth::user()->created_at->format('d/m/Y')!!}</small>
+                                            <small>Inscrit le :</small>
                                         </p>
                                     </li>
                                     <!-- Menu Body -->
