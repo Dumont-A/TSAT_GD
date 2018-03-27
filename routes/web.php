@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
+Route::get('contact','FrontController@contact')->name("contact");
+Route::get('galerie','FrontController@galerie')->name("galerie");
+
 
 Route::resource('competitions', 'CompetitionController');
 
