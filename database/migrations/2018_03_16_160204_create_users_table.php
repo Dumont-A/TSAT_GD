@@ -17,12 +17,12 @@ class CreateUsersTable extends Migration {
 			$table->integer('id', true);
 			$table->string('nom');
 			$table->string('prenom');
-			$table->string('mail');
-			$table->string('telephone');
+			$table->string('email');
+			$table->string('telephone')->nullable();
 			$table->string('password');
-			$table->boolean('est_arbritre');
-			$table->boolean('est_joueur');
-			$table->boolean('est_admin');
+			$table->boolean('est_arbritre')->default(0);
+			$table->boolean('est_joueur')->default(0);
+			$table->boolean('est_admin')->default(0);
 			$table->string('photo')->nullable();
 			$table->integer('id_statuts')->nullable()->index('FK_users_id_statuts');
 		});
