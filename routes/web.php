@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('template');
 });
@@ -21,7 +23,7 @@ Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 
 Route::resource('competitions', 'CompetitionController');
 
-//Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
+Route::get('infos_pratiques','InfoController@devenir_membre')->name("devenir_membre");
 
 // Routes pour le Back-office
 Route::group(['prefix' => 'admin'], function() {
