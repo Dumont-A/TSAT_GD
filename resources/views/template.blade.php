@@ -89,7 +89,7 @@ URL: http://gettemplates.co
 								<a href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
 									<li><a href="#">Historique du club</a></li>
-									<li><a href="{{route('club#content2')}}">Le comité</a></li>
+									<li><a href="#">Le comité</a></li>
 									<li><a href="#">Installations</a></li>
 									<li><a href="#">Partenaires</a></li>
 								</ul>
