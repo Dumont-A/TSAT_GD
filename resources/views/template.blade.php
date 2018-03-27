@@ -88,10 +88,17 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 								<a href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
+<<<<<<< HEAD
 									<li><a href="#">Historique du club</a></li>
 									<li><a href="#">Le comité</a></li>
 									<li><a href="#">Installations</a></li>
 									<li><a href="#">Partenaires</a></li>
+=======
+									<li><a href="{{route('club#content1')}}">Historique du club</a></li>
+									<li><a href="{{route('club#content2')}}">Le comité</a></li>
+									<li><a href="{{route('club#content3')}}">Installations</a></li>
+									<li><a href="{{route('club#content4')}}">Partenaires</a></li>
+>>>>>>> ad4c0d16a5adc410646f2e4236e8261ecb6da262
 								</ul>
 
 								{{-- <a href="{{route('club')}}">Le club</a> --}}
@@ -124,10 +131,9 @@ URL: http://gettemplates.co
 									<li><a href="#">Les stages</a></li>
 								</ul>
 							</li>
-							<li><a href="">Galerie</a></li>
+							<li><a href="{{route('galerie')}}">Galerie</a></li>
 							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
-
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{{route('contact')}}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
