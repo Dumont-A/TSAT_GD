@@ -198,7 +198,6 @@ URL: http://gettemplates.co
             </p>
           </div>
         </div>
-
       </div>
     </footer>
     </div>
@@ -206,7 +205,6 @@ URL: http://gettemplates.co
     <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
-
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
