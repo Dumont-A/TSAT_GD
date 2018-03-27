@@ -124,10 +124,9 @@ URL: http://gettemplates.co
 									<li><a href="#">Les stages</a></li>
 								</ul>
 							</li>
-							<li><a href="">Galerie</a></li>
+							<li><a href="{{route('galerie')}}">Galerie</a></li>
 							<li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
-
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{{route('contact')}}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
