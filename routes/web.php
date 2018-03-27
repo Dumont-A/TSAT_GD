@@ -11,8 +11,6 @@
 |
 */
 
-
-
 Route::get('/', function () {
     return view('template');
 });
@@ -23,7 +21,7 @@ Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 
 Route::resource('competitions', 'CompetitionController');
 
-Route::get('infos_pratiques','InfoController@devenir_membre')->name("devenir_membre");
+//Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
 
 // Routes pour le Back-office
 Route::group(['prefix' => 'admin'], function() {
@@ -86,3 +84,7 @@ Route::group(['prefix' => 'admin'], function() {
 });
 //route pour la page club
 Route::get('club','ClubController@pageClub')->name("club");
+Route::get('club#content1','ClubController@pageClub')->name("club#content1");
+Route::get('club#content2','ClubController@pageClub')->name("club#content2");
+Route::get('club#content3','ClubController@pageClub')->name("club#content3");
+Route::get('club#content4','ClubController@pageClub')->name("club#content4");

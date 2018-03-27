@@ -88,10 +88,10 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 								<a href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
-									<li><a href="#">Historique du club</a></li>
+									<li><a href="{{route('club#content1')}}">Historique du club</a></li>
 									<li><a href="{{route('club#content2')}}">Le comité</a></li>
-									<li><a href="#">Installations</a></li>
-									<li><a href="#">Partenaires</a></li>
+									<li><a href="{{route('club#content3')}}">Installations</a></li>
+									<li><a href="{{route('club#content4')}}">Partenaires</a></li>
 								</ul>
 
 								{{-- <a href="{{route('club')}}">Le club</a> --}}
