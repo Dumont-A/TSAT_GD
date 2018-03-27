@@ -62,6 +62,11 @@ return [
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+        'files'=>[
+            'driver'=>'local',
+            'root'   => base_path().'/files',
+            'visibility' => 'public',
+        ]
 
     ],
 
