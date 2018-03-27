@@ -36,6 +36,7 @@ Route::group(['prefix' => 'admin'], function() {
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
     Route::post('photo', 'PhotoController@store')->name('photo.store');
+    Route::get('photo/banque', 'PhotoController@banque')->name('photo.banque');
     Route::delete('photo/{id}', 'PhotoController@destroy')->name('photo.destroy')->where('id', '[0-9]+');
     //Route::resource('photo', 'PhotoController');
     Route::resource('album', 'AlbumController');

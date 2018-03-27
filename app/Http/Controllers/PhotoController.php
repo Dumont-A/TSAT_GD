@@ -84,5 +84,7 @@ class PhotoController extends Controller {
 
         return redirect()->route("album.index");
     }
-
+    public function banque(Request $request) {
+        return view('admin.photo.banque');
+    }
 }

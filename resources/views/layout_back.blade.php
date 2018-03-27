@@ -278,7 +278,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li><a href="{{ route("contenu.edit", ['page' => 'Les_cours_collectifs_adultes']) }}">Les cours collectifs adultes</a></li>
                             </ul>
                         </li>
-
+                        <li class="treeview">
+                            <a href="{{ route('photo.banque') }}"><i class="fa fa-info"></i> <span>Ma banque d'image</span>  </a>
+                        </li>
                     </ul>
                     <!-- /.sidebar-menu -->
 
