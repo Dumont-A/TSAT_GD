@@ -103,30 +103,30 @@ URL: http://gettemplates.co
 
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('competitions.index')}}">Compétitions</a>
+	              <a href="{{route('competition')}}">Compétitions</a>
 	              <ul class="dropdown">
-	                <li><a href="#">Tournois</a></li>
-	                <li><a href="#">Les équipes</a></li>
-	                <li><a href="#">Les arbitres</a></li>
-	                <li><a href="#">Résultats</a></li>
+	                <li><a href="{{route('competition#content1')}}">Tournois</a></li>
+	                <li><a href="{{route('competition#content2')}}">Les équipes</a></li>
+	                <li><a href="{{route('competition#content3')}}">Les arbitres</a></li>
+	                <li><a href="{{route('competition#content4')}}">Résultats</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="#">Infos Pratiques</a>
+	              <a href="{{route('infos')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
-	                <li><a href="#">Horaires</a></li>
-	                <li><a href="#">Devenir Membre</a></li>
-	                <li><a href="#">Réservation</a></li>
-	                <li><a href="#">Tarifs</a></li>
+	                <li><a href="{{route('infos#content1')}}">Horaires</a></li>
+	                <li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
+	                <li><a href="{{route('infos#content3')}}">Réservation</a></li>
+	                <li><a href="{{route('infos#content4')}}">Tarifs</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="#">L'enseignement</a>
+	              <a href="{{route('enseignement')}}">L'enseignement</a>
 	              <ul class="dropdown">
-	                <li><a href="#">L'équipe pédagogique</a></li>
-	                <li><a href="#">L'école de tennis</a></li>
-	                <li><a href="#">Les cours collectifs adultes</a></li>
-	                <li><a href="#">Les stages</a></li>
+	                <li><a href="{{route('enseignement#content1')}}">L'équipe pédagogique</a></li>
+	                <li><a href="{{route('enseignement#content2')}}">L'école de tennis</a></li>
+	                <li><a href="{{route('enseignement#content3')}}">Les cours collectifs adultes</a></li>
+	                <li><a href="{{route('enseignement#content4')}}">Les stages</a></li>
 	              </ul>
 	            </li>
 	            <li><a href="{{route('galerie')}}">Galerie</a></li>
@@ -547,16 +547,6 @@ URL: http://gettemplates.co
           </div>
         </div>
       </div>
->>>>>>> b714f7bb279e592a482f8ab949bea568c0ec8092
-    </footer>
-    </div>
-
-    <div class="gototop js-top">
-    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-    </div>
-
-<<<<<<< HEAD
-=======
     <!-- Modal de login -->
     <div class="modal fade" id="modal" role="dialog">
       <div class="modal-dialog">
@@ -620,14 +610,6 @@ URL: http://gettemplates.co
    </div>
     <!-- FIN Modal de login -->
 
->>>>>>> 9ba9bab0d494aafde84b731be6d3cdf1c5df184a
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
     <script src="js/jquery.waypoints.min.js"></script>
     <!-- Carousel -->
     <script src="js/owl.carousel.min.js"></script>
@@ -638,21 +620,16 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-<<<<<<< HEAD
-		<script>
-			$(document).ready(function() {
-				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
-					var page = $(this).attr('href'); // Page cible
-					var speed = 750; // Durée de l'animation (en ms)
-					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-					return false;
-				});
-			});
-		</script>
-=======
-<<<<<<< HEAD
-
-=======
+    <script>
+            $(document).ready(function() {
+                    $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                            var page = $(this).attr('href'); // Page cible
+                            var speed = 750; // Durée de l'animation (en ms)
+                            $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                            return false;
+                    });
+            });
+    </script>
     <!-- SCRIPT MODAL LOGIN -->
     <script>
         document.getElementById("connect").style.cursor = "pointer";
@@ -662,7 +639,6 @@ URL: http://gettemplates.co
             });
         });
     </script>
->>>>>>> 8b5d4e4df4723faf7064c8629e628e0702036e07
->>>>>>> 9ba9bab0d494aafde84b731be6d3cdf1c5df184a
-    </body>
-    </html>
+
+
+

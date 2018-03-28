@@ -34,6 +34,19 @@ Route::get('infos_pratiques#content2','InfoController@pageInfos')->name("infos#c
 Route::get('infos_pratiques#content3','InfoController@pageInfos')->name("infos#content3");
 Route::get('infos_pratiques#content4','InfoController@pageInfos')->name("infos#content4");
 
+//route pour la page enseignement
+Route::get('enseignement','EnseignementController@enseignement')->name("enseignement");
+Route::get('enseignement#content1','EnseignementController@enseignement')->name("enseignement#content1");
+Route::get('enseignement#content2','EnseignementController@enseignement')->name("enseignement#content2");
+Route::get('enseignement#content3','EnseignementController@enseignement')->name("enseignement#content3");
+Route::get('enseignement#content4','EnseignementController@enseignement')->name("enseignement#content4");
+
+//route pour la page compétition
+Route::get('competition','CompetitionController@competition')->name("competition");
+Route::get('competition#content1','CompetitionController@competition')->name("competition#content1");
+Route::get('competition#content2','CompetitionController@competition')->name("competition#content2");
+Route::get('competition#content3','CompetitionController@competition')->name("competition#content3");
+Route::get('competition#content4','CompetitionController@competition')->name("competition#content4");
 
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");

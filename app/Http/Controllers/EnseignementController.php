@@ -11,6 +11,12 @@ class EnseignementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function pageEnseignement()
+     {
+        return view('front.enseignement');
+     }
+
     public function index()
     {
         //
