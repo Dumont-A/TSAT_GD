@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends("template_page")
 
 @extends("template")
@@ -7,27 +8,47 @@
 @section("tittle1")
 
 @stop
+=======
+
+@extends("template_page")
+@section("tittle")
+    @parent - Infos Pratiques
+@stop
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 
 @section("menu_1")
 <i class="ti-book"></i></span>
 <h3 class="h3Menu">Horaire</h3>
+<<<<<<< HEAD
 <h3 class="h3Menu">Historique</h3>
+=======
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop
 
 @section("menu_2")
 <i class="ti-briefcase"></i></span>
 <h3 class="h3Menu">Devenir membre</h3></a>
+<<<<<<< HEAD
 <h3 class="h3Menu">Le Comité</h3></a>
+=======
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop
 
 @section("menu_3")
 <i class="ico-balle"></i></span>
+<<<<<<< HEAD
 <h3 class="h3Menu">Réservation</h3>
 <h3 class="h3Menu">Les Installations</h3>
+=======
+
+<h3 class="h3Menu">Réservation</h3>
+
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop
 
 @section("menu_4")
 <i class="ti-tag"></i></span>
+<<<<<<< HEAD
 <h3 class="h3Menu">Tarifs</h3>
 @stop
 
@@ -41,9 +62,10 @@
 
 @stop
 @section("content4")
-
 =======
-<h3 class="h3Menu">Partenaires</h3>
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
+
+<h3 class="h3Menu">Tarifs</h3>
 @stop
 
 @section("content1")
@@ -80,55 +102,10 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
 
 
 @section("content3")
-<div class="row">
-  <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-              <h2>Les Installations</h2>
-            </div>
-          </div>
-  <div class="row">
 
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ti-home"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="3" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Gymnases</span>
-
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ico-terrain"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="25" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Courts</span>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ti-user"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="12" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Entraineurs</span>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ti-id-badge"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="134" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Membres</span>
-
-      </div>
-    </div>
-
-  </div>
 @stop
 @section("content4")
+<<<<<<< HEAD
   <div class="row animate-box">
     <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
   <h2>Nos Partenaires</h2>
@@ -151,4 +128,7 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
   </div>
 </div>
 </div>
+=======
+
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop

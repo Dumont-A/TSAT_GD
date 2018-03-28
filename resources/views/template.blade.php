@@ -65,6 +65,10 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 	  <nav class="gtco-nav" role="navigation">
 	    <div class="gtco-container">
 	      <div class="row">
@@ -79,7 +83,7 @@ URL: http://gettemplates.co
 	      </div>
 	      <div class="row">
 	        <div class="col-sm-3 col-xs-12">
-	          <img src="images/logo_png.png" alt="logo transparent" height="200" width="200" style="margin-top:-50px;">
+	          <img src="images/logo_png.png" alt="logo transparent" height="200" width="200">
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
@@ -97,30 +101,30 @@ URL: http://gettemplates.co
 
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('competitions.index')}}">Compétitions</a>
+	              <a href="{{route('competition')}}">Compétitions</a>
 	              <ul class="dropdown">
-	                <li><a href="#">Tournois</a></li>
-	                <li><a href="#">Les équipes</a></li>
-	                <li><a href="#">Les arbitres</a></li>
-	                <li><a href="#">Résultats</a></li>
+	                <li><a href="{{route('competition#content1')}}">Tournois</a></li>
+	                <li><a href="{{route('competition#content2')}}">Les équipes</a></li>
+	                <li><a href="{{route('competition#content3')}}">Les arbitres</a></li>
+	                <li><a href="{{route('competition#content4')}}">Résultats</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="#">Infos Pratiques</a>
+	              <a href="{{route('infos')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
-	                <li><a href="#">Horaires</a></li>
-	                <li><a href="#">Devenir Membre</a></li>
-	                <li><a href="#">Réservation</a></li>
-	                <li><a href="#">Tarifs</a></li>
+	                <li><a href="{{route('infos#content1')}}">Horaires</a></li>
+	                <li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
+	                <li><a href="{{route('infos#content3')}}">Réservation</a></li>
+	                <li><a href="{{route('infos#content4')}}">Tarifs</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="#">L'enseignement</a>
+	              <a href="{{route('enseignement')}}">L'enseignement</a>
 	              <ul class="dropdown">
-	                <li><a href="#">L'équipe pédagogique</a></li>
-	                <li><a href="#">L'école de tennis</a></li>
-	                <li><a href="#">Les cours collectifs adultes</a></li>
-	                <li><a href="#">Les stages</a></li>
+	                <li><a href="{{route('enseignement#content1')}}">L'équipe pédagogique</a></li>
+	                <li><a href="{{route('enseignement#content2')}}">L'école de tennis</a></li>
+	                <li><a href="{{route('enseignement#content3')}}">Les cours collectifs adultes</a></li>
+	                <li><a href="{{route('enseignement#content4')}}">Les stages</a></li>
 	              </ul>
 	            </li>
 	            <li><a href="{{route('galerie')}}">Galerie</a></li>
@@ -145,11 +149,11 @@ URL: http://gettemplates.co
 	                          <div class="gtco-container">
 
 	                        <div class="row">
-	                          <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+	                          <div class="col-md-12 text-center gtco-heading animate-box">
 	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
 	                          </div>
 	                        </div>
- @yield("sous_menu")
+ 					@yield("sous_menu")
 	                      </div>
 	                    </div>
 	              </div>
@@ -214,6 +218,7 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
+<<<<<<< HEAD
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
 				<div class="row">
@@ -534,13 +539,19 @@ URL: http://gettemplates.co
           </div>
         </div>
       </div>
+=======
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
     </footer>
     </div>
 
     <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
     <!-- Modal de login -->
     <div class="modal fade" id="modal" role="dialog">
       <div class="modal-dialog">
@@ -621,6 +632,7 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+<<<<<<< HEAD
 		<script>
 			$(document).ready(function() {
 				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -632,6 +644,9 @@ URL: http://gettemplates.co
 			});
 		</script>
 
+=======
+    
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
     <!-- SCRIPT MODAL LOGIN -->
     <script>
         document.getElementById("connect").style.cursor = "pointer";
@@ -641,5 +656,9 @@ URL: http://gettemplates.co
             });
         });
     </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
     </body>
-    </html>
+</html>

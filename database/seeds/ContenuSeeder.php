@@ -20,7 +20,7 @@ class ContenuSeeder extends Seeder
           'slug' => 'info-pratique',
       ]);
       DB::table('menu')->insert([
-          'titre' => 'L'/'enseignement',
+          'titre' => 'L\'enseignement',
           'slug' => 'l-enseignement',
       ]);
       DB::table('sous_menus')->insert([
