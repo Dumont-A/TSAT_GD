@@ -80,7 +80,7 @@ URL: http://gettemplates.co
 	      </div>
 	      <div class="row">
 	        <div class="col-sm-3 col-xs-12">
-	          <img src="images/logo_png.png" alt="logo transparent" height="200" width="200" style="margin-top:-50px;">
+	          <img src="images/logo_png.png" alt="logo transparent" height="200" width="200">
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
@@ -143,10 +143,10 @@ URL: http://gettemplates.co
 
 	                <div id="gtco-features" class="gtco-features-3">
 	                  <div id="menu">
-	                          <div class="gtco-container">
+	                          <div class="gtco-container ">
 
 	                        <div class="row">
-	                          <div class="col-md-12 text-center gtco-heading animate-box">
+	                          <div class="col-md-12 text-center gtco-heading animate-box ">
 	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
 	                          </div>
 	                        </div>

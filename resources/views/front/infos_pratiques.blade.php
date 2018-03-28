@@ -24,21 +24,6 @@
 @stop
 
 @section("content1")
-
-@stop
-@section("content2")
-
-@stop
-@section("content3")
-
-@stop
-@section("content4")
-
-=======
-<h3 class="h3Menu">Partenaires</h3>
-@stop
-
-@section("content1")
 <h2 class="text-center">Horaires</h2>
 <p>Ciliciam vero, quae Cydno amni exultat, Tarsus nobilitat, urbs perspicabilis hanc condidisse Perseus memoratur, Iovis filius et Danaes, vel certe ex Aethiopia profectus Sandan quidam nomine vir opulentus et nobilis et Anazarbus auctoris vocabulum referens, et Mopsuestia vatis illius domicilium Mopsi, quem a conmilitio Argonautarum cum aureo vellere direpto redirent, errore abstractum delatumque ad Africae litus mors repentina consumpsit, et ex eo cespite punico tecti manes eius heroici dolorum varietati medentur plerumque sospitales.</br></br>
 
@@ -75,6 +60,4 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
 
 @stop
 @section("content4")
-
->>>>>>> c66d2269ab25d911be14a34babb99339bd34f41d
 @stop

@@ -1,6 +1,6 @@
 @extends("template")
 @section("sous_menu")
-  <div class="row">
+  <div class="row menu-hidden">
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#content1" ><span class="icon iconMyStyle">
