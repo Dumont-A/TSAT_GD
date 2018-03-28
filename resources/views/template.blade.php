@@ -65,7 +65,7 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-
+		
 	  <nav class="gtco-nav" role="navigation">
 	    <div class="gtco-container">
 	      <div class="row">
@@ -146,11 +146,19 @@ URL: http://gettemplates.co
 	                          <div class="gtco-container ">
 
 	                        <div class="row">
+<<<<<<< HEAD
 	                          <div class="col-md-12 text-center gtco-heading animate-box ">
 	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
 	                          </div>
 	                        </div>
  														@yield("sous_menu")
+=======
+	                          <div class="col-md-12 text-center gtco-heading animate-box">
+	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
+	                          </div>
+	                        </div>
+ 					@yield("sous_menu")
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 	                      </div>
 	                    </div>
 	              </div>
@@ -215,6 +223,10 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
     </footer>
     </div>
 
@@ -222,6 +234,72 @@ URL: http://gettemplates.co
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- Modal de login -->
+    <div class="modal fade" id="modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
+                    <div class="col-md-6">
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                    {{ csrf_field() }}
+                    <label for="password" class="col-md-4 control-label">Mot de passe</label>
+                    <div class="col-md-6">
+                        <input id="password" type="password" class="form-control" name="password" required>
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Se souvenir de moi
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            Mot de passe oublié?
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary">
+                            Connexion
+                        </button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+    <!-- FIN Modal de login -->
+
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -239,6 +317,30 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+<<<<<<< HEAD
 
+=======
+
+		<script>
+			$(document).ready(function() {
+				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 750; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					return false;
+				});
+			});
+		</script>
+
+    <!-- SCRIPT MODAL LOGIN -->
+    <script>
+        document.getElementById("connect").style.cursor = "pointer";
+        $(document).ready(function(){
+            $("#connect").click(function(){
+                $("#modal").modal();
+            });
+        });
+    </script>
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
     </body>
-    </html>
+</html>

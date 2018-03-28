@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 @extends("template_page")
 @section("tittle")
     @parent - Infos Pratiques
@@ -5,17 +10,29 @@
 
 @section("menu_1")
 <i class="ti-book"></i></span>
+<<<<<<< HEAD
 <h3 class="h3Menu">Horaire</h3>
+=======
+<h3 class="h3Menu">Horaires</h3>
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 @stop
 
 @section("menu_2")
 <i class="ti-briefcase"></i></span>
+<<<<<<< HEAD
 <h3 class="h3Menu">Devenir membre</h3></a>
+=======
+<h3 class="h3Menu">Devenir membre</h3>
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 @stop
 
 @section("menu_3")
 <i class="ico-balle"></i></span>
 <h3 class="h3Menu">Réservation</h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 @stop
 
 @section("menu_4")
@@ -60,4 +77,29 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
 
 @stop
 @section("content4")
+<<<<<<< HEAD
+=======
+  <div class="row animate-box">
+    <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+  <h2>Nos Partenaires</h2>
+  <p>Allez voir nos partenaires pour des offres spéciale adhérent</p>
+</div>
+</div>
+<div class="row animate-box">
+<div class="owl-carousel owl-carousel-carousel">
+  <div class="item">
+    <img src="images/partenaire/download.jpg"  height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
+  </div>
+  <div class="item">
+    <img src="images/partenaire/download2.png"  height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
+  </div>
+  <div class="item">
+    <img src="images/partenaire/download3.png"  height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
+  </div>
+  <div class="item">
+    <img src="images/partenaire/download.png" height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
+  </div>
+</div>
+</div>
+>>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 @stop
