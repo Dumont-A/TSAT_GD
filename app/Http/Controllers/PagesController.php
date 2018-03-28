@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Photo;
 use App\Models\Album;
-use App\Models\Contenu;
+use App\Models\SousMenu;
 use App\Models\Comite;
 use App\Models\User;
 use App\Models\Message;
-use App\Models\Rencontre;   
+use App\Models\Rencontre;
 use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller {
@@ -52,35 +52,35 @@ class PagesController extends Controller {
 
         return view('site.profil')
                         ->with('tab_users', $lesUsers);
-        
+
     }
-    
+
     function editprofil($id) {
          $leUser = User::find($id);
         return view('site.profil.editmdp')
                         ->with("leUser", $leUser);
     }
-    
+
     function convocation($id) {
          $leUser = User::find($id);
         return view('site.profil.convoc')
                         ->with("leUser", $leUser);
     }
-    
+
      public function updateprofil(Request $request, $id) {
         $leUser = User::find($id);
 
 
-     
-     
-        
-        
-     
+
+
+
+
+
         if ($request->get('password') !="") {
-              $leUser->password = bcrypt($request->get('password'));       
+              $leUser->password = bcrypt($request->get('password'));
         }
-        
-     
+
+
 
 
 
@@ -92,20 +92,20 @@ class PagesController extends Controller {
     function message(Request $request) {
       //  var_dump($request->get('contenu'));
        // dd($request->get('contenu'));
-        
+
         $request->session()->flash('success', 'Merci! Votre message a bien été envoyé');
-        
+
         $message = new Message();
         $message->auteur = $request->get('nom') . " " .$request->get('prenom');
         $message->email = $request->get('email');
         $message->titre = $request->get('titre');
         $message->contenu = stripslashes(nl2br(htmlentities($request->get('contenu'))));
         $message->tel = $request->get('telephone');
-        
-        $message->save(); 
-        
+
+        $message->save();
+
         $data = array('sujet' => $request->get('titre'));
-        
+
         Mail::send('admin.message.mail', ['titre'=>$request->get('titre'),'contenu'=>$request->get('contenu'),'auteur'=>$request->get('nom') . " " . $request->get('prenom')], function ($mail) use ($data){
             $mail->from('ppetennis@gmail.com','Tennis Club Tavaux');
             $mail->to('benoit.plaideau@gmail.com');
@@ -113,14 +113,14 @@ class PagesController extends Controller {
         });
         return redirect()->route("contact");
     }
-    
-   
+
+
     public function accepter($id,$idJoueur,Request $request)
     {
         $request->session()->flash('success', 'Les convocations sont acceptées !');
         $rencontre = Rencontre::find($id);
         $leJoueur = User::find($idJoueur);
-        $request->get('confirmation'.$leJoueur->id); 
+        $request->get('confirmation'.$leJoueur->id);
         if ($request->get('confirmation'.$leJoueur->id)=='on')
         {
             $leJoueur->rencontres()->attach($rencontre,['confirmation'=>1]);
@@ -128,6 +128,6 @@ class PagesController extends Controller {
         $leJoueur->save();
         return redirect()->route("profil");
     }
-    
+
 
 }

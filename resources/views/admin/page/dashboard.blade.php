@@ -4,8 +4,8 @@
 <div class="page-header">
     <div class="container">
         <div class="row">
-            <a class="navbar-brand" href="#"><img src="img/logo_tavaux.jpg" alt="Chania"></a>
-            <h1>Accueil - Administration du site Tennis Tavaux</h1>
+            <a class="navbar-brand" href="#"><img src="images/logo_png.png" alt="logo transparent" height="200" width="200"></a>
+            <h1>Accueil - Administration du site TSAT GD</h1>
         </div>
     </div>
 </div>
