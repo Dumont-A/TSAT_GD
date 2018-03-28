@@ -54,7 +54,7 @@ Route::get('contact','FrontController@contact')->name("contact");
 Route::get('galerie','FrontController@galerie')->name("galerie");
 
 
-Route::resource('competitions', 'CompetitionController');
+//Route::resource('competitions', 'CompetitionController');
 
 //Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
 
