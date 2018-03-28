@@ -11,6 +11,18 @@ class ContenuSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('menu')->insert([
+          'titre' => 'Le club',
+          'slug' => 'le-club',
+      ]);
+      DB::table('menu')->insert([
+          'titre' => 'Infos Pratique',
+          'slug' => 'info-pratique',
+      ]);
+      DB::table('menu')->insert([
+          'titre' => 'L'/'enseignement',
+          'slug' => 'l-enseignement',
+      ]);
       DB::table('sous_menus')->insert([
           'titre' => 'Historique',
           'contenu'=> null,
