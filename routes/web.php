@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('template');
 });
 
+Route::get('/home', function () {
+    return view('template');
+});
 Auth::routes();
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
+Route::get('contact','FrontController@contact')->name("contact");
+Route::get('galerie','FrontController@galerie')->name("galerie");
+
 
 Route::resource('competitions', 'CompetitionController');
 
@@ -36,6 +42,7 @@ Route::group(['prefix' => 'admin'], function() {
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
     Route::post('photo', 'PhotoController@store')->name('photo.store');
+    Route::get('photo/banque', 'PhotoController@banque')->name('photo.banque');
     Route::delete('photo/{id}', 'PhotoController@destroy')->name('photo.destroy')->where('id', '[0-9]+');
     //Route::resource('photo', 'PhotoController');
     Route::resource('album', 'AlbumController');
@@ -82,3 +89,9 @@ Route::group(['prefix' => 'admin'], function() {
 
 
 });
+//route pour la page club
+Route::get('club','ClubController@pageClub')->name("club");
+Route::get('club#content1','ClubController@pageClub')->name("club#content1");
+Route::get('club#content2','ClubController@pageClub')->name("club#content2");
+Route::get('club#content3','ClubController@pageClub')->name("club#content3");
+Route::get('club#content4','ClubController@pageClub')->name("club#content4");

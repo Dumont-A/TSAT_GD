@@ -1,4 +1,4 @@
-@extends("front.template")
+@extends("template")
 @section("tittle")
     @parent - Club
 @stop
@@ -40,19 +40,19 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
    <div class="row">
  <div class="item">
    <img src="images/tete_comite.png"  width="200px" height="150px" class="col-md-3"  style="border:3px inset" >
-   <p class="col-md-9" style="padding-top: 50px">Mickey : le mec qui a construit un empire avec 4 doigts</p>
+   <p class="col-md-9" style="padding-top: 50px">Président</p>
 </div>
 </div>
   <div class="row">
 <div class="item">
   <img src="images/tete_comite2.png"  width="200px" height="150px" class="col-md-3"  style="border:3px inset" >
-  <p class="col-md-9" style="padding-top: 50px">Minnie : la meuf qui est la juste pour le fric</p>
+  <p class="col-md-9" style="padding-top: 50px">Adjoint</p>
 </div>
 </div>
 <div class="row">
 <div class="item">
 <img src="images/tete_comite3.png"  width="200px" height="150px" class="col-md-3"  style="border:3px inset" >
-<p class="col-md-9" style="padding-top: 50px">Dingo : le chien du riche</p>
+<p class="col-md-9" style="padding-top: 50px">Directeur du club</p>
 </div>
 </div>
 
@@ -68,7 +68,7 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
     <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
       <div class="feature-center">
         <span class="icon">
-          <i class="icon-home"></i>
+          <i class="ti-home"></i>
         </span>
         <span class="counter js-counter" data-from="0" data-to="3" data-speed="5000" data-refresh-interval="50">1</span>
         <span class="counter-label">Gymnases</span>
@@ -87,7 +87,7 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
     <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
       <div class="feature-center">
         <span class="icon">
-          <i class="icon-users"></i>
+          <i class="ti-user"></i>
         </span>
         <span class="counter js-counter" data-from="0" data-to="12" data-speed="5000" data-refresh-interval="50">1</span>
         <span class="counter-label">Entraineurs</span>
