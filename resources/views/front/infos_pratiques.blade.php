@@ -1,70 +1,28 @@
-<<<<<<< HEAD
-@extends("template_page")
 
-@extends("template")
-@section("tittle")
-    @parent - Infos Pratiques
-@stop
-@section("tittle1")
-
-@stop
-=======
 
 @extends("template_page")
 @section("tittle")
     @parent - Infos Pratiques
 @stop
->>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 
 @section("menu_1")
 <i class="ti-book"></i></span>
 <h3 class="h3Menu">Horaire</h3>
-<<<<<<< HEAD
-<h3 class="h3Menu">Historique</h3>
-=======
->>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop
 
 @section("menu_2")
 <i class="ti-briefcase"></i></span>
-<h3 class="h3Menu">Devenir membre</h3></a>
-<<<<<<< HEAD
-<h3 class="h3Menu">Le Comité</h3></a>
-=======
->>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
+<h3 class="h3Menu">Devenir membre</h3>
 @stop
 
 @section("menu_3")
 <i class="ico-balle"></i></span>
-<<<<<<< HEAD
-<h3 class="h3Menu">Réservation</h3>
-<h3 class="h3Menu">Les Installations</h3>
-=======
-
 <h3 class="h3Menu">Réservation</h3>
 
->>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop
 
 @section("menu_4")
 <i class="ti-tag"></i></span>
-<<<<<<< HEAD
-<h3 class="h3Menu">Tarifs</h3>
-@stop
-
-@section("content1")
-
-@stop
-@section("content2")
-
-@stop
-@section("content3")
-
-@stop
-@section("content4")
-=======
->>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
-
 <h3 class="h3Menu">Tarifs</h3>
 @stop
 
@@ -105,7 +63,6 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
 
 @stop
 @section("content4")
-<<<<<<< HEAD
   <div class="row animate-box">
     <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
   <h2>Nos Partenaires</h2>
@@ -128,7 +85,4 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
   </div>
 </div>
 </div>
-=======
-
->>>>>>> 4ff9da3f8e37af345b89fa4377ce13638c4cd016
 @stop
