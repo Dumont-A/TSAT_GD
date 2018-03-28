@@ -234,7 +234,7 @@ URL: http://gettemplates.co
 					</div>
 					<div class="col-xs-9 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="#">Accueil</a></li>
 							<li class="has-dropdown">
 								<a href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
@@ -533,7 +533,7 @@ URL: http://gettemplates.co
                 <li><a href="#"><i class="icon-dribbble"></i></a></li>
               </ul>
             </p>
-          </div>    
+          </div>
         </div>
       </div>
 >>>>>>> b714f7bb279e592a482f8ab949bea568c0ec8092
@@ -544,6 +544,72 @@ URL: http://gettemplates.co
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- Modal de login -->
+    <div class="modal fade" id="modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
+                    <div class="col-md-6">
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                    {{ csrf_field() }}
+                    <label for="password" class="col-md-4 control-label">Mot de passe</label>
+                    <div class="col-md-6">
+                        <input id="password" type="password" class="form-control" name="password" required>
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Se souvenir de moi
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            Mot de passe oublié?
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary">
+                            Connexion
+                        </button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+    <!-- FIN Modal de login -->
+
+>>>>>>> 9ba9bab0d494aafde84b731be6d3cdf1c5df184a
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -561,6 +627,7 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+<<<<<<< HEAD
 		<script>
 			$(document).ready(function() {
 				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -571,5 +638,20 @@ URL: http://gettemplates.co
 				});
 			});
 		</script>
+=======
+<<<<<<< HEAD
+
+=======
+    <!-- SCRIPT MODAL LOGIN -->
+    <script>
+        document.getElementById("connect").style.cursor = "pointer";
+        $(document).ready(function(){
+            $("#connect").click(function(){
+                $("#modal").modal();
+            });
+        });
+    </script>
+>>>>>>> 8b5d4e4df4723faf7064c8629e628e0702036e07
+>>>>>>> 9ba9bab0d494aafde84b731be6d3cdf1c5df184a
     </body>
     </html>
