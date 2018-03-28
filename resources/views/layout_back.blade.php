@@ -11,7 +11,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-        <title>Tennis Tavaux</title>
+        <title>Tennis Saint-Aubin Tavaux Grand Dole</title>
 
         <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
@@ -70,9 +70,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Logo -->
                 <a href="{{ route("admin.dashboard") }}" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">T.T.</span>
+                    <span class="logo-mini">TSAT GD</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>TENNIS </b>TAVAUX</span>
+                    <span class="logo-lg"><b>T</b>SAT GD</span>
                 </a>
 
 
@@ -86,12 +86,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <!-- Messages: style can be found in dropdown.less-->
-                           
+
                             <!-- /.messages-menu -->
 
                             <!-- Notifications Menu -->
                             <!--                            <li class="dropdown notifications-menu">
-                                                             Menu toggle button 
+                                                             Menu toggle button
                                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                                                 <i class="fa fa-bell-o"></i>
                                                                 <span class="label label-warning">10</span>
@@ -99,14 +99,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <ul class="dropdown-menu">
                                                                 <li class="header">Vous avez 10 notifications</li>
                                                                 <li>
-                                                                     Inner Menu: contains the notifications 
+                                                                     Inner Menu: contains the notifications
                                                                     <ul class="menu">
-                                                                        <li> start notification 
+                                                                        <li> start notification
                                                                             <a href="#">
                                                                                 <i class="fa fa-users text-aqua"></i> 5 nouvelles inscriptions aujourd'hui
                                                                             </a>
                                                                         </li>
-                                                                         end notification 
+                                                                         end notification
                                                                     </ul>
                                                                 </li>
                                                                 <li class="footer"><a href="#">Tout voir</a></li>
@@ -114,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         </li>-->
                             <!-- Tasks Menu -->
                             <!--                            <li class="dropdown tasks-menu">
-                                                             Menu Toggle Button 
+                                                             Menu Toggle Button
                                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                                                 <i class="fa fa-flag-o"></i>
                                                                 <span class="label label-danger">9</span>
@@ -122,25 +122,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <ul class="dropdown-menu">
                                                                 <li class="header">Vous avez 9 tâches</li>
                                                                 <li>
-                                                                     Inner menu: contains the tasks 
+                                                                     Inner menu: contains the tasks
                                                                     <ul class="menu">
-                                                                        <li> Task item 
+                                                                        <li> Task item
                                                                             <a href="#">
-                                                                                 Task title and progress text 
+                                                                                 Task title and progress text
                                                                                 <h3>
                                                                                     Créer le panel admin
                                                                                     <small class="pull-right">5%</small>
                                                                                 </h3>
-                                                                                 The progress bar 
+                                                                                 The progress bar
                                                                                 <div class="progress xs">
-                                                                                     Change the css width attribute to simulate progress 
+                                                                                     Change the css width attribute to simulate progress
                                                                                     <div class="progress-bar progress-bar-aqua" style="width: 5%" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
                                                                                         <span class="sr-only">5% Complete</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </a>
                                                                         </li>
-                                                                         end task item 
+                                                                         end task item
                                                                     </ul>
                                                                 </li>
                                                                 <li class="footer">
@@ -225,7 +225,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="treeview-menu">
                                 <li><a href="{{ route("article.create") }}">Ajouter</a></li>
                                 <li><a href="{{ route("article.index") }}">Administrer</a></li>
-                            </ul>	
+                            </ul>
 
                         </li>
 
@@ -241,10 +241,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li class="treeview">
                             <a href="{{ route("partenaire.index") }}"><i class="fa fa-thumbs-up"></i> <span>Partenaire</span>  </a>
                         </li>
-                        
-                        
-                        
-                        
+
+
+
+
                         <li class="treeview">
                             <a href="{{ route("equipe.index") }}"><i class="fa fa-users"></i> <span>Equipes</span></a>
                         </li>
@@ -252,19 +252,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="{{ route("message.index") }}"><i class="fa fa-envelope-o"></i> <span>Messages</span>  </a>
                         </li>
 
-                      
+
                         <li class="treeview">
                             <a href="{{ route("coordonnee.index") }}"><i class="fa fa-globe"></i> <span>Le comité</span>  </a>
                         </li>
                         <li class="header">modification du site</li>
-                        <li>
-                            <a href="{{ route("contenu.edit", ['page' => 'Le_club']) }}"><i class="fa fa-home"></i> <span>Le club</span>  </a>
+
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-graduation-cap"></i> <span>Le club</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'historique']) }}">Historique</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'installations']) }}">Installations</a></li>
+                            </ul>
                         </li>
                         <li class="treeview">
-                            <a href="{{ route("contenu.edit", ['page' => 'La_competition']) }}"><i class="fa fa-trophy"></i> <span>La compétition</span>  </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="{{ route("contenu.edit", ['page' => 'Infos_Adherents']) }}"><i class="fa fa-info"></i> <span>Infos Adhérents</span>  </a>
+                            <a href="#"><i class="fa fa-graduation-cap"></i> <span>Infos pratiques</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'horraires']) }}">Horraires</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'tarifs']) }}">Tarifs</a></li>
+                            </ul>
                         </li>
                         <li class="treeview">
                             <a href="#"><i class="fa fa-graduation-cap"></i> <span>L'enseignement</span>
@@ -273,14 +287,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{ route("contenu.edit", ['page' => 'L_equipe_pedagogique']) }}">L'équipe pédagogique</a></li>
-                                <li><a href="{{ route("contenu.edit", ['page' => 'L_ecole_de_tennis']) }}">L'école de tennis</a></li>
-                                <li><a href="{{ route("contenu.edit", ['page' => 'Les_cours_collectifs_adultes']) }}">Les cours collectifs adultes</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'l-equipe-pedagogique']) }}">Equipe pédagogique</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'l-ecole-de-tennis']) }}">Ecole de tennis</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'cours-collectifs']) }}">Cours collectifs</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'les-stages']) }}">Les stages</a></li>
                             </ul>
                         </li>
+<<<<<<< HEAD
+
+
+
+=======
                         <li class="treeview">
                             <a href="{{ route('photo.banque') }}"><i class="fa fa-info"></i> <span>Ma banque d'image</span>  </a>
                         </li>
+>>>>>>> c0296bec7941a66222c5ddc5b92b6a750677bcfb
                     </ul>
                     <!-- /.sidebar-menu -->
 

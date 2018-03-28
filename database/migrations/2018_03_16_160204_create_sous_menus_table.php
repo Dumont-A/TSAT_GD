@@ -16,7 +16,7 @@ class CreateSousMenusTable extends Migration {
 		{
 			$table->integer('id', true);
 			$table->string('titre');
-			$table->text('contenu', 65535);
+			$table->text('contenu', 65535)->nullable();
 			$table->string('slug')->nullable();
 			$table->integer('id_menu')->index('FK_sous_menus_id_menu');
 		});
