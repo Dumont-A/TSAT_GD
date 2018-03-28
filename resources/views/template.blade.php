@@ -65,10 +65,7 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-<<<<<<< HEAD
-=======
 
->>>>>>> c66d2269ab25d911be14a34babb99339bd34f41d
 	  <nav class="gtco-nav" role="navigation">
 	    <div class="gtco-container">
 	      <div class="row">
@@ -149,11 +146,11 @@ URL: http://gettemplates.co
 	                          <div class="gtco-container">
 
 	                        <div class="row">
-	                          <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+	                          <div class="col-md-12 text-center gtco-heading animate-box">
 	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
 	                          </div>
 	                        </div>
- @yield("sous_menu")
+ 														@yield("sous_menu")
 	                      </div>
 	                    </div>
 	              </div>
@@ -242,15 +239,6 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
-					var page = $(this).attr('href'); // Page cible
-					var speed = 750; // Durée de l'animation (en ms)
-					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-					return false;
-				});
-			});
-		</script>
+
     </body>
     </html>
