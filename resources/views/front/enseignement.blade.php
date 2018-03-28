@@ -1,9 +1,6 @@
 @extends("template_page")
 @section("tittle")
-    @parent - Infos Pratiques
-@stop
-@section("tittle1")
- Infos Pratiques
+    @parent - Enseignement
 @stop
 
 @section("menu_1")
