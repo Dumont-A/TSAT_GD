@@ -107,12 +107,12 @@ URL: http://gettemplates.co
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('infos_pratiques')}}">Infos Pratiques</a>
+	              <a href="{{route('infos')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
-	                <li><a href="{{route('infos_pratiques#content1')}}">Horaires</a></li>
-	                <li><a href="{{route('infos_pratiques#content2')}}">Devenir Membre</a></li>
-	                <li><a href="{{route('infos_pratiques#content3')}}">Réservation</a></li>
-	                <li><a href="{{route('infos_pratiques#content4')}}">Tarifs</a></li>
+	                <li><a href="{{route('infos#content1')}}">Horaires</a></li>
+	                <li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
+	                <li><a href="{{route('infos#content3')}}">Réservation</a></li>
+	                <li><a href="{{route('infos#content4')}}">Tarifs</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
