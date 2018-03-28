@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('template');
 });
 
+Route::get('/home', function () {
+    return view('template');
+});
 Auth::routes();
 
 //route pour la page club
