@@ -2,9 +2,6 @@
 @section("tittle")
     @parent - Club
 @stop
-@section("tittle1")
-Le club
-@stop
 
 @section("menu_1")
 <i class="ti-book"></i></span>
