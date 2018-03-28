@@ -1,73 +1,95 @@
 @extends("template")
+
+@section("tittle")
+{{ $contenu->titre }}
+@stop
 @section("sous_menu")
-  <div class="row menu-hidden">
+  <div class="row menu-hidden" id="sous-menu">
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#content1" ><span class="icon iconMyStyle">
-          @yield("menu_1")
+        <a href="#{{ $contenu->sousmenus[0]->slug }}" ><span class="icon iconMyStyle">
+            <i class="ti-book"></i></span>
+            <h3 class="h3Menu">{{ $contenu->sousmenus[0]->titre }}</h3>
         </a>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#content2" ><span class="icon iconMyStyle">
-          @yield("menu_2")
+        <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
+         <i class="ti-briefcase"></i></span>
+        <h3 class="h3Menu">Le comité</h3></a>
         </a>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#content3"><span class="icon iconMyStyle">
-          @yield("menu_3")
+        <a href="#{{ $contenu->sousmenus[2]->slug }}"><span class="icon iconMyStyle">
+         <i class="ico-balle"></i></span>
+        <h3 class="h3Menu">{{ $contenu->sousmenus[2]->titre }}</h3>
         </a>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#content4"><span class="icon iconMyStyle">
-          @yield("menu_4")
+        <a href="#{{ $contenu->sousmenus[3]->slug }}"><span class="icon iconMyStyle">
+          <i class="ti-tag"></i></span>
+            <h3 class="h3Menu">{{ $contenu->sousmenus[3]->titre }}</h3>
         </a>
       </div>
     </div>
   </div>
 @stop
 @section("content")
-    <div id="content1">
+
+    <div id="{{ $contenu->sousmenus[0]->slug }}">
         <div id="gtco-portfolio" class="gtco-section">
           <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-                @yield("content1")
+               <h2 class="text-center">{{ $contenu->sousmenus[0]->titre }}</h2>
+               {!! $contenu->sousmenus[0]->contenu !!}
               </div>
           </div>
         </div>
       </div>
-      <div id="content2">
+      <div id="{{ $contenu->sousmenus[1]->slug }}">
         <div id="gtco-counter" class="gtco-section">
           <div class="gtco-container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-                @yield("content2")
+               <h2 class="text-center">Le comité</h2>
+                 To Do
+                 
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="content3">
+      <div id="{{ $contenu->sousmenus[2]->slug }}">
         <div id="gtco-products">
           <div class="gtco-container">
-            @yield("content3")
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">{{ $contenu->sousmenus[2]->titre }}</h2>
+               {!! $contenu->sousmenus[2]->contenu !!}
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
-      <div id="content4">
+      <div id="{{ $contenu->sousmenus[3]->slug }}">
          <div id="gtco-portfolio">
           <div class="gtco-container">
-
-    @yield("content4")
+              <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">Les partenaires</h2>
+                To Do
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
 
       {{--
     pour des tuiles d'images
@@ -168,14 +190,21 @@
         </div>
     --}}
 
-
-
-
-
-
-
-
-
-
-
 @stop
+@section("script")
+ $('#sous-menu a').on('click', function(evt) {
+
+// bloquer le comportement par défaut: on ne rechargera pas la page
+       evt.preventDefault(); 
+       // enregistre la valeur de l'attribut  href dans la variable target
+	var target = $(this).attr('href');
+       /* le sélecteur $(html, body) permet de corriger un bug sur chrome 
+       et safari (webkit) */
+	$('html, body')
+       // on arrête toutes les animations en cours 
+       .stop()
+       /* on fait maintenant l'animation vers le haut (scrollTop) vers 
+        notre ancre target */
+       .animate({scrollTop: $(target).offset().top}, 800 );
+    });
+ @stop

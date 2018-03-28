@@ -20,6 +20,8 @@ Route::get('/home', function () {
 });
 Auth::routes();
 
+Route::get('page/{page}','PagesController@page')->name("page");
+
 //route pour la page club
 Route::get('club','ClubController@pageClub')->name("club");
 Route::get('club#content1','ClubController@pageClub')->name("club#content1");
