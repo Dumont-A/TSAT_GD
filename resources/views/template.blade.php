@@ -102,12 +102,12 @@
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a href="#">Infos Pratiques</a>
+								<a href="{{route('infos')}}">Infos Pratiques</a>
 								<ul class="dropdown">
-									<li><a href="#">Horaires</a></li>
-									<li><a href="#">Devenir Membre</a></li>
-									<li><a href="#">Réservation</a></li>
-									<li><a href="#">Tarifs</a></li>
+									<li><a href="{{route('infos#content1')}}">Horaires</a></li>
+									<li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
+									<li><a href="{{route('infos#content3')}}">Réservation</a></li>
+									<li><a href="{{route('infos#content4')}}">Tarifs</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
