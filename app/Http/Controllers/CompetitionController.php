@@ -11,9 +11,14 @@ class CompetitionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function pageCompetition()
+    {
+       return view('front.competition');
+    }
+
     public function index()
     {
-        return view("front.competitions.index");
+        //
     }
 
     /**
