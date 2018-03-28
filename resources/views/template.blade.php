@@ -79,7 +79,7 @@
 					</div>
 					<div class="col-xs-9 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="#">Accueil</a></li>
 							<li class="has-dropdown">
 								<a href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
@@ -378,7 +378,7 @@
                 <li><a href="#"><i class="icon-dribbble"></i></a></li>
               </ul>
             </p>
-          </div>    
+          </div>
         </div>
       </div>
     </footer>
@@ -387,7 +387,7 @@
     <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
-    
+
     <!-- Modal de login -->
     <div class="modal fade" id="modal" role="dialog">
       <div class="modal-dialog">
@@ -450,7 +450,7 @@
     </div>
    </div>
     <!-- FIN Modal de login -->
-    
+
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -474,7 +474,7 @@
     <!-- SCRIPT MODAL LOGIN -->
     <script>
         document.getElementById("connect").style.cursor = "pointer";
-        $(document).ready(function(){ 
+        $(document).ready(function(){
             $("#connect").click(function(){
                 $("#modal").modal();
             });
