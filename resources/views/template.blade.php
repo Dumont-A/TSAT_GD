@@ -65,7 +65,7 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-		
+
 	  <nav class="gtco-nav" role="navigation">
 	    <div class="gtco-container">
 	      <div class="row">
@@ -146,19 +146,12 @@ URL: http://gettemplates.co
 	                          <div class="gtco-container ">
 
 	                        <div class="row">
-<<<<<<< HEAD
-	                          <div class="col-md-12 text-center gtco-heading animate-box ">
-	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
-	                          </div>
-	                        </div>
- 														@yield("sous_menu")
-=======
+
 	                          <div class="col-md-12 text-center gtco-heading animate-box">
 	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
 	                          </div>
 	                        </div>
  					@yield("sous_menu")
->>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 	                      </div>
 	                    </div>
 	              </div>
@@ -223,10 +216,7 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
     </footer>
     </div>
 
@@ -234,8 +224,6 @@ URL: http://gettemplates.co
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
 
-<<<<<<< HEAD
-=======
     <!-- Modal de login -->
     <div class="modal fade" id="modal" role="dialog">
       <div class="modal-dialog">
@@ -299,7 +287,6 @@ URL: http://gettemplates.co
    </div>
     <!-- FIN Modal de login -->
 
->>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -317,9 +304,7 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-<<<<<<< HEAD
 
-=======
 
 		<script>
 			$(document).ready(function() {
@@ -341,6 +326,5 @@ URL: http://gettemplates.co
             });
         });
     </script>
->>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
     </body>
 </html>
