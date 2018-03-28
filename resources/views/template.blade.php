@@ -70,7 +70,13 @@ URL: http://gettemplates.co
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-	              <li><a id="connect" href="#">Se connecter</a></li>
+	            <?php 
+                    $connexionStatut = "Se connecter";
+                    if (Auth::check()) {
+                        $connexionStatut = Auth::user()->email;
+                    }
+                    ?>
+                    <li><a id="connect">{{$connexionStatut}}</a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
 	            <li><a href="#"><i class="ti-facebook"></i></a></li>
