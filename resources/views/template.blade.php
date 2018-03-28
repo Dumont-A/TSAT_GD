@@ -75,7 +75,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-3 col-xs-12">
-						<img src="images/logo_png.png" alt="logo transparent" height="250" width="250">
+						<img src="images/logo_png.png" alt="logo transparent" height="200" width="200" style="margin-top:-50px;">
 					</div>
 					<div class="col-xs-9 text-right menu-1">
 						<ul>
@@ -102,12 +102,12 @@
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a href="#">Infos Pratiques</a>
+								<a href="{{route('infos')}}">Infos Pratiques</a>
 								<ul class="dropdown">
-									<li><a href="#">Horaires</a></li>
-									<li><a href="#">Devenir Membre</a></li>
-									<li><a href="#">Réservation</a></li>
-									<li><a href="#">Tarifs</a></li>
+									<li><a href="{{route('infos#content1')}}">Horaires</a></li>
+									<li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
+									<li><a href="{{route('infos#content3')}}">Réservation</a></li>
+									<li><a href="{{route('infos#content4')}}">Tarifs</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
@@ -468,6 +468,9 @@
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+<<<<<<< HEAD
+
+=======
     <!-- SCRIPT MODAL LOGIN -->
     <script>
         document.getElementById("connect").style.cursor = "pointer";
@@ -477,5 +480,6 @@
             });
         });
     </script>
+>>>>>>> 8b5d4e4df4723faf7064c8629e628e0702036e07
     </body>
     </html>
