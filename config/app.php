@@ -181,12 +181,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
-<<<<<<< HEAD
         Collective\Html\HtmlServiceProvider::class,
-=======
         Barryvdh\Elfinder\ElfinderServiceProvider::class
-
->>>>>>> c0296bec7941a66222c5ddc5b92b6a750677bcfb
 
     ],
 
