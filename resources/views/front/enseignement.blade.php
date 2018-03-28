@@ -1,14 +1,14 @@
 @extends("template_page")
 @section("tittle")
-    @parent - Infos Pratiques
+    @parent - Enseignement
 @stop
 @section("tittle1")
- Infos Pratiques
+  Enseignement
 @stop
 
 @section("menu_1")
 <i class="ti-book"></i></span>
-<h3 class="h3Menu">L'équipe pédagogie</h3>
+<h3 class="h3Menu">L'équipe pédagogique</h3>
 @stop
 
 @section("menu_2")

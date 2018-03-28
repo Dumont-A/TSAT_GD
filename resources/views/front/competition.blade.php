@@ -1,9 +1,9 @@
 @extends("template_page")
 @section("tittle")
-    @parent - Infos Pratiques
+    @parent - Compétition
 @stop
 @section("tittle1")
- Infos Pratiques
+ Compétition
 @stop
 
 @section("menu_1")
