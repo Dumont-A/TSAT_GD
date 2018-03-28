@@ -1,6 +1,5 @@
 @extends("template")
-@section ('content')
-Test liens utiles
+@section ('content1')
 
 
 @stop
