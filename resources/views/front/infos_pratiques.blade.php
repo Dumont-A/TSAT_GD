@@ -7,7 +7,7 @@
 
 @section("menu_1")
 <i class="ti-book"></i></span>
-<h3 class="h3Menu">Horaire</h3>
+<h3 class="h3Menu">Horaires</h3>
 @stop
 
 @section("menu_2")
