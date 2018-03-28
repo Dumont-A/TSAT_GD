@@ -1,4 +1,4 @@
-@extends("template")
+@extends("template_page")
 @section("tittle")
     @parent - Club
 @stop
