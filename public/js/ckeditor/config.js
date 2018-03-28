@@ -22,14 +22,9 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'about', groups: [ 'about' ] }
 	];
 
-	config.removeButtons = 'About,ShowBlocks,Flash,PageBreak,Iframe,Anchor,Language,BidiRtl,BidiLtr,ImageButton,Button,Select,Textarea,TextField,Radio,Checkbox,Form,HiddenField,SelectAll,PasteFromWord,Source';
+	config.removeButtons = 'About,ShowBlocks,Flash,PageBreak,Iframe,Anchor,Language,BidiRtl,BidiLtr,Checkbox,Form,HiddenField,SelectAll,PasteFromWord,Source';
 	
 	//Ajouté pour l'upload d'images
-	config.filebrowserBrowseUrl = '/PPE4_Tennis/public/js/kcfinder/browse.php?opener=ckeditor&type=files';
-    config.filebrowserImageBrowseUrl = '/PPE4_Tennis/public/js/kcfinder/browse.php?opener=ckeditor&type=images';
-    config.filebrowserFlashBrowseUrl = '/PPE4_Tennis/public/js/kcfinder/browse.php?opener=ckeditor&type=flash';
-    config.filebrowserUploadUrl = '/PPE4_Tennis/public/js/kcfinder/upload.php?opener=ckeditor&type=files';
-    config.filebrowserImageUploadUrl = '/PPE4_Tennis/public/js/kcfinder/upload.php?opener=ckeditor&type=images';
-    config.filebrowserFlashUploadUrl = '/PPE4_Tennis/public/js/kcfinder/upload.php?opener=ckeditor&type=flash';
+	config.filebrowserImageBrowseUrl = '/TSAT_GD/public/elfinder/ckeditor';
              
 };
