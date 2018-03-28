@@ -94,9 +94,10 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('coordonnee/addUserStatut/{id}', 'CoordonneeController@addUserStatut')->name('add_user_statut');
     Route::delete('coordonnee/deleteStatut/{id}', 'CoordonneeController@deleteStatut')->name('deleteStatut');
 
-    // Contenu
+    // Menu
     //
-    Route::get('contenu/edit/{page}', 'ContenuController@edit')->name('contenu.edit');
+    Route::resource('contenu', 'ContenuController');
+    Route::get('contenu/edit/{id_page}', 'ContenuController@edit')->name('contenu.edit');
 
     // Message
     //

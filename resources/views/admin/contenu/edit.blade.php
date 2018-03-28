@@ -2,7 +2,7 @@
 
 @section('title')
 <h1>
-    Modifier la page : 
+    Modifier la page :
     <small>{{ $contenu["titre"] }}</small>
 </h1>
 @stop
@@ -15,21 +15,12 @@
     <div class="col-md-12">
         <div class="contenu">
             <div class="box box-info">
-                {!! Form::open(['route' => ['contenu.update', $contenu["page"]], 'method' => 'put', 'files' => true]) !!}               
-                <div class="box-header">
-                    <h3 class="box-title">  </h3>
-
-                    <div class="form-group">
-                        <label>Titre de la page :  </label>
-                        <input class="form-control" value="{{ $contenu["titre"] }}" name="titre"> 
-                    </div>
-
-                </div>
+                {!! Form::open(['route' => ['contenu.update', $contenu["slug"]], 'method' => 'put', 'files' => true]) !!}
                 <!-- /.box-header -->
                 <div class="box-body pad">
 
                     <div class="form-group">
-                        {{ Form::textarea('editor', $contenu["ckeditor"],['id'=>'editor','class'=>'form-control','placeholder'=>'CkEditor']) }}
+                        {{ Form::textarea('editor', $contenu["contenu"],['id'=>'editor','class'=>'form-control','placeholder'=>'CkEditor']) }}
                     </div>
 
                 </div>
@@ -44,5 +35,3 @@
 </div>
 
 @stop
-
-
