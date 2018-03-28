@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('template');
 });
 
+Route::get('/home', function () {
+    return view('template');
+});
 Auth::routes();
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
