@@ -65,7 +65,6 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-<<<<<<< HEAD
 	  <nav class="gtco-nav" role="navigation">
 	    <div class="gtco-container">
 	      <div class="row">
@@ -215,7 +214,6 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
-=======
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
 				<div class="row">
@@ -536,7 +534,6 @@ URL: http://gettemplates.co
           </div>
         </div>
       </div>
->>>>>>> b714f7bb279e592a482f8ab949bea568c0ec8092
     </footer>
     </div>
 
@@ -544,8 +541,6 @@ URL: http://gettemplates.co
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
 
-<<<<<<< HEAD
-=======
     <!-- Modal de login -->
     <div class="modal fade" id="modal" role="dialog">
       <div class="modal-dialog">
@@ -609,7 +604,6 @@ URL: http://gettemplates.co
    </div>
     <!-- FIN Modal de login -->
 
->>>>>>> 9ba9bab0d494aafde84b731be6d3cdf1c5df184a
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -627,7 +621,6 @@ URL: http://gettemplates.co
     <script src="js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-<<<<<<< HEAD
 		<script>
 			$(document).ready(function() {
 				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -638,10 +631,7 @@ URL: http://gettemplates.co
 				});
 			});
 		</script>
-=======
-<<<<<<< HEAD
 
-=======
     <!-- SCRIPT MODAL LOGIN -->
     <script>
         document.getElementById("connect").style.cursor = "pointer";
@@ -651,7 +641,5 @@ URL: http://gettemplates.co
             });
         });
     </script>
->>>>>>> 8b5d4e4df4723faf7064c8629e628e0702036e07
->>>>>>> 9ba9bab0d494aafde84b731be6d3cdf1c5df184a
     </body>
     </html>
