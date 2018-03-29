@@ -1,84 +1,65 @@
 @extends('layout_back')
 
 @section('title')
-<h1>
-    Ajout d'un partenaire
-    <small>- ajoute un partenaire</small>
-</h1>
+  <h1>Ajout d'un partenaire</h1>
 @stop
 
 @section('content')
-
+<!-- FORMULAIRE DE CREATION D'UN PARTENAIRE -->
 {!! Form::open(['route' => "partenaire.store",'files' => true, 'method' => 'post']) !!}
-<div class="form-group">
-    <label>Nom du parenaire : </label>
-    <input class="form-control" placeholder="le nom du partenaire" name="name">
-</div>
+  <div class='form-row'>
+    <div class='form-group col-md-6'>
+      <label>Dénomination : </label>
+      <input class="form-control" placeholder="Denomination partenaire" name="name">
+    </div>
+    <div class='form-group col-md-6'>
+      <label>Description : </label>
+      <input class="form-control" placeholder="Description du partenaire" name="description">
+    </div>
+  </div>
 
-<div class="form-group">
-    <label>Description du parenaire : </label>
-    <input class="form-control" placeholder="Une description du partenaire" name="description">
-</div>
+  <div class='form-group col-md-12'>
+    <label>Adresse : </label>
+    <input class="form-control" placeholder="Adresse postale" name="adresse">
+  </div>
 
-<div class="form-group">
-    <label>Ville du parenaire : </label>
-    <input class="form-control" placeholder="la ville du partenaire" name="ville">
-</div>
+  <div class='form-row'>
+    <div class='form-group col-md-6'>
+      <label>Ville : </label>
+      <input class="form-control" placeholder="Ville" name="ville">
+    </div>
+    <div class='form-group col-md-6'>
+      <label>Code postal : </label>
+      <input class="form-control" placeholder="Code postal" name="cp">
+    </div>
+  </div>
 
-<div class="form-group">
-    <label>Code postal ddu parenaire : </label>
-    <input class="form-control" placeholder="le code postal du partenaire" name="cp">
-</div>
+  <div class="form-group col-md-12">
+    <label>Téléphone : </label>
+    <input class="form-control" placeholder="Telephone partenaire" name="tel">
+  </div>
 
-<div class="form-group">
-    <label>Adresse du parenaire : </label>
-    <input class="form-control" placeholder="l'adresse du partenaire" name="adresse">
-</div>
+  <div class="form-row">
+    <div class='form-group col-md-4'>
+      <label>Lien du site : </label>
+      <input class="form-control" placeholder="Lien du site partenaire" name="site">
+    </div>
+    <div class='form-group col-md-4'>
+      <label>Lien page Facebook : </label>
+      <input class="form-control" placeholder="Facebook partenaire" name="fb">
+    </div>
+    <div class='form-group col-md-4'>
+      <label>Lien Twitter : </label>
+      <input class="form-control" placeholder="Twitter partenaire" name="twitter">
+    </div>
+  </div>
 
-<div class="form-group">
-    <label>Telephone du parenaire : </label>
-    <input class="form-control" placeholder="le telephone du partenaire" name="tel">
-</div>
+  <div class="form-group col-md-12">
+    <!-- INSERTION DE LA ZONE DE RECHERCHE D'UN LOGO SUR LE SERVEUR -> EL-FINDER? -->
+  </div>
 
-<div class="form-group">
-    <label>Lien du site du parenaire : </label>
-    <input class="form-control" placeholder="le site du partenaire si il y a" name="site">
-</div>
-
-<div class="form-group">
-    <label>Lien de la page Facebook du parenaire : </label>
-    <input class="form-control" placeholder="le facebook du partenaire si il y a " name="fb">
-</div>
-
-<div class="form-group">
-    <label>Lien du Twitter du parenaire : </label>
-    <input class="form-control" placeholder="le twitter du partenaire si il y a" name="twitter">
-</div>
-
-<div class="form-group">
-    <label>Ajouter un logo :</label>
-    <input type="file" name="logo">
-</div>
-<button type="submit" class="btn btn-success">Créer</button>
-<button type="reset" class="btn btn-danger">Effacer le formulaire</button>
+  <button type="submit" class="btn btn-success">Créer</button>
+  <button type="reset" class="btn btn-danger">Effacer le formulaire</button>
 {!! Form::close() !!}
-<!--<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Uploading Image using dropzone.js and Laravel</h1>
-                {!! Form::open([ 'route' => "photo.store", 'files' => true, 'enctype' => 'multipart/form-data', 'class' => 'dropzone', 'id' => 'book-image' ]) !!}
-                <div>
-                    <h3>Upload Image</h3>
-                </div>
-                {!! Form::close() !!}
-            </div>
-        </div>
-    </div>-->
-                          
-
-
-
-
-
 
 @stop
