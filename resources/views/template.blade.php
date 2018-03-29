@@ -100,11 +100,6 @@ URL: http://gettemplates.co
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
-<<<<<<< HEAD
-	            <li class="active"><a id="li_menu" href="index.html">Accueil</a></li>
-	            <li class="has-dropdown">
-	              <a id="li_menu" href="{{route('page',['page'=>'club'])}}">Club</a>
-=======
 	            <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
 	            <li class="has-dropdown">
 	              <a href="{{route('club')}}">Club</a>
@@ -114,7 +109,6 @@ URL: http://gettemplates.co
 	                <li><a href="#">Réservation</a></li>
 	                <li><a href="#">Tarifs</a></li>
 	              </ul>
->>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
 	            </li>
 	            <li class="has-dropdown">
 	              <a id="li_menu" href="{{route('competition')}}">Compétitions</a>
@@ -126,11 +120,7 @@ URL: http://gettemplates.co
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-<<<<<<< HEAD
-	              <a id="li_menu" href="{{route('infos')}}">Infos Pratiques</a>
-=======
 	              <a href="{{route('info-pratique')}}">Infos Pratiques</a>
->>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
 	              <ul class="dropdown">
 	                <li><a href="#">Horaires</a></li>
 	                <li><a href="#">Devenir Membre</a></li>
@@ -234,10 +224,7 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
     </footer>
     </div>
 
@@ -377,16 +364,8 @@ if (Auth::check())
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
-<<<<<<< HEAD
     <script src="js/main.js"></script>
 
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cecaa27f815833682f225dd0f44d59f25fc0dfe1
->>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -420,11 +399,6 @@ if (Auth::check())
         });
     </script>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cecaa27f815833682f225dd0f44d59f25fc0dfe1
->>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
     <script>
         @yield('script')
     </script>
