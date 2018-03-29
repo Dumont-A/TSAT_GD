@@ -35,7 +35,7 @@
                     <table class="table table-bordered" >
                         <thead class="thead-inverse" >
                             <tr>
-                                
+
                                 <th class="text-center">Noms d'utilisateur</th>
                                 <th class="text-center">Valider</th>
                                 <th class="text-center">Statut</th>
@@ -45,11 +45,11 @@
                         <tbody>
                             @foreach ($tab_users as $unUser)
                             <tr>
-                               
+
                                 <td class="col-md-6 text-center"  id="td{{ $unUser["id"] }}">
                                     <h4> {{ $unUser["nom"] }}  {{ $unUser["prenom"] }} </h4>
                                 </td>
-                                <td class="col-md-1 text-center"> 
+                                <td class="col-md-1 text-center">
                                     @if ( $unUser->valider == 1)
 
 
@@ -63,25 +63,40 @@
                                     {!! Form::open(['route' => ["user.edit", $unUser->id], 'method' => 'get']) !!}
                                     <button type="submit" class="btn btn-danger btn-circle" ><i class="fa fa-times"></i></button>
                                     {!! Form::close() !!}
-                                    @endif           
+                                    @endif
                                 </td>
 
 
-                                <td class="col-md-4 text-center"> 
-                                    @if ( $unUser->admin == 1 and  $unUser->joueur == 1)
+                                <td class="col-md-4 text-center">
+                                  @if ($unUser->est_arbitre == 1 and  $unUser->est_joueur == 1 and $unUser->est_admin == 1)
+
+                                    <h4> Arbitre, Joueur et Administrateur </h4>
+
+                                  @elseif ( $unUser->est_admin == 1 and  $unUser->est_joueur == 1)
 
                                     <h4>   Joueur et Administrateur </h4>
 
+                                  @elseif ($unUser->est_arbitre == 1 and  $unUser->est_joueur == 1)
 
-                                    @elseif ($unUser->admin == 1) 
+                                    <h4> Arbitre et Joueur </h4>
+
+                                  @elseif ($unUser->est_arbitre == 1 and  $unUser->est_admin == 1)
+
+                                    <h4> Arbitre et Administrateur </h4>
+
+
+                                  @elseif ($unUser->est_admin == 1)
 
                                     <h4> Administrateur </h4>
 
 
-                                    @elseif ($unUser->joueur ==1)
+                                  @elseif ($unUser->est_joueur ==1)
 
                                     <h4> Joueur </h4>
 
+                                  @elseif ($unUser->est_arbitre ==1)
+
+                                    <h4> Arbitre </h4>
 
                                     @else
 
@@ -113,7 +128,7 @@
 
                             </tr>
                             @endforeach
-                        </tbody> 
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -122,4 +137,3 @@
 </div>
 
 @stop
-

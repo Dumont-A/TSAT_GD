@@ -42,7 +42,7 @@
                         </thead>
                         <tbody>
                             @forelse ($tab_news as $uneNews)
-                            <tr>
+                            <tr id="row{{$uneNews->id}}">
                                 <td class="col-md-1">
                                     {{ $uneNews["id"] }}
                                 </td>
@@ -99,22 +99,27 @@
 @isset($uneNews)
 @section('script')
   <script>
-
     $('#confirmationdel').click(function(){
-alert('e');
+
       $.ajax({
         type:'DELETE',
         url:'news/'+ {{ $uneNews->id }},
         data:$("#form"+{{ $uneNews->id }}).serialize(),
         datatype:'json',
         success:function(data){
-          alert('ok');
-          // alert("Le statut " + data.libelle + " a été supprimé");
-          $("#"+data.id).css('color','red');
-          $("#"+data.id).fadeOut(2500, function() {
-            $("#"+data.id).remove();
+          $("#flash_error").hide();
+          $("#flash_success").hide();
+          $("#row"+data.id).css('color','red');
+          $("#row"+data.id+ " a").css('color','red');
+          $("#row"+data.id).fadeOut(2500, function() {
+            $("#row"+data.id).remove();
           })
+          $("#session_success").html('<center><strong>'+ data.message +' </strong></center>');
+          $('#session_success2').show();
           $('#confirm-delete').modal('hide');
+          $('#session_success2').fadeOut(3600, function() {
+            $('#session_success2').hide();
+          })
         }
       });
 

@@ -43,32 +43,39 @@ class UserController extends Controller {
         $request->session()->flash('success', 'L\'utilisateur à été Ajouté !');
 
 
-        if ($request->get('admin') == null) {
-            $admin = false;
+        if ($request->get('est_admin') == null) {
+            $est_admin = false;
         } else {
-            $admin = true;
+            $est_admin = true;
         }
 
-        if ($request->get('joueur') == null) {
-            $joueur = false;
+        if ($request->get('est_joueur') == null) {
+            $est_joueur = false;
         } else {
-            $joueur = true;
+            $est_joueur = true;
         }
-      
-        
-   
-        
+
+        if ($request->get('est_arbitre') == null) {
+            $est_arbitre = false;
+        } else {
+            $est_arbitre = true;
+        }
+
+
+
+
         User::create([
             'nom' => $request->get('nom'),
             'prenom' => $request->get('prenom'),
             'email' => $request->get('email'),
             'telephone' => $request->get('telephone'),
             'password' => bcrypt($request->get('password')),
-            'admin' => $admin,
-            'joueur' => $joueur,
-            'valider'=> true,   
-            
-        
+            'est_admin' => $est_admin,
+            'est_joueur' => $est_joueur,
+            'est_arbitre' => $est_arbitre,
+            'valider'=> true,
+
+
         ]);
 
         return redirect()->route("user.index");
@@ -81,7 +88,7 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
-        
+
     }
 
     /**
@@ -106,36 +113,42 @@ class UserController extends Controller {
     public function update(Request $request, $id) {
         $leUser = User::find($id);
 
-        if ($request->get('admin') == null) {
-            $admin = false;
+        if ($request->get('est_admin') == null) {
+            $est_admin = false;
         } else {
-            $admin = true;
+            $est_admin = true;
         }
 
-        if ($request->get('joueur') == null) {
-            $joueur = false;
+        if ($request->get('est_joueur') == null) {
+            $est_joueur = false;
         } else {
-            $joueur = true;
+            $est_joueur = true;
+        }
+        if ($request->get('est_arbitre') == null) {
+            $est_arbitre = false;
+        } else {
+            $est_arbitre = true;
         }
         if ($request->get('valider') == null) {
             $valider = false;
         } else {
             $valider = true;
         }
-     
-     
-        
+
+
+
         $leUser->nom = $request->get('nom');
         $leUser->prenom = $request->get('prenom');
         $leUser->email = $request->get('email');
         $leUser->telephone = $request->get('telephone');
-     
+
         if ($request->get('password') !="") {
-              $leUser->password = bcrypt($request->get('password'));       
+              $leUser->password = bcrypt($request->get('password'));
         }
-        
-        $leUser->joueur = $joueur;
-        $leUser->admin = $admin;
+
+        $leUser->est_admin = $est_admin;
+        $leUser->est_joueur = $est_joueur;
+        $leUser->est_arbitre = $est_arbitre;
         $leUser->valider = $valider;
 
 

@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-    
+
     /**
      * The attributes that are mass assignable.
      *
@@ -17,7 +17,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
 
-  'nom','prenom', 'email', 'telephone', 'password', 'joueur' , 'admin', 'valider',
+  'nom','prenom', 'email', 'telephone', 'password', 'joueur' , 'admin', 'arbitre','valider',
 
 
     ];
@@ -30,12 +30,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    
+
     public function comite()
     {
         return $this->belongsTo('App\Models\Comite');
     }
-    
+
     public function documents()
     {
         return $this->hasMany('App\Models\Document');
@@ -45,4 +45,3 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Rencontre')->withPivot('confirmation');
     }
 }
-

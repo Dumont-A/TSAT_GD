@@ -1,8 +1,14 @@
 @extends("template")
 @section("tittle")
+<<<<<<< HEAD
+    @parent - Enseignement
+
+=======
 Enseignement
+>>>>>>> 3a64baae39c6465b41bbd8b79af9470c14681f7f
 @stop
 @section("tittle1")
+  Enseignement
 @stop
 
 @section("menu_1")
