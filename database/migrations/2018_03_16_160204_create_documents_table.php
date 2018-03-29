@@ -19,7 +19,8 @@ class CreateDocumentsTable extends Migration {
 			$table->text('contenu', 65535);
 			$table->string('type_document');
 			$table->boolean('public')->nullable();
-			$table->integer('id_users')->index('FK_documents_id_users');
+			$table->integer('user_id')->index('FK_documents_id_users');
+			$table->timestamps();
 		});
 	}
 

@@ -11,31 +11,31 @@ class ContenuSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'Le club',
           'slug' => 'club',
       ]);
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'Compétition',
           'slug' => 'competition',
       ]);
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'Infos Pratique',
           'slug' => 'info-pratique',
       ]);
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'L\'enseignement',
           'slug' => 'l-enseignement',
       ]);
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'La galerie',
           'slug' => 'galerie',
       ]);
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'Les liens utiles',
           'slug' => 'lien-utiles',
       ]);
-      DB::table('menu')->insert([
+      DB::table('menus')->insert([
           'titre' => 'Contact',
           'slug' => 'contact',
       ]);
@@ -99,7 +99,7 @@ class ContenuSeeder extends Seeder
           'titre' => 'Les horaires',
           'contenu'=> null,
           'slug' => 'horaires',
-          'menu_id' => 3,          
+          'menu_id' => 3,
           'ordre' => 1,
       ]);
       DB::table('sous_menus')->insert([
@@ -142,7 +142,7 @@ class ContenuSeeder extends Seeder
           'contenu'=> null,
           'slug' => 'cours-colectifs',
           'menu_id' => 4,
-          'ordre' => 3,          
+          'ordre' => 3,
       ]);
       DB::table('sous_menus')->insert([
           'titre' => 'Les stages',

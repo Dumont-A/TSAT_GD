@@ -14,7 +14,7 @@ class AddForeignKeysToSousMenusTable extends Migration {
 	{
 		Schema::table('sous_menus', function(Blueprint $table)
 		{
-			$table->foreign('menu_id', 'FK_sous_menus_menu_id')->references('id')->on('menu')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('menu_id', 'FK_sous_menus_menu_id')->references('id')->on('menus')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 

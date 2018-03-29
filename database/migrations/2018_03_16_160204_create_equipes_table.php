@@ -17,6 +17,7 @@ class CreateEquipesTable extends Migration {
 			$table->integer('id', true);
 			$table->string('libelle');
 			$table->string('division');
+			$table->timestamps();
 		});
 	}
 

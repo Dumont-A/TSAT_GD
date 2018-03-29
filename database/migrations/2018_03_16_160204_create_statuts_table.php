@@ -16,6 +16,7 @@ class CreateStatutsTable extends Migration {
 		{
 			$table->integer('id', true);
 			$table->string('libelle');
+			$table->timestamps();
 		});
 	}
 

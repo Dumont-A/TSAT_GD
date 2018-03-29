@@ -14,7 +14,7 @@ class AddForeignKeysToDocumentsTable extends Migration {
 	{
 		Schema::table('documents', function(Blueprint $table)
 		{
-			$table->foreign('id_users', 'FK_documents_id_users')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('user_id', 'FK_documents_id_users')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 
