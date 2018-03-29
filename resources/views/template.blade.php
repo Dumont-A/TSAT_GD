@@ -71,7 +71,20 @@ URL: http://gettemplates.co
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-	              <li><a id="connect" href="#">Se connecter</a></li>
+                    <?php
+                    //PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM
+                        $connexionStatut = "Se connecter";
+                        if (Auth::check()) //SI le user est connecté on change l'id pour la modal de profil
+                        {
+                            //Définition des infos utilisateur pour modal profil
+                            $connexionStatut = strtoupper(Auth::user()->nom) ." ". Auth::user()->prenom;
+                            echo '<li><a id="profil" href="#">'.$connexionStatut.'</a></li>';
+                        }
+                        else //Si il est déconnecté, on change l'id pour la modal de connexion
+                        {
+                            echo '<li><a id="login" href="#">'.$connexionStatut.'</a></li>';
+                        }
+                    ?>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
 	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
@@ -87,35 +100,51 @@ URL: http://gettemplates.co
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
+<<<<<<< HEAD
 	            <li class="active"><a id="li_menu" href="index.html">Accueil</a></li>
 	            <li class="has-dropdown">
 	              <a id="li_menu" href="{{route('page',['page'=>'club'])}}">Club</a>
+=======
+	            <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
+	            <li class="has-dropdown">
+	              <a href="{{route('club')}}">Club</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
+	              </ul>
+>>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
 	            </li>
 	            <li class="has-dropdown">
 	              <a id="li_menu" href="{{route('competition')}}">Compétitions</a>
 	              <ul class="dropdown">
-	                <li><a href="{{route('competition#content1')}}">Tournois</a></li>
-	                <li><a href="{{route('competition#content2')}}">Les équipes</a></li>
-	                <li><a href="{{route('competition#content3')}}">Les arbitres</a></li>
-	                <li><a href="{{route('competition#content4')}}">Résultats</a></li>
+	                <li><a href="#">Tournois</a></li>
+	                <li><a href="#">Les équipes</a></li>
+	                <li><a href="#">Les arbitres</a></li>
+	                <li><a href="#">Résultats</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
+<<<<<<< HEAD
 	              <a id="li_menu" href="{{route('infos')}}">Infos Pratiques</a>
+=======
+	              <a href="{{route('info-pratique')}}">Infos Pratiques</a>
+>>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
 	              <ul class="dropdown">
-	                <li><a href="{{route('infos#content1')}}">Horaires</a></li>
-	                <li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
-	                <li><a href="{{route('infos#content3')}}">Réservation</a></li>
-	                <li><a href="{{route('infos#content4')}}">Tarifs</a></li>
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
 	              <a id="li_menu" href="{{route('enseignement')}}">L'enseignement</a>
 	              <ul class="dropdown">
-	                <li><a href="{{route('enseignement#content1')}}">L'équipe pédagogique</a></li>
-	                <li><a href="{{route('enseignement#content2')}}">L'école de tennis</a></li>
-	                <li><a href="{{route('enseignement#content3')}}">Les cours collectifs adultes</a></li>
-	                <li><a href="{{route('enseignement#content4')}}">Les stages</a></li>
+	                <li><a href="#">L'équipe pédagogique</a></li>
+	                <li><a href="#">L'école de tennis</a></li>
+	                <li><a href="#">Les cours collectifs adultes</a></li>
+	                <li><a href="#">Les stages</a></li>
 	              </ul>
 	            </li>
 	            <li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
@@ -155,8 +184,6 @@ URL: http://gettemplates.co
 	    </header>
 
 	@yield("content")
-
-
 
 	  <footer id="gtco-footer" role="contentinfo">
 	    <div class="gtco-container">
@@ -207,6 +234,10 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
     </footer>
     </div>
 
@@ -215,12 +246,12 @@ URL: http://gettemplates.co
     </div>
 
     <!-- Modal de login -->
-    <div class="modal fade" id="modal" role="dialog">
+    <div class="modal fade" id="modalLogin" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modalLogin">&times;</button>
             <h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
           </div>
           <div class="modal-body">
@@ -274,8 +305,61 @@ URL: http://gettemplates.co
         </div>
       </div>
     </div>
-   </div>
     <!-- FIN Modal de login -->
+
+    <!-- Modal de PROFIL -->
+<?php
+if (Auth::check())
+    {
+        $nom = strtoupper(Auth::user()->nom);
+        $prenom = Auth::user()->prenom;
+        $email = Auth::user()->email;
+        $telephone = Auth::user()->telephone;
+        echo '    <div class="modal fade" id="modalProfil" role="dialog">
+        <div class="modal-dialog">
+
+           <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4>Mon profil</h4>
+            </div>
+            <div class="row">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="names"> Nom, prénom : </label>
+                            '.$nom.' '.$prenom.'
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="email"> Email : </label>
+                            '.$email.'
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="telephone"> Téléphone : </label>
+                            '.$telephone.'
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="logoutProfil" class="btn btn-primary">Se déconnecter</button>
+                <button type="button" id="toAdmin" class="btn btn-primary">Vers mode admin</button>
+            </div>
+          </div>
+        </div>
+    </div> ';
+    }
+?>
+    <!-- FIN Modal de PROFIL -->
 
     <!-- jQuery -->
     <script src="{{ url('js/jquery.min.js')}}"></script>
@@ -293,8 +377,16 @@ URL: http://gettemplates.co
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
+<<<<<<< HEAD
     <script src="js/main.js"></script>
 
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cecaa27f815833682f225dd0f44d59f25fc0dfe1
+>>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -310,15 +402,29 @@ URL: http://gettemplates.co
 		</script>
 
     <!-- SCRIPT MODAL LOGIN -->
+    <!--Définit les variables du script pour la bonne modal -->
+    <?php
+    $identifiant = "#login";
+    $nom_modal = "#modalLogin";
+        if (Auth::check())
+        {
+            $identifiant = "#profil";
+            $nom_modal = "#modalProfil";
+        }
+    ?>
     <script>
-        document.getElementById("connect").style.cursor = "pointer";
         $(document).ready(function(){
-            $("#connect").click(function(){
-                $("#modal").modal();
+            $(<?php echo '"'.$identifiant.'"'; ?>).click(function(){
+                $(<?php echo '"'.$nom_modal.'"'; ?>).modal();
             });
         });
     </script>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cecaa27f815833682f225dd0f44d59f25fc0dfe1
+>>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
     <script>
         @yield('script')
     </script>
