@@ -1,55 +1,40 @@
 @extends('layout_back')
 
-
+@section('title')
+  <h1>
+    DOC<small>- ajoute des documents</small>
+  </h1>
+@stop
 @section('content')
 
-<h1>
-    DOC
-    <small>- ajoute des documents</small>
-</h1>
 
-{!! Form::open(['route' => "document.store",'files' => true, 'method' => 'post']) !!}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-info">
+        {!! Form::open(['route' => "document.store",'files' => true, 'method' => 'post']) !!}
 
-<div class="form-group  col-md-offset-4">
-    <label>Nom de l'image : </label>
-    <div class="col-md-5">
-        <input class="form-control" placeholder="Mon image" name="nom">
-    </div>
-</div>
+        <div class="box-header">
+            <h3 class="box-title">  </h3>
 
-
-
-@if(Auth::check())
-
-
-
-
-
-
-<input type="hidden" name="user_id" value="" />             
-<div class="form-group col-md-offset-4">
-    <label>Parcourir image :</label>
-    <input type="file" name="document">
-</div> 
-<button type="submit" class="btn btn-success col-md-offset-4">Créer</button>
-<button type="reset" class="btn btn-danger col-md-offset-4 ">Effacer le formulaire</button>
-{!! Form::close() !!}
-<!--<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Uploading Image using dropzone.js and Laravel</h1>
-                {!! Form::open([ 'route' => "photo.store", 'files' => true, 'enctype' => 'multipart/form-data', 'class' => 'dropzone', 'id' => 'book-image' ]) !!}
-                <div>
-                    <h3>Upload Image</h3>
-                </div>
-                {!! Form::close() !!}
+            <div class="form-group">
+                <label>Nom du document :  </label>
+                <input class="form-control" placeholder="Mon document" name="titre">
             </div>
+
         </div>
-    </div>-->
 
-@endif
+        <div class="box-body pad">
+        <div class="form-group">
+          <label>Parcourir image :</label>
+          <input type="file" name="document">
+        </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
+        <button type="reset" class="btn btn-danger btn-lg btn-block">Effacer le formulaire</button>
+        {!! Form::close() !!}
 
-
-
-
+      </div>
+      <!-- /.box -->
+    </div>
+  </div>
 @stop

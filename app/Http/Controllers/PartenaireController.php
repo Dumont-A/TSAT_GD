@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Partenaire;
-use Intervention\Image\ImageManager;
-use Illuminate\Contracts\Filesystem\Factory as Storage;
-use Illuminate\Filesystem\Filesystem;
-use Image;
-Use File;
+
 
 class PartenaireController extends Controller
 {
@@ -42,7 +38,7 @@ class PartenaireController extends Controller
     public function store(Request $request)
     {
         $request->session()->flash('success', 'Le partenaire à été Ajouté !');
-        
+
         $partenaire = new Partenaire();
 
         $partenaire->nom = $request->get('name');
@@ -54,18 +50,9 @@ class PartenaireController extends Controller
         $partenaire->site = $request->get('site');
         $partenaire->facebook = $request->get('fb');
         $partenaire->twitter = $request->get('twitter');
-    
-          
-        $logo = $request->file('logo');
-        
-        $imagename = time().'.'.$logo->getClientOriginalExtension();    
-        $destinationPath = public_path('img/partenaire/');
-        Image::make($logo->getRealPath())->resize(320, null, function ($constraint) {
-    $constraint->aspectRatio();
-})
-                ->save($destinationPath.'/'.$imagename);
-        $logo->move($destinationPath, $imagename);              
-      
+
+
+
         $partenaire->logo = $imagename;
 
         $partenaire->save();
@@ -105,7 +92,7 @@ class PartenaireController extends Controller
     public function update(Request $request, $id)
     {
         $request->session()->flash('success', 'Le partenaire à été modifié !');
-        
+
         $partenaire = Partenaire::find($id);
 
         $partenaire->nom = $request->get('name');
@@ -117,36 +104,14 @@ class PartenaireController extends Controller
         $partenaire->site = $request->get('site');
         $partenaire->facebook = $request->get('fb');
         $partenaire->twitter = $request->get('twitter');
- 
+
         $oldLogo = $partenaire->logo;
         $logo = $request->file('logo');
-        
-        
-        
-        
-        
-       if (File::exists($logo))
-        {
-          $imagename = time().'.'.$logo->getClientOriginalExtension();    
-        $destinationPath = public_path('img/partenaire/');
-        Image::make($logo->getRealPath())->resize(320, null, function ($constraint) {
-        $constraint->aspectRatio();
-        })
-                ->save($destinationPath.'/'.$imagename);
-        $logo->move($destinationPath, $imagename);              
-        
-        $partenaire->logo = $imagename;  
-        
-        File::delete("img/partenaire/" . $oldLogo);
-        }
-        else
-        {
-            $partenaire->logo = $oldLogo;
-        }
+
 
         $partenaire->save();
-        
-        
+
+
         return redirect()->route("partenaire.index");
     }
 
