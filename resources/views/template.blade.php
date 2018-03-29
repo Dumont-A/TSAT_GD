@@ -33,28 +33,28 @@ URL: http://gettemplates.co
 
 	<!-- Animate.css -->
 
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="{{ url('css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
 
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="{{ url('css/icomoon.css')}}">
 	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
+	<link rel="stylesheet" href="{{ url('css/themify-icons.css')}}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/icontennis.css">
+	<link rel="stylesheet" href="{{ url('css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{ url('css/icontennis.css')}}">
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="{{ url('css/magnific-popup.css')}}">
 
 	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/MyStyle.css">
+	<link rel="stylesheet" href="{{ url('css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{ url('css/owl.theme.default.min.css')}}">
+	<link rel="stylesheet" href="{{ url('css/MyStyle.css')}}">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{{ url('css/style.css')}}">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="{{ url('js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -80,22 +80,13 @@ URL: http://gettemplates.co
 	      </div>
 	      <div class="row">
 	        <div class="col-sm-3 col-xs-12">
-	          <img src="images/logo_png.png" alt="logo transparent" height="200" width="200">
+	          <img src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="200" width="200">
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
 	            <li class="active"><a href="index.html">Accueil</a></li>
 	            <li class="has-dropdown">
-	              <a href="{{route('club')}}">Club</a>
-	              <ul class="dropdown">
-	                <li><a href="{{route('club#content1')}}">Historique du club</a></li>
-	                <li><a href="{{route('club#content2')}}">Le comité</a></li>
-	                <li><a href="{{route('club#content3')}}">Installations</a></li>
-	                <li><a href="{{route('club#content4')}}">Partenaires</a></li>
-	              </ul>
-
-	              {{-- <a href="{{route('club')}}">Le club</a> --}}
-
+	              <a href="{{route('page',['page'=>'club'])}}">Club</a>
 	            </li>
 	            <li class="has-dropdown">
 	              <a href="{{route('competition')}}">Compétitions</a>
@@ -133,7 +124,7 @@ URL: http://gettemplates.co
 	    </div>
 	  </nav>
 
-	  <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(images/tennis3.jpg);">
+	  <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url({{url('images/tennis3.jpg')}});">
 	      <div class="overlay"></div>
 	      <div class="gtco-container">
 	        <div class="row">
@@ -143,9 +134,10 @@ URL: http://gettemplates.co
 
 	                <div id="gtco-features" class="gtco-features-3">
 	                  <div id="menu">
-	                          <div class="gtco-container">
+	                          <div class="gtco-container ">
 
 	                        <div class="row">
+
 	                          <div class="col-md-12 text-center gtco-heading animate-box">
 	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
 	                          </div>
@@ -215,6 +207,10 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </footer>
     </div>
 
@@ -286,22 +282,38 @@ URL: http://gettemplates.co
     <!-- FIN Modal de login -->
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <script src="{{ url('js/jquery.min.js')}}"></script>
     <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="{{ url('js/jquery.easing.1.3.js')}}"></script>
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url('js/bootstrap.min.js')}}"></script>
     <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="{{ url('js/jquery.waypoints.min.js')}}"></script>
     <!-- Carousel -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="{{ url('js/owl.carousel.min.js')}}"></script>
     <!-- countTo -->
-    <script src="js/jquery.countTo.js"></script>
+    <script src="{{ url('js/jquery.countTo.js')}}"></script>
     <!-- Magnific Popup -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/magnific-popup-options.js"></script>
+    <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
+<<<<<<< HEAD
     <script src="js/main.js"></script>
+=======
+    <script src="{{ url('js/main.js')}}"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 750; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					return false;
+				});
+			});
+		</script>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 
     <!-- SCRIPT MODAL LOGIN -->
     <script>
@@ -312,6 +324,12 @@ URL: http://gettemplates.co
             });
         });
     </script>
+<<<<<<< HEAD
 
+=======
+    <script>
+        @yield('script')
+    </script>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </body>
 </html>

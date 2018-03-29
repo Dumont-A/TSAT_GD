@@ -11,10 +11,17 @@ use App\Models\Comite;
 use App\Models\User;
 use App\Models\Message;
 use App\Models\Rencontre;
+use App\Models\Menu;
 use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller {
 
+    public function page($page) {
+        
+        $contenu=Menu::where("slug",$page)->first();
+        return view('front.page')->with("contenu",$contenu);
+    }
+    
     public function index() {
         $lesArticles = Article::all()->sortByDesc("created_at");
 

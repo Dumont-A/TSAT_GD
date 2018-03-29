@@ -20,6 +20,8 @@ Route::get('/home', function () {
 });
 Auth::routes();
 
+Route::get('page/{page}','PagesController@page')->name("page");
+
 //route pour la page club
 Route::get('club','ClubController@pageClub')->name("club");
 Route::get('club#content1','ClubController@pageClub')->name("club#content1");
@@ -35,18 +37,18 @@ Route::get('infos_pratiques#content3','InfoController@pageInfos')->name("infos#c
 Route::get('infos_pratiques#content4','InfoController@pageInfos')->name("infos#content4");
 
 //route pour la page enseignement
-Route::get('enseignement','EnseignementController@enseignement')->name("enseignement");
-Route::get('enseignement#content1','EnseignementController@enseignement')->name("enseignement#content1");
-Route::get('enseignement#content2','EnseignementController@enseignement')->name("enseignement#content2");
-Route::get('enseignement#content3','EnseignementController@enseignement')->name("enseignement#content3");
-Route::get('enseignement#content4','EnseignementController@enseignement')->name("enseignement#content4");
+Route::get('enseignement','EnseignementController@pageEnseignement')->name("enseignement");
+Route::get('enseignement#content1','EnseignementController@pageEnseignement')->name("enseignement#content1");
+Route::get('enseignement#content2','EnseignementController@pageEnseignement')->name("enseignement#content2");
+Route::get('enseignement#content3','EnseignementController@pageEnseignement')->name("enseignement#content3");
+Route::get('enseignement#content4','EnseignementController@pageEnseignement')->name("enseignement#content4");
 
 //route pour la page compétition
-Route::get('competition','CompetitionController@competition')->name("competition");
-Route::get('competition#content1','CompetitionController@competition')->name("competition#content1");
-Route::get('competition#content2','CompetitionController@competition')->name("competition#content2");
-Route::get('competition#content3','CompetitionController@competition')->name("competition#content3");
-Route::get('competition#content4','CompetitionController@competition')->name("competition#content4");
+Route::get('competition','CompetitionController@pageCompetition')->name("competition");
+Route::get('competition#content1','CompetitionController@pageCompetition')->name("competition#content1");
+Route::get('competition#content2','CompetitionController@pageCompetition')->name("competition#content2");
+Route::get('competition#content3','CompetitionController@pageCompetition')->name("competition#content3");
+Route::get('competition#content4','CompetitionController@pageCompetition')->name("competition#content4");
 
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");

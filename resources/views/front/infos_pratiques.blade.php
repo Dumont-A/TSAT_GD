@@ -5,6 +5,7 @@
 @stop
 
 @section("menu_1")
+<<<<<<< HEAD
 <i class="ti-timer"></i></span>
 <h3 class="h3Menu">Horaire</h3>
 @stop
@@ -23,6 +24,24 @@
 
 @section("menu_4")
 <i class="ti-money"></i></span>
+=======
+<i class="ti-book"></i></span>
+<h3 class="h3Menu">Horaires</h3>
+@stop
+
+@section("menu_2")
+<i class="ti-briefcase"></i></span>
+<h3 class="h3Menu">Devenir membre</h3>
+@stop
+
+@section("menu_3")
+<i class="ico-balle"></i></span>
+<h3 class="h3Menu">Réservation</h3>
+@stop
+
+@section("menu_4")
+<i class="ti-tag"></i></span>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 <h3 class="h3Menu">Tarifs</h3>
 @stop
 
@@ -63,5 +82,8 @@ Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare 
 
 @stop
 @section("content4")
+<<<<<<< HEAD
 
+=======
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 @stop
