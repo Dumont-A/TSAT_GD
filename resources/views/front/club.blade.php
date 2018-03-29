@@ -1,5 +1,4 @@
 @extends("template")
-
 @section("tittle")
 {{ $contenu->titre }}
 @stop
@@ -17,7 +16,7 @@
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
          <i class="ti-briefcase"></i></span>
-        <h3 class="h3Menu">Le comité</h3></a>
+        <h3 class="h3Menu">{{ $contenu->sousmenus[1]->titre }}</h3></a>
         </a>
       </div>
     </div>

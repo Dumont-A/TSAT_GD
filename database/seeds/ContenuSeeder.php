@@ -103,7 +103,7 @@ class ContenuSeeder extends Seeder
           'ordre' => 1,
       ]);
       DB::table('sous_menus')->insert([
-          'titre' => 'Devenir membre du site :',
+          'titre' => 'Devenir membre',
           'contenu'=> null,
           'slug' => 'devenir-membre',
           'menu_id' => 3,

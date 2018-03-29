@@ -276,11 +276,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-<<<<<<< HEAD
-                                <li><a href="{{ route("contenu.edit", ['slug' => 'horaires']) }}">Horraires</a></li>
-=======
                                 <li><a href="{{ route("contenu.edit", ['slug' => 'horaires']) }}">Horaires</a></li>
->>>>>>> cf8a311cacb95993bff7edd695d6e37e0a74622f
                                 <li><a href="{{ route("contenu.edit", ['slug' => 'tarifs']) }}">Tarifs</a></li>
                             </ul>
                         </li>
