@@ -207,7 +207,10 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </footer>
     </div>
 
@@ -294,6 +297,9 @@ URL: http://gettemplates.co
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
+<<<<<<< HEAD
+    <script src="js/main.js"></script>
+=======
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -307,6 +313,7 @@ URL: http://gettemplates.co
 				});
 			});
 		</script>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 
     <!-- SCRIPT MODAL LOGIN -->
     <script>
@@ -317,8 +324,12 @@ URL: http://gettemplates.co
             });
         });
     </script>
+<<<<<<< HEAD
+
+=======
     <script>
         @yield('script')
     </script>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </body>
 </html>
