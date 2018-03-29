@@ -71,7 +71,20 @@ URL: http://gettemplates.co
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-	              <li><a id="connect" href="#">Se connecter</a></li>
+                    <?php
+                    //PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM
+                        $connexionStatut = "Se connecter";
+                        if (Auth::check()) //SI le user est connecté on change l'id pour la modal de profil
+                        {
+                            //Définition des infos utilisateur pour modal profil
+                            $connexionStatut = strtoupper(Auth::user()->nom) ." ". Auth::user()->prenom;
+                            echo '<li><a id="profil" href="#">'.$connexionStatut.'</a></li>';
+                        }
+                        else //Si il est déconnecté, on change l'id pour la modal de connexion
+                        {
+                            echo '<li><a id="login" href="#">'.$connexionStatut.'</a></li>';
+                        }
+                    ?>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
 	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
@@ -162,8 +175,6 @@ URL: http://gettemplates.co
 
 	@yield("content")
 
-
-
 	  <footer id="gtco-footer" role="contentinfo">
 	    <div class="gtco-container">
 	      <div class="row row-p	b-md">
@@ -222,12 +233,12 @@ URL: http://gettemplates.co
     </div>
 
     <!-- Modal de login -->
-    <div class="modal fade" id="modal" role="dialog">
+    <div class="modal fade" id="modalLogin" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modalLogin">&times;</button>
             <h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
           </div>
           <div class="modal-body">
@@ -281,8 +292,61 @@ URL: http://gettemplates.co
         </div>
       </div>
     </div>
-   </div>
     <!-- FIN Modal de login -->
+
+    <!-- Modal de PROFIL -->
+<?php
+if (Auth::check())
+    {
+        $nom = strtoupper(Auth::user()->nom);
+        $prenom = Auth::user()->prenom;
+        $email = Auth::user()->email;
+        $telephone = Auth::user()->telephone;
+        echo '    <div class="modal fade" id="modalProfil" role="dialog">
+        <div class="modal-dialog">
+
+           <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4>Mon profil</h4>
+            </div>
+            <div class="row">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="names"> Nom, prénom : </label>
+                            '.$nom.' '.$prenom.'
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="email"> Email : </label>
+                            '.$email.'
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="telephone"> Téléphone : </label>
+                            '.$telephone.'
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="logoutProfil" class="btn btn-primary">Se déconnecter</button>
+                <button type="button" id="toAdmin" class="btn btn-primary">Vers mode admin</button>
+            </div>
+          </div>
+        </div>
+    </div> ';
+    }
+?>
+    <!-- FIN Modal de PROFIL -->
 
     <!-- jQuery -->
     <script src="{{ url('js/jquery.min.js')}}"></script>
@@ -315,11 +379,20 @@ URL: http://gettemplates.co
 		</script>
 
     <!-- SCRIPT MODAL LOGIN -->
+    <!--Définit les variables du script pour la bonne modal -->
+    <?php
+    $identifiant = "#login";
+    $nom_modal = "#modalLogin";
+        if (Auth::check())
+        {
+            $identifiant = "#profil";
+            $nom_modal = "#modalProfil";
+        }
+    ?>
     <script>
-        document.getElementById("connect").style.cursor = "pointer";
         $(document).ready(function(){
-            $("#connect").click(function(){
-                $("#modal").modal();
+            $(<?php echo '"'.$identifiant.'"'; ?>).click(function(){
+                $(<?php echo '"'.$nom_modal.'"'; ?>).modal();
             });
         });
     </script>
