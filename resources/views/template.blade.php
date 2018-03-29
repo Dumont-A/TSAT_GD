@@ -86,7 +86,7 @@ URL: http://gettemplates.co
                     ?>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
-	            <li><a href="#"><i class="ti-facebook"></i></a></li>
+	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -217,7 +217,10 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </footer>
     </div>
 
@@ -335,6 +338,9 @@ URL: http://gettemplates.co
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
+<<<<<<< HEAD
+    <script src="js/main.js"></script>
+=======
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -348,6 +354,7 @@ URL: http://gettemplates.co
 				});
 			});
 		</script>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 
     <!-- SCRIPT MODAL LOGIN -->
     <script>
@@ -357,8 +364,12 @@ URL: http://gettemplates.co
             });
         });
     </script>
+<<<<<<< HEAD
+
+=======
     <script>
         @yield('script')
     </script>
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </body>
 </html>

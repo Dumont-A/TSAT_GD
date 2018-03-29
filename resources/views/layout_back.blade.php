@@ -217,14 +217,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li class="header">Menu principal</li>
                         <!-- Optionally, you can add icons to the links -->
                         <li class="treeview">
-                            <a href="#"><i class="fa fa-list-alt"></i> <span>Articles</span>
+                            <a href="#"><i class="fa fa-list-alt"></i> <span>News</span></span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{ route("article.create") }}">Ajouter</a></li>
-                                <li><a href="{{ route("article.index") }}">Administrer</a></li>
+                                <li><a href="{{ route("news.create") }}">Ajouter</a></li>
+                                <li><a href="{{ route("news.index") }}">Administrer</a></li>
                             </ul>
 
                         </li>
@@ -259,7 +259,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li class="header">modification du site</li>
 
                         <li class="treeview">
-                            <a href="#"><i class="fa fa-graduation-cap"></i> <span>Le club</span>
+                            <a href="#"><i class="fa fa-users"></i> <span>Le club</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
@@ -270,13 +270,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </ul>
                         </li>
                         <li class="treeview">
-                            <a href="#"><i class="fa fa-graduation-cap"></i> <span>Infos pratiques</span>
+                            <a href="#"><i class="fa fa-info"></i> <span>Infos pratiques</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{ route("contenu.edit", ['slug' => 'horraires']) }}">Horraires</a></li>
+                                <li><a href="{{ route("contenu.edit", ['slug' => 'horaires']) }}">Horaires</a></li>
                                 <li><a href="{{ route("contenu.edit", ['slug' => 'tarifs']) }}">Tarifs</a></li>
                             </ul>
                         </li>
@@ -295,7 +295,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
 
                         <li class="treeview">
-                            <a href="{{ route('photo.banque') }}"><i class="fa fa-info"></i> <span>Ma banque d'image</span>  </a>
+                            <a href="{{ route('photo.banque') }}"><i class="fa fa-picture-o"></i> <span>Ma banque d'image</span>  </a>
                         </li>
                     </ul>
                     <!-- /.sidebar-menu -->

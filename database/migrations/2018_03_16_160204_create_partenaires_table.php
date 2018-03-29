@@ -23,6 +23,7 @@ class CreatePartenairesTable extends Migration {
 			$table->string('adresse');
 			$table->string('code_postal');
 			$table->string('ville');
+			$table->timestamps();
 		});
 	}
 

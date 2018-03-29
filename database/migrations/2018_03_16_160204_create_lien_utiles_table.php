@@ -19,6 +19,7 @@ class CreateLienUtilesTable extends Migration {
 			$table->string('url');
 			$table->string('photo');
 			$table->boolean('actif');
+			$table->timestamps();
 		});
 	}
 
