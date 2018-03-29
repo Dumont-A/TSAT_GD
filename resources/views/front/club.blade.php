@@ -1,129 +1,210 @@
-@extends("template_page")
+@extends("template")
+
 @section("tittle")
-    @parent - Club
+{{ $contenu->titre }}
 @stop
-
-@section("menu_1")
-<i class="ti-book"></i></span>
-<h3 class="h3Menu">Historique</h3>
+@section("sous_menu")
+  <div class="row menu-hidden" id="sous-menu">
+    <div class="col-md-3 col-sm-6">
+      <div class="feature-center animate-box" data-animate-effect="fadeIn">
+        <a href="#{{ $contenu->sousmenus[0]->slug }}" ><span class="icon iconMyStyle">
+            <i class="ti-book"></i></span>
+            <h3 class="h3Menu">{{ $contenu->sousmenus[0]->titre }}</h3>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="feature-center animate-box" data-animate-effect="fadeIn">
+        <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
+         <i class="ti-briefcase"></i></span>
+        <h3 class="h3Menu">Le comité</h3></a>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="feature-center animate-box" data-animate-effect="fadeIn">
+        <a href="#{{ $contenu->sousmenus[2]->slug }}"><span class="icon iconMyStyle">
+         <i class="ico-balle"></i></span>
+        <h3 class="h3Menu">{{ $contenu->sousmenus[2]->titre }}</h3>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="feature-center animate-box" data-animate-effect="fadeIn">
+        <a href="#{{ $contenu->sousmenus[3]->slug }}"><span class="icon iconMyStyle">
+          <i class="ti-tag"></i></span>
+            <h3 class="h3Menu">{{ $contenu->sousmenus[3]->titre }}</h3>
+        </a>
+      </div>
+    </div>
+  </div>
 @stop
+@section("content")
 
-@section("menu_2")
-<i class="ti-briefcase"></i></span>
-<h3 class="h3Menu">Le Comité</h3></a>
-@stop
+    <div id="{{ $contenu->sousmenus[0]->slug }}">
+        <div id="gtco-portfolio" class="gtco-section">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">{{ $contenu->sousmenus[0]->titre }}</h2>
+               {!! $contenu->sousmenus[0]->contenu !!}
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="{{ $contenu->sousmenus[1]->slug }}">
+        <div id="gtco-counter" class="gtco-section">
+          <div class="gtco-container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">Le comité</h2>
+                 To Do
 
-@section("menu_3")
-<i class="ico-balle"></i></span>
-<h3 class="h3Menu">Les Installations</h3>
-@stop
-
-@section("menu_4")
-<i class="ti-tag"></i></span>
-<h3 class="h3Menu">Partenaires</h3>
-@stop
-
-@section("content1")
-<h2 class="text-center">Historique</h2>
-<p>Ciliciam vero, quae Cydno amni exultat, Tarsus nobilitat, urbs perspicabilis hanc condidisse Perseus memoratur, Iovis filius et Danaes, vel certe ex Aethiopia profectus Sandan quidam nomine vir opulentus et nobilis et Anazarbus auctoris vocabulum referens, et Mopsuestia vatis illius domicilium Mopsi, quem a conmilitio Argonautarum cum aureo vellere direpto redirent, errore abstractum delatumque ad Africae litus mors repentina consumpsit, et ex eo cespite punico tecti manes eius heroici dolorum varietati medentur plerumque sospitales.</br></br>
-
-Sed si ille hac tam eximia fortuna propter utilitatem rei publicae frui non properat, ut omnia illa conficiat, quid ego, senator, facere debeo, quem, etiamsi ille aliud vellet, rei publicae consulere oporteret?</br></br>
-
-Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare ab iis, quidquid velimus, perfecta quidem sapientia si simus, nihil habeat res vitii; sed loquimur de iis amicis qui ante oculos sunt, quos vidimus aut de quibus memoriam accepimus, quos novit vita communis. Ex hoc numero nobis exempla sumenda sunt, et eorum quidem maxime qui ad sapientiam proxime accedunt.</p>
-
-@stop
-@section("content2")
- <h2 class="text-center">Le Comité</h2>
-   <div class="row">
- <div class="item">
-   <img src="images/tete_comite.png"  width="200px" height="150px" class="col-md-3"  style="border:3px inset" >
-   <p class="col-md-9" style="padding-top: 50px">Président</p>
-</div>
-</div>
-  <div class="row">
-<div class="item">
-  <img src="images/tete_comite2.png"  width="200px" height="150px" class="col-md-3"  style="border:3px inset" >
-  <p class="col-md-9" style="padding-top: 50px">Adjoint</p>
-</div>
-</div>
-<div class="row">
-<div class="item">
-<img src="images/tete_comite3.png"  width="200px" height="150px" class="col-md-3"  style="border:3px inset" >
-<p class="col-md-9" style="padding-top: 50px">Directeur du club</p>
-</div>
-</div>
-
-@stop
-@section("content3")
-<div class="row">
-  <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-              <h2>Les Installations</h2>
+              </div>
             </div>
           </div>
-  <div class="row">
-
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ti-home"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="3" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Gymnases</span>
-
+        </div>
       </div>
-    </div>
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ico-terrain"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="25" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Courts</span>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ti-user"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="12" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Entraineurs</span>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-      <div class="feature-center">
-        <span class="icon">
-          <i class="ti-id-badge"></i>
-        </span>
-        <span class="counter js-counter" data-from="0" data-to="134" data-speed="5000" data-refresh-interval="50">1</span>
-        <span class="counter-label">Membres</span>
+      <div id="{{ $contenu->sousmenus[2]->slug }}">
+        <div id="gtco-products">
+          <div class="gtco-container">
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">{{ $contenu->sousmenus[2]->titre }}</h2>
+               {!! $contenu->sousmenus[2]->contenu !!}
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
-    </div>
+      <div id="{{ $contenu->sousmenus[3]->slug }}">
+         <div id="gtco-portfolio">
+          <div class="gtco-container">
+              <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">Les partenaires</h2>
+                To Do
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </div>
+
+      {{--
+    pour des tuiles d'images
+        <div class="row">
+                  <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <h2>Les Installations</h2>
+                  </div>
+                </div>
+
+                <div class="row row-pb-md">
+                  <div class="col-md-12">
+                    <ul id="gtco-portfolio-list">
+                      <li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur1.jpg); ">
+                        <a href="#" class="color-1">
+                          <div class="case-studies-summary">
+                            <span>Journée 7</span>
+                            <h2>Magnifique partie de Adrien Perriguey</h2>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur2.jpg); ">
+                        <a href="#" class="color-2">
+                          <div class="case-studies-summary">
+                            <span>Championnat 2017</span>
+                            <h2>Alexandre Dumont sacré vainqueur en solo</h2>
+                          </div>
+                        </a>
+                      </li>
+
+
+                      <li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur3.jpg); ">
+                        <a href="#" class="color-3">
+                          <div class="case-studies-summary">
+                            <span>Journée 6</span>
+                            <h2>Notre joueur Hugo Buffard accusé de tricherie</h2>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur4.jpg); ">
+                        <a href="#" class="color-4">
+                          <div class="case-studies-summary">
+                            <span>Journée 5</span>
+                            <h2>De superbes résultats pour notre duo</h2>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/joueurtennis5.jpg); ">
+                        <a href="#" class="color-5">
+                          <div class="case-studies-summary">
+                            <span>Journée 4</span>
+                            <h2>Victoire écrasante de l'équipe de Tavaux</h2>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tennisjoueur6.jpg); ">
+                        <a href="#" class="color-6">
+                          <div class="case-studies-summary">
+                            <span>Championnat 2016</span>
+                            <h2>Des résultats mitigés</h2>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div> --}}
+        {{-- pour s'inscrire , non utilisé
+
+        <div id="gtco-subscribe">
+          <div class="gtco-container">
+            <div class="row animate-box">
+              <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2>Demande d'adhésion au club</h2>
+                <p>Suivez nous</p>
+              </div>
+            </div>
+            <div class="row animate-box">
+              <div class="col-md-12">
+                <form class="form-inline">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="form-group">
+                      <label for="email" class="sr-only">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Votre email">
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="form-group">
+                      <label for="name" class="sr-only">Nom et prenom</label>
+                      <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <button type="submit" class="btn btn-default btn-block">Envoyer</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    --}}
+
 @stop
-@section("content4")
-  <div class="row animate-box">
-    <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-  <h2>Nos Partenaires</h2>
-  <p>Allez voir nos partenaires pour des offres spéciale adhérent</p>
-</div>
-</div>
-<div class="row animate-box">
-<div class="owl-carousel owl-carousel-carousel">
-  <div class="item">
-    <img src="images/partenaire/download.jpg"  height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-  </div>
-  <div class="item">
-    <img src="images/partenaire/download2.png"  height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-  </div>
-  <div class="item">
-    <img src="images/partenaire/download3.png"  height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-  </div>
-  <div class="item">
-    <img src="images/partenaire/download.png" height="150px" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-  </div>
-</div>
-</div>
-@stop
+@section("script")
+ $('#sous-menu a').on('click', function(evt) {
+
+// bloquer le comportement par défaut: on ne rechargera pas la page
+       evt.preventDefault();
+       // enregistre la valeur de l'attribut  href dans la variable target
+	var target = $(this).attr('href');
+       /* le sélecteur $(html, body) permet de corriger un bug sur chrome
+       et safari (webkit) */
+	$('html, body')
+       // on arrête toutes les animations en cours
+       .stop()
+       /* on fait maintenant l'animation vers le haut (scrollTop) vers
+        notre ancre target */
+       .animate({scrollTop: $(target).offset().top}, 800 );
+    });
+ @stop
