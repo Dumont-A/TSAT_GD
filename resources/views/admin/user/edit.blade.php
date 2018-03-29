@@ -33,43 +33,63 @@
 
 
 
-<div class="form-group{{ $errors->has('joueur') ? ' has-error' : '' }}">
-    <label for="joueur" class="col-md-4 control-label">Est-il un joueur?</label>
+<div class="form-group{{ $errors->has('est_joueur') ? ' has-error' : '' }}">
+    <label for="est_joueur" class="col-md-4 control-label">Est-il un joueur?</label>
 
-    @if ( $leUser->joueur == 1)
+    @if ( $leUser->est_joueur == 1)
             <div class="checkbox">
-                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="joueur" checked >
+                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_joueur" checked >
 @else
-       
-            <div class="checkbox">
-                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="joueur" >
-@endif           
 
-        @if ($errors->has('joueur'))
+            <div class="checkbox">
+                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_joueur" >
+@endif
+
+        @if ($errors->has('est_joueur'))
         <span class="help-block">
-            <strong>{{ $errors->first('joueur') }}</strong>
+            <strong>{{ $errors->first('est_joueur') }}</strong>
+        </span>
+        @endif
+    </div>
+</div>
+
+<div class="form-group{{ $errors->has('est_arbitre') ? ' has-error' : '' }}">
+    <label for="est_arbitre" class="col-md-4 control-label">Est-il un arbitre?</label>
+
+    @if ( $leUser->est_arbitre == 1)
+            <div class="checkbox">
+                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_arbitre" checked >
+@else
+
+            <div class="checkbox">
+                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_arbitre" >
+@endif
+
+        @if ($errors->has('est_arbitre'))
+        <span class="help-block">
+            <strong>{{ $errors->first('est_arbitre') }}</strong>
         </span>
         @endif
     </div>
 </div>
 
 
-<div class="form-group{{ $errors->has('admin') ? ' has-error' : '' }}">
-    <label for="admin" class="col-md-4 control-label">Est-il un administrateur?</label>
+<div class="form-group{{ $errors->has('est_admin') ? ' has-error' : '' }}">
+    <label for="est_admin" class="col-md-4 control-label">Est-il un administrateur?</label>
 
-    
 
-@if ( $leUser->admin == 1)
+
+@if ( $leUser->est_admin == 1)
             <div class="checkbox">
-                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="admin" checked >
+                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_admin" checked >
 @else
-       
+
             <div class="checkbox">
-                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="admin" >
-@endif           
-                @if ($errors->has('admin'))
+                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_admin" >
+@endif
+                @if ($errors->has('est_admin'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('admin') }}</strong>
+                    <strong>{{ $errors->first('est_admin') }}</strong>
                 </span>
                 @endif
             </div>
@@ -82,10 +102,10 @@
             <div class="checkbox">
                 <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="valider" checked >
 @else
-       
+
             <div class="checkbox">
                 <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="valider" >
-@endif           
+@endif
                 @if ($errors->has('valider'))
                 <span class="help-block">
                     <strong>{{ $errors->first('valider') }}</strong>

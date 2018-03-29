@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('template');
-});
+})->name("home");
 Auth::routes();
 
 Route::get('accueil','PagesController@accueil')->name("accueil");
@@ -25,11 +25,10 @@ Route::get('club','PagesController@club')->name("club");
 Route::get('info-pratique','PagesController@infoPratique')->name("info-pratique");
 Route::get('enseignement','PagesController@enseignement')->name("enseignement");
 Route::get('competition','PagesController@competition')->name("competition");
-
+Route::get('contact','PagesController@contact')->name("contact");
 
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-Route::get('contact','FrontController@contact')->name("contact");
 Route::get('galerie','FrontController@galerie')->name("galerie");
 
 
@@ -62,10 +61,11 @@ Route::group(['prefix' => 'admin'], function() {
 
     // Documents
     //
-    Route::get('document', 'DocumentController@home')->name('document.home');
-    Route::get('document/create', 'DocumentController@acreate')->name('document.acreate');
-    Route::post('document/store', 'DocumentController@astore')->name('document.astore');
-    Route::delete('document/destroy','DocumentController@adestroy')->name('document.adestroy');
+    // Route::get('document', 'DocumentController@home')->name('document.home');
+    // Route::get('document/create', 'DocumentController@acreate')->name('document.acreate');
+    // Route::post('document/store', 'DocumentController@astore')->name('document.astore');
+    // Route::delete('document/destroy','DocumentController@adestroy')->name('document.adestroy');
+    Route::resource('document','DocumentController');
 
     // Articles
     //

@@ -100,38 +100,52 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-                       
-                        <div class="form-group{{ $errors->has('joueur') ? ' has-error' : '' }}">
+
+                        <div class="form-group{{ $errors->has('est_joueur') ? ' has-error' : '' }}">
                             <label for="joueur" class="col-md-4 control-label">Est-il un joueur?</label>
 
                             <div class="checkbox">
                                <input data-toggle="toggle" type="checkbox"  data-onstyle="success" name="joueur" >
 
-                                @if ($errors->has('joueur'))
+                                @if ($errors->has('est_joueur'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('joueur') }}</strong>
+                                    <strong>{{ $errors->first('est_joueur') }}</strong>
                                 </span>
                                 @endif
                             </div>
                         </div>
-                       
-                       
-                       <div class="form-group{{ $errors->has('admin') ? ' has-error' : '' }}">
-                            <label for="admin" class="col-md-4 control-label">Est-il un administrateur?</label>
+
+
+                       <div class="form-group{{ $errors->has('est_admin') ? ' has-error' : '' }}">
+                            <label for="est_admin" class="col-md-4 control-label">Est-il un administrateur?</label>
 
                             <div class="checkbox">
-                               <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="admin" >
+                               <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="est_admin" >
 
-                                @if ($errors->has('admin'))
+                                @if ($errors->has('est_admin'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('admin') }}</strong>
+                                    <strong>{{ $errors->first('est_admin') }}</strong>
                                 </span>
                                 @endif
                             </div>
                         </div>
-                        
-                     
-                        
+
+                        <div class="form-group{{ $errors->has('est_arbitre') ? ' has-error' : '' }}">
+                             <label for="arbitre" class="col-md-4 control-label">Est-il un arbitre?</label>
+
+                             <div class="checkbox">
+                                <input data-toggle="toggle" type="checkbox"   data-onstyle="success" name="arbitre" >
+
+                                 @if ($errors->has('est_arbitre'))
+                                 <span class="help-block">
+                                     <strong>{{ $errors->first('est_arbitre') }}</strong>
+                                 </span>
+                                 @endif
+                             </div>
+                         </div>
+
+
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

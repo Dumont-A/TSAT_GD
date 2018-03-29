@@ -4,43 +4,70 @@
 {{ $contenu->titre }}
 @stop
 @section("sous_menu")
-  <div class="row menu-hidden" id="sous-menu">
-    <div class="col-md-3 col-sm-6">
-      <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#{{ $contenu->sousmenus[0]->slug }}" ><span class="icon iconMyStyle">
-            <i class="ti-book"></i></span>
-            <h3 class="h3Menu">{{ $contenu->sousmenus[0]->titre }}</h3>
-        </a>
-      </div>
+<div class="row menu-hidden" id="sous-menu">
+  <div class="col-md-4 col-sm-5">
+    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+      <a href="#{{ $contenu->sousmenus[0]->slug }}" ><span class="icon iconMyStyle">
+          <i class=" ti-mobile"></i></span>
+          <h3 class="h3Menu">{{ $contenu->sousmenus[0]->titre }}</h3>
+      </a>
     </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
-         <i class="ti-briefcase"></i></span>
-        <h3 class="h3Menu">Le comité</h3></a>
-        </a>
-      </div>
+  </div>
+  <div class="col-md-4 col-sm-5">
+    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+      <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
+       <i class=" ti-comment-alt"></i></span>
+      <h3 class="h3Menu">{{ $contenu->sousmenus[1]->titre }}</h3></a>
+      </a>
     </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#{{ $contenu->sousmenus[2]->slug }}"><span class="icon iconMyStyle">
-         <i class="ico-balle"></i></span>
-        <h3 class="h3Menu">{{ $contenu->sousmenus[2]->titre }}</h3>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="feature-center animate-box" data-animate-effect="fadeIn">
-        <a href="#{{ $contenu->sousmenus[3]->slug }}"><span class="icon iconMyStyle">
-          <i class="ti-tag"></i></span>
-            <h3 class="h3Menu">{{ $contenu->sousmenus[3]->titre }}</h3>
-        </a>
-      </div>
+  </div>
+  <div class="col-md-4 col-sm-5">
+    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+      <a href="#{{ $contenu->sousmenus[2]->slug }}"><span class="icon iconMyStyle">
+       <i class="ti-map-alt"></i></span>
+      <h3 class="h3Menu">{{ $contenu->sousmenus[2]->titre }}</h3>
+      </a>
     </div>
   </div>
 @stop
 
 @section("content")
+
+    <div id="{{ $contenu->sousmenus[0]->slug }}">
+        <div id="gtco-portfolio" class="gtco-section">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">coordonnées</h2>
+                  test coorodonnées
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="{{ $contenu->sousmenus[1]->slug }}">
+        <div id="gtco-counter" class="gtco-section">
+          <div class="gtco-container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">contacter</h2>
+                  test contacter
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="{{ $contenu->sousmenus[2]->slug }}">
+        <div id="gtco-products">
+          <div class="gtco-container">
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+               <h2 class="text-center">Plan</h2>
+                <div style="width: 700px; height: 500px;">
+                	 {!! Mapper::render() !!}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 @stop
 
 @section("script")
