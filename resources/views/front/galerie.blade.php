@@ -1,6 +1,6 @@
 @extends("template")
 @section("tittle")
-    @parent - Galerie
+Galerie
 @stop
 @section ('content')
 

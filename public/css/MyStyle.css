@@ -1,8 +1,4 @@
-#menu{
 
-
-margin-top : 250px;
-}
 
 .iconMyStyle {
     background: white;
@@ -19,6 +15,17 @@ font-size: 25px;
 }
 
 
+#li_menu {
+  font-size: 20px;
+}
+#titre_sous_logo{
+  color:#fff;
+  padding-left:20px;
+  line-height:23px; 
+}
+#logo{
+        margin-top: -50px;}
+
 @media screen and (max-width: 991px){
 
 .menu-hidden{
@@ -26,3 +33,19 @@ display: none;
 }
 
 }
+@media screen and (max-width : 767px){
+#logo{
+        vertical-align: middle;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      margin-top: 0px;}
+#titre_sous_logo{
+        margin-top:100px;
+        text-align:center;
+      padding-left:0px; }
+}
+@media screen and (max-width : 768px){
+#logo{
+
+      margin-top: 0px;}

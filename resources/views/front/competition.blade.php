@@ -1,7 +1,6 @@
 @extends("template")
 @section("tittle")
-    @parent - Compétitions
-    @parent - Compétition
+Compétition
 @stop
 @section("tittle1")
 @stop
