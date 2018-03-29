@@ -36,7 +36,7 @@ class NewsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        $request->session()->flash('success', 'La news à été ajoutée !');
+        $request->session()->flash('success', 'La news' . $request->get('titre') . ' à été ajoutée !');
 
         $laNews = new News();
 
@@ -78,6 +78,7 @@ class NewsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
+      $request->session()->flash('success', 'La news' . $request->get('titre') . ' à été modifiée !');
         $laNews = News::find($id);
 
         $laNews->titre = $request->get('titre');
@@ -96,13 +97,11 @@ class NewsController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id) {
-        $request->session()->flash('success', 'La news à été supprimée !');
+    public function destroy( $id) {
+        $laNews = News::find($id);
+        News::destroy($id);
 
-
-        $laNews->destroy($id);
-
-        return response()->json("eee");
+        return response()->json(["id"=>$id,"message"=> 'La news '. $laNews->titre .' à été supprimée !']);
     }
 
 }
