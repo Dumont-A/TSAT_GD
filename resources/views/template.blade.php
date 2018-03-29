@@ -67,7 +67,7 @@ URL: http://gettemplates.co
 	<div id="page">
 
 	  <nav class="gtco-nav" role="navigation">
-	    <div class="gtco-container">
+			<div class="row">
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
@@ -80,16 +80,19 @@ URL: http://gettemplates.co
 	      </div>
 	      <div class="row">
 	        <div class="col-sm-3 col-xs-12">
-	          <img src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="200" width="200">
+	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="200" width="200" vspace="-2500" >
+						<div class="gtco-heading animate-box  ">
+							<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
+						</div>
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
-	            <li class="active"><a href="index.html">Accueil</a></li>
+	            <li class="active"><a id="li_menu" href="index.html">Accueil</a></li>
 	            <li class="has-dropdown">
-	              <a href="{{route('page',['page'=>'club'])}}">Club</a>
+	              <a id="li_menu" href="{{route('page',['page'=>'club'])}}">Club</a>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('competition')}}">Compétitions</a>
+	              <a id="li_menu" href="{{route('competition')}}">Compétitions</a>
 	              <ul class="dropdown">
 	                <li><a href="{{route('competition#content1')}}">Tournois</a></li>
 	                <li><a href="{{route('competition#content2')}}">Les équipes</a></li>
@@ -98,7 +101,7 @@ URL: http://gettemplates.co
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('infos')}}">Infos Pratiques</a>
+	              <a id="li_menu" href="{{route('infos')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
 	                <li><a href="{{route('infos#content1')}}">Horaires</a></li>
 	                <li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
@@ -107,7 +110,7 @@ URL: http://gettemplates.co
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('enseignement')}}">L'enseignement</a>
+	              <a id="li_menu" href="{{route('enseignement')}}">L'enseignement</a>
 	              <ul class="dropdown">
 	                <li><a href="{{route('enseignement#content1')}}">L'équipe pédagogique</a></li>
 	                <li><a href="{{route('enseignement#content2')}}">L'école de tennis</a></li>
@@ -115,13 +118,16 @@ URL: http://gettemplates.co
 	                <li><a href="{{route('enseignement#content4')}}">Les stages</a></li>
 	              </ul>
 	            </li>
-	            <li><a href="{{route('galerie')}}">Galerie</a></li>
-	            <li><a href="{{route('liens_utiles')}}">Liens utiles</a></li>
-	            <li><a href="{{route('contact')}}">Contact</a></li>
+	            <li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
+	            <li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
+	            <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
 	          </ul>
 	        </div>
 	      </div>
-	    </div>
+			<div class="row">
+
+					</div>
+</div>
 	  </nav>
 
 	  <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url({{url('images/tennis3.jpg')}});">
@@ -131,23 +137,17 @@ URL: http://gettemplates.co
 	          <div class="col-md-12 col-md-offset-0 text-left">
 	            <div class="display-t">
 	              <div class="display-tc">
-
 	                <div id="gtco-features" class="gtco-features-3">
 	                  <div id="menu">
-	                          <div class="gtco-container ">
-
+	                     <div class="gtco-container ">
 	                        <div class="row">
-
-	                          <div class="col-md-12 text-center gtco-heading animate-box">
-	                            <h1 class="animate-box" data-animate-effect="fadeInUp">@yield("tittle")</h1>
-	                          </div>
-	                        </div>
- 					@yield("sous_menu")
-	                      </div>
-	                    </div>
-	              </div>
-	            </div>
-	            </div>
+													</div>
+ 													@yield("sous_menu")
+	                     </div>
+	                  </div>
+	               </div>
+	             </div>
+	           </div>
 	          </div>
 	        </div>
 	      </div>
@@ -207,10 +207,6 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </footer>
     </div>
 
@@ -297,9 +293,8 @@ URL: http://gettemplates.co
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
-<<<<<<< HEAD
     <script src="js/main.js"></script>
-=======
+
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -313,7 +308,6 @@ URL: http://gettemplates.co
 				});
 			});
 		</script>
->>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 
     <!-- SCRIPT MODAL LOGIN -->
     <script>
@@ -324,12 +318,9 @@ URL: http://gettemplates.co
             });
         });
     </script>
-<<<<<<< HEAD
 
-=======
     <script>
         @yield('script')
     </script>
->>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
     </body>
 </html>
