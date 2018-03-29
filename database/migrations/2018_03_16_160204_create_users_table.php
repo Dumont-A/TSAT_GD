@@ -20,7 +20,8 @@ class CreateUsersTable extends Migration {
 			$table->string('email');
 			$table->string('telephone')->nullable();
 			$table->string('password');
-			$table->boolean('est_arbritre')->default(0);
+			$table->string('commentaire')->nullable();
+			$table->boolean('est_arbitre')->default(0);
 			$table->boolean('est_joueur')->default(0);
 			$table->boolean('est_admin')->default(0);
 			$table->boolean('valider')->default(0);

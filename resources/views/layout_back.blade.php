@@ -236,7 +236,7 @@ end task item
         <a href="{{ route ("user.index") }}"><i class="fa fa-user"></i> <span>Utilisateurs</span>  </a>
       </li>
       <li class="treeview">
-        <a href="{{ route("document.home") }}"><i class="fa fa-file-o"></i> <span>Documents</span>  </a>
+        <a href="{{ route("document.index") }}"><i class="fa fa-file-o"></i> <span>Documents</span>  </a>
       </li>
       <li class="treeview">
         <a href="{{ route("partenaire.index") }}"><i class="fa fa-thumbs-up"></i> <span>Partenaire</span>  </a>
@@ -349,10 +349,10 @@ end task item
 <footer class="main-footer">
   <!-- To the right -->
   <div class="pull-right hidden-xs">
-    Club de tennis de Tavaux
+    Club de tennis de Saint-Aubin Tavaux, Grand Dole
   </div>
   <!-- Default to the left -->
-  <strong>Copyright &copy; 2016 <a href="{{ route("admin.dashboard") }}">Club de tennis de Tavaux</a>.</strong> tous droits reservés.
+  <strong>Copyright &copy; 2018 <a href="{{ route("admin.dashboard") }}">Club de tennis de Saint-Aubin Tavaux, Grand Dole</a>.</strong> Tous droits reservés.
 </footer>
 
 <!-- /.control-sidebar -->
