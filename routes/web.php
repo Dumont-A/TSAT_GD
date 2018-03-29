@@ -77,7 +77,7 @@ Route::group(['prefix' => 'admin'], function() {
 
     // Articles
     //
-    Route::resource('article', 'ArticleController');
+    Route::resource('news', 'NewsController');
 
     // Equipes et Rencontres
     //

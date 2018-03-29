@@ -18,6 +18,7 @@ class CreatePhotosTable extends Migration {
 			$table->string('titre');
 			$table->text('description', 65535)->nullable();
 			$table->integer('id_albums')->index('FK_photos_id_albums');
+			$table->timestamps();
 		});
 	}
 

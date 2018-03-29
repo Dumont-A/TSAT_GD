@@ -21,6 +21,7 @@ class CreateRencontresTable extends Migration {
 			$table->string('victoire')->nullable();
 			$table->integer('id_equipes')->index('FK_rencontres_id_equipes');
 			$table->integer('id_albums')->index('FK_rencontres_id_albums');
+			$table->timestamps();
 		});
 	}
 

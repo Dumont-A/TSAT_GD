@@ -20,7 +20,7 @@ class ContenuSeeder extends Seeder
           'slug' => 'info-pratique',
       ]);
       DB::table('menu')->insert([
-          'titre' => 'L'/'enseignement',
+          'titre' => 'L\'enseignement',
           'slug' => 'l-enseignement',
       ]);
       DB::table('sous_menus')->insert([
@@ -36,9 +36,9 @@ class ContenuSeeder extends Seeder
           'id_menu' => 1,
       ]);
       DB::table('sous_menus')->insert([
-          'titre' => 'Horraires',
+          'titre' => 'Horaires',
           'contenu'=> null,
-          'slug' => 'horraires',
+          'slug' => 'horaires',
           'id_menu' => 1,
       ]);
       DB::table('sous_menus')->insert([
@@ -62,7 +62,7 @@ class ContenuSeeder extends Seeder
       DB::table('sous_menus')->insert([
           'titre' => 'Cours collectifs',
           'contenu'=> null,
-          'slug' => 'cours-colectifs',
+          'slug' => 'cours-collectifs',
           'id_menu' => 1,
       ]);
       DB::table('sous_menus')->insert([

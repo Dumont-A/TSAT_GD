@@ -2,8 +2,8 @@
 
 @section('title')
 <h1>
-    Administration des articles
-    <small>- Rechercher, Modifier et supprimer des articles</small>
+    Administration des news
+    <small>- Rechercher, Modifier et supprimer des news</small>
 </h1>
 @stop
 
@@ -15,12 +15,12 @@
     <div class="col-md-12">
         <div class="box">
             <div class="box-header with-border">
-                {!! Form::open(['route' => "article.create", 'method' => 'get']) !!}
+                {!! Form::open(['route' => "news.create", 'method' => 'get']) !!}
                 <button type="submit" class="btn btn-success btn-lg btn-block">Ajouter</button>
                 {!! Form::close() !!}
                 <!-- /.box-header -->
                 <div class="box-body">
-                    
+
                     <!-- search form (Optional) -->
                     <form action="#" method="get">
                         <div class="input-group margin">
@@ -36,44 +36,91 @@
                         <thead class="thead-inverse">
                             <tr>
                                 <th style="width: 10px">#</th>
-                                <th>Article</th>
+                                <th>News</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($tab_articles as $unArticle)
+                            @forelse ($tab_news as $uneNews)
                             <tr>
                                 <td class="col-md-1">
-                                    {{ $unArticle["id"] }}
+                                    {{ $uneNews["id"] }}
                                 </td>
-                                <td class="col-md-10" id="td{{ $unArticle["id"] }}">
+                                <td class="col-md-10" id="td{{ $uneNews["id"] }}">
                                     <a href="..." style="display:block;width:100%;height:100%;">
-                                    {{ $unArticle["titre"] }}
+                                    {{ $uneNews["titre"] }}
                                     </a>
                                 </td>
                                 <td class="col-md-1">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            {!! Form::open(['route' => ["article.edit", $unArticle->id], 'method' => 'get']) !!}
+                                            {!! Form::open(['route' => ["news.edit", $uneNews->id], 'method' => 'get']) !!}
                                             <button type="submit" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
                                             {!! Form::close() !!}
                                         </div>
                                         <div class="col-md-6">
-                                            {!! Form::open(['route' => ["article.destroy", $unArticle->id], 'method' => 'delete', 'id' => "form".$unArticle->id]) !!}
-                                            <button type="submit" id="{{ $unArticle->id }}" class="btn btn-danger btn-circle jsDeleteButton"><i class="fa fa-times"></i></button>
+                                            {!! Form::open(['route' => ["news.destroy", $uneNews->id], 'method' => 'delete', 'id' => "form".$uneNews->id]) !!}
+                                            <button type="button" id="{{ $uneNews->id }}" class="btn btn-danger btn-circle jsDeleteButton" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-times"></i></button>
+                                            {{-- <button id="btnDestroy" class="btn btn-default btn-app" type="button" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></button> --}}
                                             {!! Form::close() !!}
+
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach
-                        </tbody> 
+                          @empty
+                          @endforelse
+
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+@isset($uneNews)
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        Confirmer la suppression de {{ $uneNews->titre }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        <a id="confirmationdel" class="btn btn-danger btn-ok">Confirmer</a>
+      </div>
+    </div>
+  </div>
+</div>
+@endisset
 @stop
 
+
+@isset($uneNews)
+@section('script')
+  <script>
+
+    $('#confirmationdel').click(function(){
+alert('e');
+      $.ajax({
+        type:'DELETE',
+        url:'news/'+ {{ $uneNews->id }},
+        data:$("#form"+{{ $uneNews->id }}).serialize(),
+        datatype:'json',
+        success:function(data){
+          alert('ok');
+          // alert("Le statut " + data.libelle + " a été supprimé");
+          $("#"+data.id).css('color','red');
+          $("#"+data.id).fadeOut(2500, function() {
+            $("#"+data.id).remove();
+          })
+          $('#confirm-delete').modal('hide');
+        }
+      });
+
+    });
+
+
+  </script>
+@stop
+@endisset

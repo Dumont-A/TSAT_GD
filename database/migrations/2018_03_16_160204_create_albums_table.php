@@ -19,6 +19,7 @@ class CreateAlbumsTable extends Migration {
 			$table->text('description', 65535)->nullable();
 			$table->integer('id_tournois')->index('FK_albums_id_tournois');
 			$table->integer('id_rencontres')->index('FK_albums_id_rencontres');
+			$table->timestamps();
 		});
 	}
 

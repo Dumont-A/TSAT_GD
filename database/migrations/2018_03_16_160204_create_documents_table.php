@@ -20,6 +20,7 @@ class CreateDocumentsTable extends Migration {
 			$table->string('type_document');
 			$table->boolean('public')->nullable();
 			$table->integer('id_users')->index('FK_documents_id_users');
+			$table->timestamps();
 		});
 	}
 

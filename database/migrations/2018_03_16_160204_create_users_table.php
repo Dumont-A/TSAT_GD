@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration {
 			$table->boolean('est_admin')->default(0);
 			$table->string('photo')->nullable();
 			$table->integer('id_statuts')->nullable()->index('FK_users_id_statuts');
+			$table->timestamps();
 		});
 	}
 
