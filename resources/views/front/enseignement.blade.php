@@ -1,6 +1,6 @@
 @extends("template")
 @section("tittle")
-    @parent - Enseignement
+Enseignement
 @stop
 @section("tittle1")
 @stop

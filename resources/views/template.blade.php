@@ -100,9 +100,9 @@ URL: http://gettemplates.co
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
-	            <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
+	            <li class="active"><a id="li_menu" href="{{route('accueil')}}">Accueil</a></li>
 	            <li class="has-dropdown">
-	              <a href="{{route('club')}}">Club</a>
+	              <a  id="li_menu" href="{{route('club')}}">Club</a>
 	              <ul class="dropdown">
 	                <li><a href="#">Horaires</a></li>
 	                <li><a href="#">Devenir Membre</a></li>
@@ -120,7 +120,7 @@ URL: http://gettemplates.co
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('info-pratique')}}">Infos Pratiques</a>
+	              <a id="li_menu"  href="{{route('info-pratique')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
 	                <li><a href="#">Horaires</a></li>
 	                <li><a href="#">Devenir Membre</a></li>
