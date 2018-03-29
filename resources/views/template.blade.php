@@ -143,9 +143,7 @@ URL: http://gettemplates.co
 	          </ul>
 	        </div>
 	      </div>
-			<div class="row">
 
-					</div>
 </div>
 	  </nav>
 
@@ -364,8 +362,6 @@ if (Auth::check())
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
-    <script src="js/main.js"></script>
-
     <script src="{{ url('js/main.js')}}"></script>
 
 

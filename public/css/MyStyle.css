@@ -21,6 +21,7 @@ font-size: 25px;
 #titre_sous_logo{
   color:#fff;
   padding-left:20px;
+  line-height:23px; 
 }
 #logo{
         margin-top: -50px;}
