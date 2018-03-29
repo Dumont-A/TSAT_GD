@@ -16,15 +16,33 @@ use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller {
 
+    public function accueil() {
+        return view('front.accueil');
+    }
     public function club() {
 
         $contenu=Menu::where("slug","club")->first();
         return view('front.club')->with("contenu",$contenu);
     }
+    public function competition() {
+
+        $contenu=Menu::where("slug","competition")->first();
+        return view('front.competition')->with("contenu",$contenu);
+    }
     public function infoPratique() {
 
         $contenu=Menu::where("slug","info-pratique")->first();
         return view('front.info_pratique')->with("contenu",$contenu);
+    }
+    public function enseignement() {
+
+        $contenu=Menu::where("slug","enseignement")->first();
+        return view('front.enseignement')->with("contenu",$contenu);
+    }
+    public function contact() {
+
+        $contenu=Menu::where("slug","contact")->first();
+        return view('front.contact')->with("contenu",$contenu);
     }
     public function index() {
         $lesArticles = Article::all()->sortByDesc("created_at");
@@ -33,11 +51,11 @@ class PagesController extends Controller {
                         ->with("tab_articles", $lesArticles);
     }
 
-    function contact() {
+    /* function contact() {
         $leComite = Comite::with('Users')->get();
         return view('site.contact')->with("leComite", $leComite);
     }
-
+    */
     function documentation() {
         return view('site.documentation');
     }
@@ -63,7 +81,6 @@ class PagesController extends Controller {
 
         return view('site.profil')
                         ->with('tab_users', $lesUsers);
-
     }
 
     function editprofil($id) {

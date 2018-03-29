@@ -2,8 +2,8 @@
 
 @section('title')
 <h1>
-    Administration des partenaire
-    <small>- Rechercher, ajoute, modifier et supprimer des partenaire</small>
+    Administration des partenaires
+    <small>Gestion</small>
 </h1>
 @stop
 
@@ -20,7 +20,7 @@
                 {!! Form::close() !!}
                 <!-- /.box-header -->
                 <div class="box-body">
-                    
+
                     <!-- search form (Optional) -->
                     <form action="#" method="get">
                         <div class="input-group margin">
@@ -34,23 +34,23 @@
 
                     <table class="table table-bordered">
                         <thead class="thead-inverse">
-                            <tr> 
-                                <th>Logo du partenaire</th>
-                                <th>Nom du partenaire</th>
-                                <th>Description du partenaire</th>
-                                <th>code postal du partenaire</th>
-                                <th>Ville du partenaire</th>
-                                <th>Adresse du partenaire</th>
-                                <th>Telephone du partenaire</th>
-                                <th>Site du partenaire</th>
-                                <th>facebook du partenaire</th>
-                                <th>Twitter du partenaire</th>
-                                <th>action</th>
+                            <tr>
+                                <th>Logo</th>
+                                <th>Dénomination</th>
+                                <th>Description</th>
+                                <th>Code postal</th>
+                                <th>Ville</th>
+                                <th>Adresse</th>
+                                <th>Telephone</th>
+                                <th>Site</th>
+                                <th>Facebook</th>
+                                <th>Twitter</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($lesPartenaires as $unPartenaire)
-                            <tr>  
+                            <tr>
                                 <td class="col-md-3" id="td{{ $unPartenaire["id"] }}">
                                     <center><img width="50%" src="{{ url('img/partenaire') ."/". $unPartenaire->logo }}" alt="img{{ $unPartenaire["id"] }}"></center>
                                 </td>
@@ -81,7 +81,7 @@
                                 <td class="col-md-2" id="td{{ $unPartenaire["id"] }}">
                                     {{ $unPartenaire["twitter"] }}
                                 </td>
-                               
+
                                 <td class="col-md-3">
                                     <div class="row">
                                         <div class="col-md-1">
@@ -95,12 +95,12 @@
                                             <button type="submit" id="{{ $unPartenaire->id }}" class="btn btn-danger btn-circle jsDeleteButton"><i class="fa fa-times"></i></button>
                                             {!! Form::close() !!}
                                         </div>
-                                        
+
                                     </div>
                                 </td>
                             </tr>
                             @endforeach
-                        </tbody> 
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -109,4 +109,3 @@
 </div>
 
 @stop
-

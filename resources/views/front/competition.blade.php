@@ -1,13 +1,8 @@
-@extends("template_page")
+@extends("template")
 @section("tittle")
-<<<<<<< HEAD
-    @parent - Compétitions
-=======
-    @parent - Compétition
+Compétition
 @stop
 @section("tittle1")
- Compétition
->>>>>>> 5bd4921192d60618ef16ad6d193c2682f3e7d78c
 @stop
 
 @section("menu_1")
