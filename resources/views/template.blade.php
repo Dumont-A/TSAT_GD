@@ -99,7 +99,13 @@ URL: http://gettemplates.co
 	          <ul>
 	            <li class="active"><a href="index.html">Accueil</a></li>
 	            <li class="has-dropdown">
-	              <a href="{{route('page',['page'=>'club'])}}">Club</a>
+	              <a href="{{route('club')}}">Club</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
+	              </ul>
 	            </li>
 	            <li class="has-dropdown">
 	              <a href="{{route('competition')}}">Compétitions</a>
@@ -111,12 +117,12 @@ URL: http://gettemplates.co
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
-	              <a href="{{route('infos')}}">Infos Pratiques</a>
+	              <a href="{{route('info-pratique')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
-	                <li><a href="{{route('infos#content1')}}">Horaires</a></li>
-	                <li><a href="{{route('infos#content2')}}">Devenir Membre</a></li>
-	                <li><a href="{{route('infos#content3')}}">Réservation</a></li>
-	                <li><a href="{{route('infos#content4')}}">Tarifs</a></li>
+	                <li><a href="#horaires">Horaires</a></li>
+	                <li><a href="#devenir-membre">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
@@ -357,7 +363,6 @@ if (Auth::check())
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
-    <script src="js/main.js"></script>
     <script src="{{ url('js/main.js')}}"></script>
 
 
