@@ -89,10 +89,7 @@ URL: http://gettemplates.co
 	      </div>
 	      <div class="row">
 	        <div class="col-sm-3 col-xs-12">
-	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="200" width="200" vspace="-2500" >
-						<div class="gtco-heading animate-box  ">
-							<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
-						</div>
+	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="300" width="300"  >
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
@@ -139,8 +136,13 @@ URL: http://gettemplates.co
 	          </ul>
 	        </div>
 	      </div>
-
+				<div class="row">
+					<div class="gtco-heading animate-box col-sm-12  ">
+						<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
+					</div>
+				</div>
 </div>
+
 	  </nav>
 
 	  <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url({{url('images/tennis3.jpg')}});">
@@ -164,7 +166,7 @@ URL: http://gettemplates.co
 	          </div>
 	        </div>
 	      </div>
-	      </div>
+
 	    </header>
 
 	@yield("content")
