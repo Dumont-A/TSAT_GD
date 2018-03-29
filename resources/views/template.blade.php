@@ -62,6 +62,15 @@ URL: http://gettemplates.co
 
 </head>
 <body>
+    @php ($connexionStatut = "Se connecter")
+    <!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
+    @if (Auth::check()) <!-- SI le user est connecté on change l'id pour la modal de profil -->
+        <!-- Définition des infos utilisateur pour modal profil -->
+        @php ($identifiant = "profil")
+        @php ($connexionStatut = Auth::user()->nom ." ". Auth::user()->prenom)
+    @else <!-- Si il est déconnecté, on change l'id pour la modal de connexion -->
+        @php ($identifiant = "login")
+    @endif
 	<div class="gtco-loader"></div>
 
 	<div id="page">
@@ -71,20 +80,7 @@ URL: http://gettemplates.co
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-                    <?php
-                    //PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM
-                        $connexionStatut = "Se connecter";
-                        if (Auth::check()) //SI le user est connecté on change l'id pour la modal de profil
-                        {
-                            //Définition des infos utilisateur pour modal profil
-                            $connexionStatut = strtoupper(Auth::user()->nom) ." ". Auth::user()->prenom;
-                            echo '<li><a id="profil" href="#">'.$connexionStatut.'</a></li>';      
-                        }
-                        else //Si il est déconnecté, on change l'id pour la modal de connexion
-                        {
-                            echo '<li><a id="login" href="#">'.$connexionStatut.'</a></li>';
-                        }
-                    ?>
+                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}}</a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
 	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
@@ -294,14 +290,10 @@ URL: http://gettemplates.co
     <!-- FIN Modal de login -->
     
     <!-- Modal de PROFIL -->
-<?php
-if (Auth::check()) 
-    {
-        $nom = strtoupper(Auth::user()->nom);
-        $prenom = Auth::user()->prenom;
-        $email = Auth::user()->email;
-        $telephone = Auth::user()->telephone;
-        echo '    <div class="modal fade" id="modalProfil" role="dialog">
+
+@if (Auth::check()) 
+  
+            <div class="modal fade" id="modalProfil" role="dialog">
         <div class="modal-dialog">
 
            <!-- Modal content -->
@@ -315,13 +307,13 @@ if (Auth::check())
                     <div class="form-row">
                         <div class="col-md-6">
                             <label for="names"> Nom, prénom : </label>
-                            '.$nom.' '.$prenom.'
+                            {{ Auth::user()->nom }} {{ Auth::user()->prenom }}
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6">
                             <label for="email"> Email : </label>
-                            '.$email.'
+                            {{ Auth::user()->email }}
                         </div>
                     </div>
                 </div>
@@ -331,7 +323,7 @@ if (Auth::check())
                     <div class="form-row">
                         <div class="col-md-6">
                             <label for="telephone"> Téléphone : </label>
-                            '.$telephone.'
+                           {{ Auth::user()->telephone}}
                         </div>
                     </div>
                 </div>
@@ -342,9 +334,8 @@ if (Auth::check())
             </div>
           </div>
         </div>
-    </div> ';
-    }
-?>
+    </div> 
+@endif
     <!-- FIN Modal de PROFIL -->
 
     <!-- jQuery -->
@@ -379,19 +370,16 @@ if (Auth::check())
 
     <!-- SCRIPT MODAL LOGIN -->
     <!--Définit les variables du script pour la bonne modal -->
-    <?php
-    $identifiant = "#login";
-    $nom_modal = "#modalLogin";
-        if (Auth::check()) 
-        {
-            $identifiant = "#profil";
-            $nom_modal = "#modalProfil";
-        }
-    ?>
+    @php ($identifiant = "#login")
+    @php ($nom_modal = "#modalLogin")
+    @if (Auth::check()) 
+        @php ($identifiant = "#profil")
+        @php ($nom_modal = "#modalProfil")
+    @endif
     <script>
         $(document).ready(function(){
-            $(<?php echo '"'.$identifiant.'"'; ?>).click(function(){
-                $(<?php echo '"'.$nom_modal.'"'; ?>).modal();
+            $('{{$identifiant}}').click(function(){
+                $('{{$nom_modal}}').modal();
             });
         });
     </script>
