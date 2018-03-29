@@ -78,7 +78,7 @@ URL: http://gettemplates.co
                         {
                             //Définition des infos utilisateur pour modal profil
                             $connexionStatut = strtoupper(Auth::user()->nom) ." ". Auth::user()->prenom;
-                            echo '<li><a id="profil" href="#">'.$connexionStatut.'</a></li>';      
+                            echo '<li><a id="profil" href="#">'.$connexionStatut.'</a></li>';
                         }
                         else //Si il est déconnecté, on change l'id pour la modal de connexion
                         {
@@ -224,10 +224,7 @@ URL: http://gettemplates.co
 	      </div>
 
 	    </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 16b4c2d86f8fe32f98eb4f6bbe500bdf37b0d3ca
     </footer>
     </div>
 
@@ -296,10 +293,10 @@ URL: http://gettemplates.co
       </div>
     </div>
     <!-- FIN Modal de login -->
-    
+
     <!-- Modal de PROFIL -->
 <?php
-if (Auth::check()) 
+if (Auth::check())
     {
         $nom = strtoupper(Auth::user()->nom);
         $prenom = Auth::user()->prenom;
@@ -367,12 +364,8 @@ if (Auth::check())
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
-<<<<<<< HEAD
 
-    <script src="js/main.js"></script>
 
-=======
->>>>>>> 16b4c2d86f8fe32f98eb4f6bbe500bdf37b0d3ca
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -392,7 +385,7 @@ if (Auth::check())
     <?php
     $identifiant = "#login";
     $nom_modal = "#modalLogin";
-        if (Auth::check()) 
+        if (Auth::check())
         {
             $identifiant = "#profil";
             $nom_modal = "#modalProfil";
@@ -405,10 +398,7 @@ if (Auth::check())
             });
         });
     </script>
-<<<<<<< HEAD
-=======
 
->>>>>>> 16b4c2d86f8fe32f98eb4f6bbe500bdf37b0d3ca
     <script>
         @yield('script')
     </script>
