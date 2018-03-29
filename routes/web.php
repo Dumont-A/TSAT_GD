@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('template');
-});
+})->name("home");
 Auth::routes();
 
 Route::get('page/{page}','PagesController@page')->name("page");
