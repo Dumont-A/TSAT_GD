@@ -1,10 +1,15 @@
-@extends("template_page")
+@extends("template")
 @section("tittle")
     @parent - Enseignement
+<<<<<<< HEAD
 
 @stop
 @section("tittle1")
   Enseignement
+=======
+@stop
+@section("tittle1")
+>>>>>>> 348acbcddd1b401ad9f22c49bc49523627478956
 @stop
 
 @section("menu_1")
