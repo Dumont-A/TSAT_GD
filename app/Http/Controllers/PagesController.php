@@ -16,12 +16,16 @@ use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller {
 
-    public function page($page) {
-        
-        $contenu=Menu::where("slug",$page)->first();
-        return view('front.page')->with("contenu",$contenu);
+    public function club() {
+
+        $contenu=Menu::where("slug","club")->first();
+        return view('front.club')->with("contenu",$contenu);
     }
-    
+    public function infoPratique() {
+
+        $contenu=Menu::where("slug","info-pratique")->first();
+        return view('front.info_pratique')->with("contenu",$contenu);
+    }
     public function index() {
         $lesArticles = Article::all()->sortByDesc("created_at");
 
