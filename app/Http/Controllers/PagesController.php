@@ -13,6 +13,7 @@ use App\Models\Message;
 use App\Models\Rencontre;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Mail;
+use Mapper;
 
 class PagesController extends Controller {
 
@@ -41,9 +42,12 @@ class PagesController extends Controller {
     }
     public function contact() {
 
+        Mapper::map(47.051175, 5.413658, ['zoom' => 17]);
+
         $contenu=Menu::where("slug","contact")->first();
         return view('front.contact')->with("contenu",$contenu);
     }
+
     public function index() {
         $lesArticles = Article::all()->sortByDesc("created_at");
 
