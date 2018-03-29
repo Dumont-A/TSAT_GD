@@ -168,8 +168,6 @@ URL: http://gettemplates.co
 
 	@yield("content")
 
-
-
 	  <footer id="gtco-footer" role="contentinfo">
 	    <div class="gtco-container">
 	      <div class="row row-p	b-md">
@@ -287,47 +285,38 @@ URL: http://gettemplates.co
         </div>
       </div>
     </div>
-   </div>
     <!-- FIN Modal de login -->
     
     <!-- Modal de PROFIL -->
     <div class="modal fade" id="modalProfil" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modalProfil">&times;</button>
-            <h4><span class="glyphicon glyphicon-lock"></span>Mon profil</h4>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-                <div class="col-md-6">
-                    Nom et prénom :
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4><span class="glyphicon glyphicon-lock"></span> Mon profil</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label for="names"><span class="glyphicon glyphicon-user"></span> Nom, prénom : </label>
+                        test en dur
+                    </div>
                 </div>
-                <div class="col-md-6">
-                     <?php Auth::user()->nom ." ". Auth::user()->prenom ?>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label for="email"><span class="glyphicon glyphicon-eye-open"></span> Adresse email</label>
+                        test en dur
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-md-6">
-                    Adresse e-mail :
-                </div>
-                <div class="col-md-6">
-                     <?php Auth::user()->email ?>
-                </div>
-            </div> 
-            <div class="form-group">
-                <div class="col-md-6">
-                    Téléphone :
-                </div>
-                <div class="col-md-6">
-                    <?php Auth::user()->telephone ?>
-                </div>
+            <div class="modal-footer">
+              C'est quoi ça
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    </div> 
     <!-- FIN Modal de PROFIL -->
 
     <!-- jQuery -->
