@@ -1,5 +1,8 @@
 @extends("template")
-@section ('content1')
+@section("tittle")
+    @parent - Liens utiles
+@stop
+@section ('content')
 
 
 @stop

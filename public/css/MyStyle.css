@@ -17,3 +17,12 @@ font-size: 25px;
     margin-left: 0px;
     margin-right: 0px;
 }
+
+
+@media screen and (max-width: 991px){
+
+.menu-hidden{
+display: none;
+}
+
+}
