@@ -12,3 +12,17 @@ margin-top : 250px;
 color:#FFF;
 font-size: 25px;
 }
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+@media screen and (max-width: 991px){
+
+.menu-hidden{
+display: none;
+}
+
+}

@@ -1,9 +1,6 @@
-@extends("template")
+@extends("template_page")
 @section("tittle")
     @parent - Club
-@stop
-@section("tittle1")
-Le club
 @stop
 
 @section("menu_1")

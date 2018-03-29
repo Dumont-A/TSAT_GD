@@ -18,8 +18,12 @@ class CreateSousMenusTable extends Migration {
 			$table->string('titre');
 			$table->text('contenu', 65535)->nullable();
 			$table->string('slug')->nullable();
+<<<<<<< HEAD
 			$table->integer('id_menu')->index('FK_sous_menus_id_menu');
 			$table->timestamps();
+=======
+			$table->integer('menu_id')->index('FK_sous_menus_menu_id');
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 		});
 	}
 

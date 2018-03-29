@@ -182,8 +182,15 @@ return [
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+<<<<<<< HEAD
         Barryvdh\Elfinder\ElfinderServiceProvider::class,
 
+=======
+
+        Collective\Html\HtmlServiceProvider::class,
+
+        Barryvdh\Elfinder\ElfinderServiceProvider::class
+>>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
 
     ],
 
