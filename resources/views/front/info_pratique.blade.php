@@ -8,7 +8,7 @@
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[0]->slug }}" ><span class="icon iconMyStyle">
-            <i class="ti-book"></i></span>
+            <i class="ti-timer"></i></span>
             <h3 class="h3Menu">{{ $contenu->sousmenus[0]->titre }}</h3>
         </a>
       </div>
@@ -16,7 +16,7 @@
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
-         <i class="ti-briefcase"></i></span>
+         <i class="ti-user"></i></span>
         <h3 class="h3Menu">{{ $contenu->sousmenus[1]->titre }}</h3></a>
         </a>
       </div>
@@ -24,7 +24,7 @@
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[2]->slug }}"><span class="icon iconMyStyle">
-         <i class="ico-balle"></i></span>
+         <i class="ti-notepad"></i></span>
         <h3 class="h3Menu">{{ $contenu->sousmenus[2]->titre }}</h3>
         </a>
       </div>
@@ -32,7 +32,7 @@
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[3]->slug }}"><span class="icon iconMyStyle">
-          <i class="ti-tag"></i></span>
+          <i class="ti-money"></i></span>
             <h3 class="h3Menu">{{ $contenu->sousmenus[3]->titre }}</h3>
         </a>
       </div>
@@ -76,7 +76,6 @@
                    </div>
                    <button class="btn btn-block btn-default btn-lg" type="button">Envoyer la demande</button>
                  </form>
-
               </div>
             </div>
           </div>

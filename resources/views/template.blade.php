@@ -84,7 +84,7 @@ URL: http://gettemplates.co
 	        </div>
 	        <div class="col-xs-9 text-right menu-1">
 	          <ul>
-	            <li class="active"><a href="index.html">Accueil</a></li>
+	            <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
 	            <li class="has-dropdown">
 	              <a href="{{route('club')}}">Club</a>
 	              <ul class="dropdown">
@@ -97,17 +97,17 @@ URL: http://gettemplates.co
 	            <li class="has-dropdown">
 	              <a href="{{route('competition')}}">Compétitions</a>
 	              <ul class="dropdown">
-	                <li><a href="{{route('competition#content1')}}">Tournois</a></li>
-	                <li><a href="{{route('competition#content2')}}">Les équipes</a></li>
-	                <li><a href="{{route('competition#content3')}}">Les arbitres</a></li>
-	                <li><a href="{{route('competition#content4')}}">Résultats</a></li>
+	                <li><a href="#">Tournois</a></li>
+	                <li><a href="#">Les équipes</a></li>
+	                <li><a href="#">Les arbitres</a></li>
+	                <li><a href="#">Résultats</a></li>
 	              </ul>
 	            </li>
 	            <li class="has-dropdown">
 	              <a href="{{route('info-pratique')}}">Infos Pratiques</a>
 	              <ul class="dropdown">
-	                <li><a href="#horaires">Horaires</a></li>
-	                <li><a href="#devenir-membre">Devenir Membre</a></li>
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
 	                <li><a href="#">Réservation</a></li>
 	                <li><a href="#">Tarifs</a></li>
 	              </ul>
@@ -115,10 +115,10 @@ URL: http://gettemplates.co
 	            <li class="has-dropdown">
 	              <a href="{{route('enseignement')}}">L'enseignement</a>
 	              <ul class="dropdown">
-	                <li><a href="{{route('enseignement#content1')}}">L'équipe pédagogique</a></li>
-	                <li><a href="{{route('enseignement#content2')}}">L'école de tennis</a></li>
-	                <li><a href="{{route('enseignement#content3')}}">Les cours collectifs adultes</a></li>
-	                <li><a href="{{route('enseignement#content4')}}">Les stages</a></li>
+	                <li><a href="#">L'équipe pédagogique</a></li>
+	                <li><a href="#">L'école de tennis</a></li>
+	                <li><a href="#">Les cours collectifs adultes</a></li>
+	                <li><a href="#">Les stages</a></li>
 	              </ul>
 	            </li>
 	            <li><a href="{{route('galerie')}}">Galerie</a></li>
