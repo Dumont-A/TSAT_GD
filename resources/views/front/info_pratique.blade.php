@@ -17,7 +17,7 @@
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
          <i class="ti-briefcase"></i></span>
-        <h3 class="h3Menu">Le comité</h3></a>
+        <h3 class="h3Menu">{{ $contenu->sousmenus[1]->titre }}</h3></a>
         </a>
       </div>
     </div>
@@ -56,8 +56,26 @@
           <div class="gtco-container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">Le comité</h2>
-                 To Do
+               <h2 class="text-center">Devenez membre!</h2>
+                 <form>
+                   <div class="form-group">
+                     <label for="mail">Adresse e-mail</label>
+                     <input type="email" class="form-control" id="mail" placeholder="exemple@mail.com">
+                   </div>
+                   <div class="form-group">
+                     <label for="nom">Nom</label>
+                     <input type="text" class="form-control" id="nom">
+                   </div>
+                   <div class="form-group">
+                     <label for="prenom">Prénom</label>
+                     <input type="text" class="form-control" id="prenom">
+                   </div>
+                   <div class="form-group">
+                     <label for="vous">Qui êtes vous vis à vis du club ?</label>
+                     <textarea type="text" class="form-control" id="vous" rows="3"></textarea>
+                   </div>
+                   <button class="btn btn-block btn-default btn-lg" type="button">Envoyer la demande</button>
+                 </form>
 
               </div>
             </div>

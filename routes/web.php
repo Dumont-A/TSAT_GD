@@ -20,21 +20,10 @@ Route::get('/home', function () {
 });
 Auth::routes();
 
-Route::get('page/{page}','PagesController@page')->name("page");
+Route::get('club','PagesController@club')->name("club");
+Route::get('info-pratique','PagesController@infoPratique')->name("info-pratique");
 
-//route pour la page club
-Route::get('club','ClubController@pageClub')->name("club");
-Route::get('club#content1','ClubController@pageClub')->name("club#content1");
-Route::get('club#content2','ClubController@pageClub')->name("club#content2");
-Route::get('club#content3','ClubController@pageClub')->name("club#content3");
-Route::get('club#content4','ClubController@pageClub')->name("club#content4");
 
-//route pour la page infos pratiques
-Route::get('infos_pratiques','InfoController@pageInfos')->name("infos");
-Route::get('infos_pratiques#content1','InfoController@pageInfos')->name("infos#content1");
-Route::get('infos_pratiques#content2','InfoController@pageInfos')->name("infos#content2");
-Route::get('infos_pratiques#content3','InfoController@pageInfos')->name("infos#content3");
-Route::get('infos_pratiques#content4','InfoController@pageInfos')->name("infos#content4");
 
 //route pour la page enseignement
 Route::get('enseignement','EnseignementController@pageEnseignement')->name("enseignement");
