@@ -364,11 +364,8 @@ if (Auth::check())
     <script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{ url('js/magnific-popup-options.js')}}"></script>
     <!-- Main -->
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cecaa27f815833682f225dd0f44d59f25fc0dfe1
     <script src="{{ url('js/main.js')}}"></script>
 
 
@@ -401,10 +398,7 @@ if (Auth::check())
             });
         });
     </script>
-<<<<<<< HEAD
 
-=======
->>>>>>> cecaa27f815833682f225dd0f44d59f25fc0dfe1
     <script>
         @yield('script')
     </script>

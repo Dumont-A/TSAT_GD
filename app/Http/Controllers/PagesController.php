@@ -39,6 +39,11 @@ class PagesController extends Controller {
         $contenu=Menu::where("slug","enseignement")->first();
         return view('front.enseignement')->with("contenu",$contenu);
     }
+    public function contact() {
+
+        $contenu=Menu::where("slug","contact")->first();
+        return view('front.contact')->with("contenu",$contenu);
+    }
     public function index() {
         $lesArticles = Article::all()->sortByDesc("created_at");
 
@@ -46,11 +51,11 @@ class PagesController extends Controller {
                         ->with("tab_articles", $lesArticles);
     }
 
-    function contact() {
+    /* function contact() {
         $leComite = Comite::with('Users')->get();
         return view('site.contact')->with("leComite", $leComite);
     }
-
+    */
     function documentation() {
         return view('site.documentation');
     }
