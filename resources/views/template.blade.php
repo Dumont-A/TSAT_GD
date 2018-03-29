@@ -74,7 +74,7 @@ URL: http://gettemplates.co
 	              <li><a id="connect" href="#">Se connecter</a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
-	            <li><a href="#"><i class="ti-facebook"></i></a></li>
+	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>

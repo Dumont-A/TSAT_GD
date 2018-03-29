@@ -12,10 +12,10 @@ class AddForeignKeysToRencontreUserTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('rencontre_user', function(Blueprint $table)
+		Schema::table('rencontre_users', function(Blueprint $table)
 		{
-			$table->foreign('id', 'FK_rencontre_user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('id_rencontres', 'FK_rencontre_user_id_rencontres')->references('id')->on('rencontres')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('user_id', 'FK_rencontre_user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('rencontre_id', 'FK_rencontre_user_id_rencontres')->references('id')->on('rencontres')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 
@@ -27,7 +27,7 @@ class AddForeignKeysToRencontreUserTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('rencontre_user', function(Blueprint $table)
+		Schema::table('rencontre_users', function(Blueprint $table)
 		{
 			$table->dropForeign('FK_rencontre_user_id');
 			$table->dropForeign('FK_rencontre_user_id_rencontres');

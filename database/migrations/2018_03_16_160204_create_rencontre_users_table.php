@@ -18,8 +18,9 @@ class CreateRencontreUsersTable extends Migration {
 			$table->boolean('resultat')->nullable();
 			$table->text('score', 65535)->nullable();
 			$table->integer('id');
-			$table->integer('id_rencontres')->index('FK_rencontre_user_id_rencontres');
-			$table->primary(['id','id_rencontres']);
+			$table->integer('rencontre_id')->index('FK_rencontre_user_id_rencontre');
+			$table->integer('user_id')->index('FK_user_rencontre_id_user');
+			$table->primary('id');
 			$table->timestamps();
 		});
 	}

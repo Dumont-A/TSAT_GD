@@ -21,7 +21,7 @@ class CreateTournoisTable extends Migration {
 			$table->string('lien_site')->nullable();
 			$table->boolean('actif');
 			$table->text('resultat', 65535)->nullable();
-			$table->integer('id_albums')->index('FK_tournois_id_albums');
+			$table->integer('album_id')->index('FK_tournois_id_albums');
 			$table->timestamps();
 		});
 	}

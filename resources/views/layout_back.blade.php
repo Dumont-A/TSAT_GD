@@ -293,10 +293,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li><a href="{{ route("contenu.edit", ['slug' => 'les-stages']) }}">Les stages</a></li>
                             </ul>
                         </li>
-<<<<<<< HEAD
-=======
 
->>>>>>> e35dde1ea630bc362fdccb0cd0c1d64293515528
                         <li class="treeview">
                             <a href="{{ route('photo.banque') }}"><i class="fa fa-picture-o"></i> <span>Ma banque d'image</span>  </a>
                         </li>

@@ -14,8 +14,8 @@ class AddForeignKeysToAlbumsTable extends Migration {
 	{
 		Schema::table('albums', function(Blueprint $table)
 		{
-			$table->foreign('id_rencontres', 'FK_albums_id_rencontres')->references('id')->on('rencontres')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('id_tournois', 'FK_albums_id_tournois')->references('id')->on('tournois')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('rencontre_id', 'FK_albums_id_rencontres')->references('id')->on('rencontres')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('tournoi_id', 'FK_albums_id_tournois')->references('id')->on('tournois')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 
