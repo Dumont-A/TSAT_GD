@@ -50,16 +50,16 @@
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">contacter</h2>
                {!! Form::open(['url' => 'contact']) !!}
-               {!! Form::label('nom', 'Entrez votre nom : ') !!}
-               {!! Form::text('nom') !!}
-               {!! Form::label('prenom', 'Entrez votre prénom : ') !!}
-               {!! Form::text('prenom') !!}
-               {!! Form::label('mail', 'Entrez votre adresse mail : ') !!}
-               {!! Form::text('mail') !!}
-               {!! Form::label('sujet', 'Entrez votre sujet : ') !!}
-               {!! Form::text('sujet') !!}
-               {!! Form::label('sujet', 'Entrez votre sujet : ') !!}
-               {!! Form::text('sujet') !!}
+               {!! Form::label('nom', 'Nom : ') !!}
+               {!! Form::text('nom') !!} <br>
+               {!! Form::label('prenom', 'Prénom : ') !!}
+               {!! Form::text('prenom') !!} <br>
+               {!! Form::label('mail', 'Adresse mail : ') !!}
+               {!! Form::text('mail') !!} <br>
+               {!! Form::label('sujet', 'Sujet : ') !!}
+               {!! Form::text('sujet') !!} <br>
+               {!! Form::label('message', 'Entrez votre message : ') !!}
+               {!! Form::text('message') !!} <br>
                {!! Form::submit('Envoyer') !!}
                {!! Form::close() !!}
               </div>
