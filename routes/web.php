@@ -38,10 +38,10 @@ Route::get('galerie','FrontController@galerie')->name("galerie");
 //Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
 
 // Routes pour le Back-office
-Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
-    
+Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
+
     Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
-    
+
     Route::get('/', function () {
                 return view('admin.page.dashboard');
             })
