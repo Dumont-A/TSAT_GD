@@ -56,19 +56,19 @@ class DocumentController extends Controller
 
     $document->user_id = $request->get('user_id');
 
-    $document->nom = $request->get('nom');
+    $document->titre = $request->get('nom');
 
-    $fichier = $request->file('document');
+    $contenu = $request->file('document');
 
-    $documentname = time().'.'.$fichier->getClientOriginalName();
+    $documentname = time().'.'.$contenu->getClientOriginalName();
 
 
 
     $destinationPath = public_path('doc/');
 
-    $fichier->move($destinationPath, $documentname);
+    $contenu->move($destinationPath, $documentname);
 
-    $document->fichier = $documentname;
+    $document->contenu = $documentname;
 
     $document->save();
 

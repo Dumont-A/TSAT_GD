@@ -17,31 +17,32 @@ class RencontreController extends Controller
      */
     public function index($equipe_id)
     {
+
         $uneEquipe = Equipe::find($equipe_id);
         return view('admin.rencontre.index')->with('uneEquipe', $uneEquipe);
     }
-    
+
     public function createR($equipe_id)
     {
         $uneEquipe = Equipe::find($equipe_id);
         return view('admin.rencontre.create')->with('uneEquipe', $uneEquipe);
     }
-    
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'date' => 'required',
+            'dte' => 'required',
             'lieu' => 'required',
             'adversaire' => 'required'
         ]);
         if ($validator->fails()) {
-            return redirect(route('rencontre.createR'))
+            return redirect(route('rencontre.createR',["id"=>$request->get('equipe_id')]))
                         ->withErrors($validator)
                         ->withInput();
         }
         $request->session()->flash('success', 'La rencontre à été ajoutée !');
         $rencontre = new Rencontre();
-        $rencontre->date = $request->get('date');
+        $rencontre->dte = $request->get('dte');
         $rencontre->lieu = $request->get('lieu');
         $rencontre->adversaire = $request->get('adversaire');
         $rencontre->equipe_id = $request->get('equipe_id');
@@ -60,7 +61,7 @@ class RencontreController extends Controller
     {
         $rencontre = Rencontre::find($id);
 
-        $rencontre->date = $request->get('date');
+        $rencontre->dte = $request->get('date');
         $rencontre->lieu = $request->get('lieu');
         $rencontre->adversaire = $request->get('adversaire');
         $rencontre->equipe_id= $request->get('equipe_id');
@@ -77,22 +78,22 @@ class RencontreController extends Controller
         $rencontre->delete();
         return redirect()->route("equipe.index");
     }
-    
+
         public function convoquer($rencontre_id)
     {
        $rencontre = Rencontre::find($rencontre_id);
        $lesJoueurs = User::where("joueur", "=", 1)->whereNotIn('id',[$rencontre_id])->get();
        return view('admin.rencontre.convoquer')->with('tab_joueurs', $lesJoueurs)->with('rencontre', $rencontre);
     }
-    
+
     public function convoquerstore($id,Request $request)
     {
         $request->session()->flash('success', 'Les joueurs sont notifiés de la rencontre !');
         $rencontre = Rencontre::find($id);
         $lesUser = User::all();
-        
+
         foreach($lesUser as $user){
-            $request->get('confirmation'.$user->id); 
+            $request->get('confirmation'.$user->id);
             if ($request->get('confirmation'.$user->id)=='on')
             {
                 $rencontre->users()->attach($user,['confirmation'=>0]);
@@ -101,6 +102,6 @@ class RencontreController extends Controller
         $rencontre->save();
         return redirect()->route("equipe.index");
     }
-    
-    
+
+
 }
