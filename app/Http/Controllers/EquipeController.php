@@ -48,7 +48,7 @@ class EquipeController extends Controller
         $request->session()->flash('success', 'L\'équipe à été ajoutée !');
         $equipe = new Equipe();
 
-        $equipe->nom = $request->get('nom');
+        $equipe->libelle = $request->get('nom');
         $equipe->division = $request->get('division');
         $equipe->save();
         return redirect()->route("equipe.index");
@@ -88,7 +88,7 @@ class EquipeController extends Controller
     {
         $equipe = Equipe::find($id);
 
-        $equipe->nom = $request->get('nom');
+        $equipe->libelle = $request->get('nom');
         $equipe->division = $request->get('division');
 
         $equipe->save();

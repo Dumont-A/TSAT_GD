@@ -72,9 +72,15 @@ URL: http://gettemplates.co
         @php ($identifiant = "login")
     @endif
 	<div class="gtco-loader"></div>
-
+    
 	<div id="page">
-
+        <!-- Si utilisateur est admin, on lui affiche le lien du back office -->
+        @php ($statutAfficher = "hidden")
+        @if (Auth::check())
+            @if (Auth::user()->est_admin == 1)
+                @php ($statutAfficher = "visible")
+            @endif
+        @endif
 	  <nav class="gtco-nav" role="navigation">
 			<div class="row">
 	      <div class="row">
@@ -83,7 +89,7 @@ URL: http://gettemplates.co
                     <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}}</a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 	            <li><a href="#"><i class="icon-mail2"></i></a></li>
-	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
+                    <li><a href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}" title="Mode administrateur"><i class="ti-user"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -294,7 +300,7 @@ URL: http://gettemplates.co
 
 @if (Auth::check()) 
   
-            <div class="modal fade" id="modalProfil" role="dialog">
+    <div class="modal fade" id="modalProfil" role="dialog">
         <div class="modal-dialog">
 
            <!-- Modal content -->
@@ -330,8 +336,9 @@ URL: http://gettemplates.co
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" id="logoutProfil" class="btn btn-primary">Se déconnecter</button>
-                <button type="button" id="toAdmin" class="btn btn-primary">Vers mode admin</button>
+                {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
+                    <button type="submit" class="btn btn-primary">Déconnexion</button>
+                {!! Form::close() !!}
             </div>
           </div>
         </div>

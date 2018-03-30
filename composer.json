@@ -8,11 +8,12 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-debugbar": "~2.4",
         "barryvdh/laravel-elfinder": "^0.3.12",
+        "cornford/googlmapper": "2.*",
         "illuminate/html": "5.0.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
-	      "cornford/googlmapper": "2.*"
+        "unisharp/laravel-filemanager": "~1.8"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

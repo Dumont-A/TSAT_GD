@@ -54,12 +54,34 @@
     </div>
   </div>
 
-  <div class="form-group col-md-12">
-    <!-- INSERTION DE LA ZONE DE RECHERCHE D'UN LOGO SUR LE SERVEUR -> EL-FINDER? -->
-  </div>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Standalone Button</h2>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary" ">
+              <i class="fa fa-picture-o"></i> Choose
+            </a>
+          </span>
+          <input id="thumbnail" class="form-control" type="text" name="filepath">
+        </div>
+        <img id="holder" style="margin-top:15px;max-height:100px;">
+      </div>
+    </div>
 
   <button type="submit" class="btn btn-success">Créer</button>
   <button type="reset" class="btn btn-danger">Effacer le formulaire</button>
 {!! Form::close() !!}
 
+@stop
+@section('script')
+  <script>
+   var route_prefix = "{{ url(config('lfm.prefix')) }}";
+  </script>
+  <script>
+    {!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/js/lfm.js')) !!}
+  </script>
+<script>
+    $('#lfm').filemanager('image', {prefix: route_prefix});
+</script>
 @stop

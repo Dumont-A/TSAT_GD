@@ -28,22 +28,22 @@
 
                     <div class="form-group">
                         <label>Date de la rencontre :  </label>
-                        <input type ="date" class="form-control" placeholder="Date :" name="date"> 
+                        <input type ="date" class="form-control" placeholder="Date :" name="dte"> 
                     </div>
                     <div class="form-group">
                         <label>Lieu de la rencontre :  </label>
-                        <input class="form-control" placeholder="Lieu :" name="lieu"> 
+                        <input class="form-control" placeholder="Lieu :" name="lieu">
                     </div>
                     <div class="form-group">
                         <label>Adversaire :  </label>
-                        <input class="form-control" placeholder="Adversaire :" name="adversaire"> 
+                        <input class="form-control" placeholder="Adversaire :" name="adversaire">
                     </div>
                     <div class="form-group">
                         <input type="hidden" value="{{ $uneEquipe->id }}" name="equipe_id">
                     </div>
                 </div>
                 <!-- /.box-header -->
-                
+
 
                 <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
 

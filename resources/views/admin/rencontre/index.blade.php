@@ -2,7 +2,7 @@
 
 @section('title')
 <h1>
-    Administration des rencontres pour l'équipe : {{ $uneEquipe->nom }}
+    Administration des rencontres pour l'équipe : {{ $uneEquipe->libelle }}
     <small>- Créer, Modifier et supprimer des rencontres</small>
 </h1>
 @stop
@@ -15,12 +15,12 @@
     <div class="col-md-12">
         <div class="box">
             <div class="box-header with-border">
-                {!! Form::open(['url' => route("rencontre.createR", $uneEquipe->id), 'method' => 'get']) !!}
+                {!! Form::open(['route'=>["rencontre.createR", $uneEquipe->id], 'method' => 'get']) !!}
                 <button type="submit" class="btn btn-success btn-lg btn-block">Créer une rencontre</button>
                 {!! Form::close() !!}
                 <!-- /.box-header -->
                 <div class="box-body">
-                    
+
                     <!-- search form (Optional) -->
                     <form action="#" method="get">
                         <div class="input-group margin">
@@ -80,7 +80,7 @@
                                 </td>
                             </tr>
                             @endforeach
-                        </tbody> 
+                        </tbody>
                     </table>
                 </div>
             </div>
