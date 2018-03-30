@@ -57,25 +57,43 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">Devenez membre!</h2>
-                 {!! Form::open(['route' => 'user.store']) !!}
+                  {!! Form::open(['route' => 'user.store']) !!}
+                    <div class="form-group">
+                      <label for="nom">Nom :</label>
+                  {!! Form::text('nom', null, array('class' => 'form-control')) !!}
+                    </div>
+                    <div class="form-group">
+                      <label for="prenom">Prénom :</label>
+                  {!! Form::text('prenom', null, array('class' => 'form-control')) !!}
+                    </div>
+                    <div class="form-group">
+                      <label for="telephone">Téléphone :</label>
+                  {!! Form::text('telephone', null, array('class' => 'form-control')) !!}
+                    </div>
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                      <label for="email">Adresse e-mail :</label>
+                  {!! Form::text('email', null, array('class' => 'form-control', 'required')) !!}
+                     @if ($errors->has('email'))
+                       <span class="help-block">
+                         <strong>{{ $errors->first('email') }}</strong>
+                       </span>
+                     @endif
+                    </div>
+                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                      <label for="password">Mot de passe :</label>
+                  {{ Form::password('password', array('class' => 'form-control', 'required')) }}
+                  @if ($errors->has('password'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                  @endif
+                    </div>
                    <div class="form-group">
-                     <label for="mail">Adresse e-mail</label>
-                     {!! Form::text('email', 'exemple@mail.com', array('class' => 'form-control')) !!}
+                     <label for="commentaire">Qui êtes vous vis à vis du club ?</label>
+                  {{ Form::textarea('commentaire', null, array('class' => 'form-control', 'rows' => "3")) }}
                    </div>
-                   <div class="form-group">
-                     <label for="nom">Nom</label>
-                     {!! Form::text('nom', null, array('class' => 'form-control')) !!}
-                   </div>
-                   <div class="form-group">
-                     <label for="prenom">Prénom</label>
-                     {!! Form::text('prenom', null, array('class' => 'form-control')) !!}
-                   </div>
-                   <div class="form-group">
-                     <label for="vous">Qui êtes vous vis à vis du club ?</label>
-                     {{ Form::textarea('', null, array('class' => 'form-control', 'rows' => "3")) }}
-                   </div>
-                   <button class="btn btn-block btn-default btn-lg" type="button">Envoyer la demande</button>
-                 {!! Form::close() !!}
+                  {{ Form::submit('Envoyer la demande', array('class' => 'btn btn-block btn-default btn-lg')) }}
+                  {!! Form::close() !!}
               </div>
             </div>
           </div>

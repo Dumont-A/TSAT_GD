@@ -62,6 +62,9 @@ URL: http://gettemplates.co
 
 </head>
 <body>
+    @if (Session::has('error'))
+        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('error') }}</p>
+    @endif
     @php ($connexionStatut = "Se connecter")
     <!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
     @if (Auth::check()) <!-- SI le user est connecté on change l'id pour la modal de profil -->
@@ -72,18 +75,28 @@ URL: http://gettemplates.co
         @php ($identifiant = "login")
     @endif
 	<div class="gtco-loader"></div>
-
+    
 	<div id="page">
+<<<<<<< HEAD
 <div class="row">
 	  <nav id="div_nav" class="gtco-nav" role="navigation">
+=======
+        <!-- Si utilisateur est admin, on lui affiche le lien du back office -->
+        @php ($statutAfficher = "hidden")
+        @if (Auth::check())
+            @if (Auth::user()->est_admin == 1)
+                @php ($statutAfficher = "visible")
+            @endif
+        @endif
+	  <nav class="gtco-nav" role="navigation">
+>>>>>>> e406b9397f8de7f1658f186ef637e29895677d10
 			<div class="row">
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}}</a></li>
+                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
-	            <li><a href="#"><i class="icon-mail2"></i></a></li>
-	            <li><a href="{{route('admin.dashboard')}}"><i class="ti-user"></i></a></li>
+                    <li><a href="#"><i class="icon-mail2"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -289,9 +302,15 @@ URL: http://gettemplates.co
 
     <!-- Modal de PROFIL -->
 
+<<<<<<< HEAD
 @if (Auth::check())
 
             <div class="modal fade" id="modalProfil" role="dialog">
+=======
+@if (Auth::check()) 
+  
+    <div class="modal fade" id="modalProfil" role="dialog">
+>>>>>>> e406b9397f8de7f1658f186ef637e29895677d10
         <div class="modal-dialog">
 
            <!-- Modal content -->
@@ -327,8 +346,20 @@ URL: http://gettemplates.co
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" id="logoutProfil" class="btn btn-primary">Se déconnecter</button>
-                <button type="button" id="toAdmin" class="btn btn-primary">Vers mode admin</button>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}">Vers le mode administrateur</a>
+                        </div>
+                    </div> 
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
+                                <button type="submit" class="btn btn-primary">Déconnexion</button>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>

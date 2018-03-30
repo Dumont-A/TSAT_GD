@@ -37,8 +37,8 @@
         <div id="gtco-portfolio" class="gtco-section">
           <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">coordonnées</h2>
-                  test coorodonnées
+               <h2 class="text-center">{{ $contenu->sousmenus[0]->titre }}</h2>
+               {!! $contenu->sousmenus[0]->contenu !!}
               </div>
           </div>
         </div>
@@ -48,8 +48,20 @@
           <div class="gtco-container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">contacter</h2>
-                  test contacter
+               <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
+               {!! Form::open(['url' => 'contact']) !!}
+               {!! Form::label('nom', 'Nom : ') !!}
+               {!! Form::text('nom') !!} <br>
+               {!! Form::label('prenom', 'Prénom : ') !!}
+               {!! Form::text('prenom') !!} <br>
+               {!! Form::label('mail', 'Adresse mail : ') !!}
+               {!! Form::text('mail') !!} <br>
+               {!! Form::label('sujet', 'Sujet : ') !!}
+               {!! Form::text('sujet') !!} <br>
+               {!! Form::label('message', 'Entrez votre message : ') !!}
+               {!! Form::text('message') !!} <br>
+               {!! Form::submit('Envoyer') !!}
+               {!! Form::close() !!}
               </div>
             </div>
           </div>
@@ -60,7 +72,7 @@
           <div class="gtco-container">
            <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">Plan</h2>
+               <h2 class="text-center">{{ $contenu->sousmenus[2]->titre }}</h2>
                 <div style="width: 700px; height: 500px;">
                 	 {!! Mapper::render() !!}
                 </div>

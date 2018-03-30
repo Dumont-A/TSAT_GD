@@ -28,7 +28,7 @@ class Admin {
      */
     public function handle($request, Closure $next)
     {
-    if ($this->auth->guest() || $this->auth->user()->isAdmin==false)
+    if ($this->auth->guest() || $this->auth->user()->est_admin==false)
         {
                 if ($request->ajax())
                 {
@@ -38,7 +38,7 @@ class Admin {
                 {
                         $request->session()->flash('error', 'Il faut être admin !');
 
-                        return redirect()->route('login');
+                        return redirect()->route('home');
 
 
                 }
