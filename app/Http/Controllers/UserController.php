@@ -73,7 +73,6 @@ class UserController extends Controller {
             'est_admin' => $est_admin,
             'est_joueur' => $est_joueur,
             'est_arbitre' => $est_arbitre,
-            'valider'=> true,
 
 
         ]);
