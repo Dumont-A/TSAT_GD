@@ -75,12 +75,8 @@ URL: http://gettemplates.co
         @php ($identifiant = "login")
     @endif
 	<div class="gtco-loader"></div>
-    
+
 	<div id="page">
-<<<<<<< HEAD
-<div class="row">
-	  <nav id="div_nav" class="gtco-nav" role="navigation">
-=======
         <!-- Si utilisateur est admin, on lui affiche le lien du back office -->
         @php ($statutAfficher = "hidden")
         @if (Auth::check())
@@ -88,8 +84,7 @@ URL: http://gettemplates.co
                 @php ($statutAfficher = "visible")
             @endif
         @endif
-	  <nav class="gtco-nav" role="navigation">
->>>>>>> e406b9397f8de7f1658f186ef637e29895677d10
+						<nav id="div_nav" class="gtco-nav" role="navigation">
 			<div class="row">
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
@@ -302,15 +297,9 @@ URL: http://gettemplates.co
 
     <!-- Modal de PROFIL -->
 
-<<<<<<< HEAD
 @if (Auth::check())
 
-            <div class="modal fade" id="modalProfil" role="dialog">
-=======
-@if (Auth::check()) 
-  
     <div class="modal fade" id="modalProfil" role="dialog">
->>>>>>> e406b9397f8de7f1658f186ef637e29895677d10
         <div class="modal-dialog">
 
            <!-- Modal content -->
@@ -351,7 +340,7 @@ URL: http://gettemplates.co
                         <div class="col-md-6">
                             <a class="btn btn-primary" href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}">Vers le mode administrateur</a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="form-row">
                         <div class="col-md-6">
                             {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
