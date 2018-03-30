@@ -62,8 +62,10 @@ URL: http://gettemplates.co
 
 </head>
 <body>
-    @if (Session::has('error'))
-        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('error') }}</p>
+    @if (Session::has('error') || Session::has('errors'))
+        <input type="hidden" value="1" id="checkModal">
+    @else
+    <input type="hidden" value="0" id="checkModal">
     @endif
     @php ($connexionStatut = "Se connecter")
     <!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
@@ -242,10 +244,13 @@ URL: http://gettemplates.co
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modalLogin">&times;</button>
+            <button type="button" class="close" id="loginClose" data-dismiss="modalLogin">&times;</button>
             <h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
           </div>
           <div class="modal-body">
+                 @if (Session::has('error'))
+                    <p class="alert alert-danger">{{ Session::get('error') }}</p>
+                @endif
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
@@ -308,7 +313,7 @@ URL: http://gettemplates.co
            <!-- Modal content -->
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <button type="button" id="profilClose" class="close" data-dismiss="modalProfil">&times;</button>
               <h4>Mon profil</h4>
             </div>
             <div class="row">
@@ -401,6 +406,12 @@ URL: http://gettemplates.co
     @endif
     <script>
         $(document).ready(function(){
+            
+            if ($("#checkModal").val()==1){
+                $("#modalLogin").modal();
+            }
+            
+            
             $('{{$identifiant}}').click(function(){
                 $('{{$nom_modal}}').modal();
             });
