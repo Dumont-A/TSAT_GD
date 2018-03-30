@@ -74,8 +74,8 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-
-	  <nav class="gtco-nav" role="navigation">
+<div class="row">
+	  <nav id="div_nav" class="gtco-nav" role="navigation">
 			<div class="row">
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
@@ -88,10 +88,10 @@ URL: http://gettemplates.co
 	        </div>
 	      </div>
 	      <div class="row">
-	        <div class="col-sm-3 col-xs-12">
+	        <div class="col-sm-4 col-xs-12">
 	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="300" width="300"  >
 	        </div>
-	        <div class="col-xs-9 text-right menu-1">
+	        <div class="col-xs-8 text-right menu-1">
 	          <ul>
 	            <li class="active"><a id="li_menu" href="{{route('accueil')}}">Accueil</a></li>
 	            <li class="has-dropdown">
@@ -136,13 +136,10 @@ URL: http://gettemplates.co
 	          </ul>
 	        </div>
 	      </div>
-				<div class="row">
-					<div class="gtco-heading animate-box col-sm-12  ">
-						<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
-					</div>
-				</div>
-</div>
-
+			</div>
+		<div class="animate-box  ">
+		<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
+		</div>
 	  </nav>
 
 	  <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url({{url('images/tennis3.jpg')}});">
@@ -166,11 +163,11 @@ URL: http://gettemplates.co
 	          </div>
 	        </div>
 	      </div>
-
 	    </header>
-
-	@yield("content")
-
+			</div>
+			<div class="row">
+				@yield("content")
+			</div>
 	  <footer id="gtco-footer" role="contentinfo">
 	    <div class="gtco-container">
 	      <div class="row row-p	b-md">
@@ -292,8 +289,8 @@ URL: http://gettemplates.co
 
     <!-- Modal de PROFIL -->
 
-@if (Auth::check()) 
-  
+@if (Auth::check())
+
             <div class="modal fade" id="modalProfil" role="dialog">
         <div class="modal-dialog">
 
@@ -335,7 +332,7 @@ URL: http://gettemplates.co
             </div>
           </div>
         </div>
-    </div> 
+    </div>
 @endif
     <!-- FIN Modal de PROFIL -->
 
@@ -375,7 +372,7 @@ URL: http://gettemplates.co
     <!--Définit les variables du script pour la bonne modal -->
     @php ($identifiant = "#login")
     @php ($nom_modal = "#modalLogin")
-    @if (Auth::check()) 
+    @if (Auth::check())
         @php ($identifiant = "#profil")
         @php ($nom_modal = "#modalProfil")
     @endif
