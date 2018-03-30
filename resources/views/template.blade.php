@@ -62,6 +62,9 @@ URL: http://gettemplates.co
 
 </head>
 <body>
+    @if (Session::has('error'))
+        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('error') }}</p>
+    @endif
     @php ($connexionStatut = "Se connecter")
     <!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
     @if (Auth::check()) <!-- SI le user est connecté on change l'id pour la modal de profil -->
@@ -86,10 +89,9 @@ URL: http://gettemplates.co
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}}</a></li>
+                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
-	            <li><a href="#"><i class="icon-mail2"></i></a></li>
-                    <li><a href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}" title="Mode administrateur"><i class="ti-user"></i></a></li>
+                    <li><a href="#"><i class="icon-mail2"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -336,9 +338,20 @@ URL: http://gettemplates.co
                 </div>
             </div>
             <div class="modal-footer">
-                {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
-                    <button type="submit" class="btn btn-primary">Déconnexion</button>
-                {!! Form::close() !!}
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}">Vers le mode administrateur</a>
+                        </div>
+                    </div> 
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
+                                <button type="submit" class="btn btn-primary">Déconnexion</button>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>

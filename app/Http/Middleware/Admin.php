@@ -38,7 +38,7 @@ class Admin {
                 {
                         $request->session()->flash('error', 'Il faut être admin !');
 
-                        return redirect()->route('login');
+                        return redirect()->route('home');
 
 
                 }
