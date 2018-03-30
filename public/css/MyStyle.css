@@ -16,9 +16,17 @@ font-size: 25px;
     margin-right: 0px;
 }
 
+.nav gtco-heading {
+    height: 10px;
+}
+
+#div_nav {
+    HEIGHT: 200PX;}
 
 #li_menu {
   font-size: 20px;
+padding-bottom: 0px;
+padding-top: 0px;
 }
 #titre_sous_logo{
   color:#fff;
@@ -30,7 +38,7 @@ font-size: 25px;
 #logo{
         margin-top: -50px;}
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 1050px){
 
 .menu-hidden{
 display: none;

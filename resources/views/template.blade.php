@@ -62,6 +62,9 @@ URL: http://gettemplates.co
 
 </head>
 <body>
+    @if (Session::has('error'))
+        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('error') }}</p>
+    @endif
     @php ($connexionStatut = "Se connecter")
     <!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
     @if (Auth::check()) <!-- SI le user est connecté on change l'id pour la modal de profil -->
@@ -74,6 +77,10 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
     
 	<div id="page">
+<<<<<<< HEAD
+<div class="row">
+	  <nav id="div_nav" class="gtco-nav" role="navigation">
+=======
         <!-- Si utilisateur est admin, on lui affiche le lien du back office -->
         @php ($statutAfficher = "hidden")
         @if (Auth::check())
@@ -82,22 +89,22 @@ URL: http://gettemplates.co
             @endif
         @endif
 	  <nav class="gtco-nav" role="navigation">
+>>>>>>> e406b9397f8de7f1658f186ef637e29895677d10
 			<div class="row">
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
-                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}}</a></li>
+                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
-	            <li><a href="#"><i class="icon-mail2"></i></a></li>
-                    <li><a href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}" title="Mode administrateur"><i class="ti-user"></i></a></li>
+                    <li><a href="#"><i class="icon-mail2"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>
 	      <div class="row">
-	        <div class="col-sm-3 col-xs-12">
+	        <div class="col-sm-4 col-xs-12">
 	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="300" width="300"  >
 	        </div>
-	        <div class="col-xs-9 text-right menu-1">
+	        <div class="col-xs-8 text-right menu-1">
 	          <ul>
 	            <li class="active"><a id="li_menu" href="{{route('accueil')}}">Accueil</a></li>
 	            <li class="has-dropdown">
@@ -142,13 +149,10 @@ URL: http://gettemplates.co
 	          </ul>
 	        </div>
 	      </div>
-				<div class="row">
-					<div class="gtco-heading animate-box col-sm-12  ">
-						<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
-					</div>
-				</div>
-</div>
-
+			</div>
+		<div class="animate-box  ">
+		<h1 id="titre_sous_logo" class="animate-box" data-animate-effect="fadeInUp" ><span style="background:#d2007b63; padding-left:10px ; padding-right:10px">@yield("tittle")</span></h1>
+		</div>
 	  </nav>
 
 	  <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url({{url('images/tennis3.jpg')}});">
@@ -172,11 +176,11 @@ URL: http://gettemplates.co
 	          </div>
 	        </div>
 	      </div>
-
 	    </header>
-
-	@yield("content")
-
+			</div>
+			<div class="row">
+				@yield("content")
+			</div>
 	  <footer id="gtco-footer" role="contentinfo">
 	    <div class="gtco-container">
 	      <div class="row row-p	b-md">
@@ -298,9 +302,15 @@ URL: http://gettemplates.co
 
     <!-- Modal de PROFIL -->
 
+<<<<<<< HEAD
+@if (Auth::check())
+
+            <div class="modal fade" id="modalProfil" role="dialog">
+=======
 @if (Auth::check()) 
   
     <div class="modal fade" id="modalProfil" role="dialog">
+>>>>>>> e406b9397f8de7f1658f186ef637e29895677d10
         <div class="modal-dialog">
 
            <!-- Modal content -->
@@ -336,13 +346,24 @@ URL: http://gettemplates.co
                 </div>
             </div>
             <div class="modal-footer">
-                {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
-                    <button type="submit" class="btn btn-primary">Déconnexion</button>
-                {!! Form::close() !!}
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}">Vers le mode administrateur</a>
+                        </div>
+                    </div> 
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            {!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
+                                <button type="submit" class="btn btn-primary">Déconnexion</button>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
-    </div> 
+    </div>
 @endif
     <!-- FIN Modal de PROFIL -->
 
@@ -382,7 +403,7 @@ URL: http://gettemplates.co
     <!--Définit les variables du script pour la bonne modal -->
     @php ($identifiant = "#login")
     @php ($nom_modal = "#modalLogin")
-    @if (Auth::check()) 
+    @if (Auth::check())
         @php ($identifiant = "#profil")
         @php ($nom_modal = "#modalProfil")
     @endif
