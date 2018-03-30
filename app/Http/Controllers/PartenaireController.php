@@ -37,7 +37,8 @@ class PartenaireController extends Controller
      */
     public function store(Request $request)
     {
-        $request->session()->flash('success', 'Le partenaire à été Ajouté !');
+        dd($request->get('filepath'));
+       /* $request->session()->flash('success', 'Le partenaire à été Ajouté !');
 
         $partenaire = new Partenaire();
 
@@ -56,7 +57,7 @@ class PartenaireController extends Controller
         $partenaire->logo = $imagename;
 
         $partenaire->save();
-        return redirect()->route("partenaire.index");
+        return redirect()->route("partenaire.index");*/
     }
 
     /**

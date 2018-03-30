@@ -1,4 +1,6 @@
-
+#menu{
+  padding-top:200px;
+}
 
 .iconMyStyle {
     background: white;
@@ -20,8 +22,10 @@ font-size: 25px;
 }
 #titre_sous_logo{
   color:#fff;
-  padding-left:20px;
-  line-height:23px; 
+  margin-left:50px;
+  margin-top :30px;
+  font-size: 50px;
+  padding-bottom: 20px;
 }
 #logo{
         margin-top: -50px;}
@@ -41,9 +45,11 @@ display: none;
         margin-right: auto;
       margin-top: 0px;}
 #titre_sous_logo{
-        margin-top:100px;
+        margin-top:50px;
         text-align:center;
-      padding-left:0px; }
+      padding-left:0px;
+      margin-left:0px;}
+
 }
 @media screen and (max-width : 768px){
 #logo{

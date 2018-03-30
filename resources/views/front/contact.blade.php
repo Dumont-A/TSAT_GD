@@ -49,7 +49,19 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">contacter</h2>
-                  test contacter
+               {!! Form::open(['url' => 'contact']) !!}
+               {!! Form::label('nom', 'Nom : ') !!}
+               {!! Form::text('nom') !!} <br>
+               {!! Form::label('prenom', 'Prénom : ') !!}
+               {!! Form::text('prenom') !!} <br>
+               {!! Form::label('mail', 'Adresse mail : ') !!}
+               {!! Form::text('mail') !!} <br>
+               {!! Form::label('sujet', 'Sujet : ') !!}
+               {!! Form::text('sujet') !!} <br>
+               {!! Form::label('message', 'Entrez votre message : ') !!}
+               {!! Form::text('message') !!} <br>
+               {!! Form::submit('Envoyer') !!}
+               {!! Form::close() !!}
               </div>
             </div>
           </div>
