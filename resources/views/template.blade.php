@@ -77,9 +77,12 @@ URL: http://gettemplates.co
 	<div class="gtco-loader"></div>
 
 	<div id="page">
+<<<<<<< HEAD
 
 <div class="row">
 	  <nav id="div_nav" class="gtco-nav" role="navigation">
+=======
+>>>>>>> dce6cca995951245d5989fe7082e1a1870fea238
         <!-- Si utilisateur est admin, on lui affiche le lien du back office -->
         @php ($statutAfficher = "hidden")
         @if (Auth::check())
@@ -87,7 +90,11 @@ URL: http://gettemplates.co
                 @php ($statutAfficher = "visible")
             @endif
         @endif
+<<<<<<< HEAD
 	  <nav class="gtco-nav" role="navigation">
+=======
+						<nav id="div_nav" class="gtco-nav" role="navigation">
+>>>>>>> dce6cca995951245d5989fe7082e1a1870fea238
 			<div class="row">
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
