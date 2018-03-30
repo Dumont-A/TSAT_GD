@@ -61,7 +61,9 @@
            <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">Plan</h2>
-               test
+                <div style="width: 700px; height: 500px;">
+                	 {!! Mapper::render() !!}
+                </div>
               </div>
             </div>
           </div>

@@ -57,25 +57,25 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">Devenez membre!</h2>
-                 <form>
+                 {!! Form::open(['route' => 'user.store']) !!}
                    <div class="form-group">
                      <label for="mail">Adresse e-mail</label>
-                     <input type="email" class="form-control" id="mail" placeholder="exemple@mail.com">
+                     {!! Form::text('email', 'exemple@mail.com', array('class' => 'form-control')) !!}
                    </div>
                    <div class="form-group">
                      <label for="nom">Nom</label>
-                     <input type="text" class="form-control" id="nom">
+                     {!! Form::text('nom', null, array('class' => 'form-control')) !!}
                    </div>
                    <div class="form-group">
                      <label for="prenom">Prénom</label>
-                     <input type="text" class="form-control" id="prenom">
+                     {!! Form::text('prenom', null, array('class' => 'form-control')) !!}
                    </div>
                    <div class="form-group">
                      <label for="vous">Qui êtes vous vis à vis du club ?</label>
-                     <textarea type="text" class="form-control" id="vous" rows="3"></textarea>
+                     {{ Form::textarea('', null, array('class' => 'form-control', 'rows' => "3")) }}
                    </div>
                    <button class="btn btn-block btn-default btn-lg" type="button">Envoyer la demande</button>
-                 </form>
+                 {!! Form::close() !!}
               </div>
             </div>
           </div>
