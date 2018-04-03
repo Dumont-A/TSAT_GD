@@ -54,11 +54,13 @@
     </div>
   </div>
 
-  <!-- EL FINDER -->
+  <!-- EL FINDER : file manager -->
   <div class="row">
-    <label for="elfinder">Feature Image</label>
-    <input type="text" id="elfinder" name="elfinder" value="">
-    <a href="" class="popup_selector" data-inputid="elfinder">Select Image</a>
+    <div class='form-group col-md-12'>
+      <label for="input_id">Image</label>
+      <input type="text" id="input_id" name="input_id" value="">
+      <a href="" class="popup_selector" data-inputid="input_id">Select Image</a>
+    </div>
   </div>
 
   <button type="submit" class="btn btn-success">Créer</button>
@@ -67,19 +69,4 @@
 
 @stop
 @section('script')
-<script>
-  $('.popup_selector').click( function (event) {
-            event.preventDefault()
-            var updateID = $(this).attr('data-inputid')
-            var elfinderUrl = '/elfinder/popup/'
-            var triggerUrl = elfinderUrl + updateID
-            $.colorbox({
-                href: triggerUrl,
-                fastIframe: true,
-                iframe: true,
-                width: '70%',
-                height: '50%'
-            })
-          });
-</script>
 @stop

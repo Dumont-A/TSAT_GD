@@ -38,11 +38,7 @@ Route::get('galerie','FrontController@galerie')->name("galerie");
 //Route::get('devenir_membre', 'InfosPratiquesController@devenir_membre')->name("devenir_membre");
 
 // Routes pour le Back-office
-<<<<<<< HEAD
-Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
-=======
 Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
->>>>>>> e07c450187ac08cb2e08b16cf13317e95b3e1eff
 
     Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
 
@@ -55,7 +51,7 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     });
 
     //FileManager El-finder
-    Route::get('el-finder/{input_id}' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
+    Route::get('el-finder\{input_id}' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
 
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
