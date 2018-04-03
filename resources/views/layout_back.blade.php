@@ -302,6 +302,9 @@ end task item
       <li class="treeview">
         <a href="{{ route('photo.banque') }}"><i class="fa fa-picture-o"></i> <span>Ma banque d'image</span>  </a>
       </li>
+      <li class="treeview">
+        <a href="{{ route('photo.banque') }}"><i class="fa fa-phone"></i> <span>Contact</span>  </a>
+      </li>
     </ul>
     <!-- /.sidebar-menu -->
 

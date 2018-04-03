@@ -16,7 +16,6 @@ class CoordonneeController extends Controller
     {
         $leComite = Comite::with('Users')->get();
         $lesUsers = User::pluck('nom','id');
-        //dd($leComite);
         return view('admin.coordonnee.index')->with("leComite", $leComite)->with("lesUsers", $lesUsers);
     }
 
@@ -93,7 +92,7 @@ class CoordonneeController extends Controller
         $user->save();
         return redirect()->route("coordonnee.index");
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -108,12 +107,12 @@ class CoordonneeController extends Controller
         $user->save();
         return redirect()->route("coordonnee.index");
     }
-    
+
     public function deleteStatut($id,Request $request)
     {
-        
+
         $statut = Comite::find($id);
-        User::where('comite_id',$id)->update(['comite_id'=>NULL]);        
+        User::where('comite_id',$id)->update(['comite_id'=>NULL]);
         $statut->delete();
 
         return redirect()->route("coordonnee.create");
