@@ -39,9 +39,9 @@ Route::get('galerie','FrontController@galerie')->name("galerie");
 
 // Routes pour le Back-office
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
-    
+
     Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
-    
+
     Route::get('/', function () {
                 return view('admin.page.dashboard');
             })
@@ -62,6 +62,8 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
     // Utilisateurs / Profil
     //
     Route::resource('user', 'UserController');
+
+    Route::post('info-pratique','UserController@storeFront')->name("user.storeFront");
 
     // Documents
     //
