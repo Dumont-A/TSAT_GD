@@ -24,11 +24,9 @@
 
 <div class="form-group">
     <label>Parcourir image :</label>
-    <input type="file" id="feature_image" name="feature_image">
-
-    <label for="feature_image">Feature Image</label>
-    <input type="text" id="feature_image" name="feature_image" value="">
-    <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"  src="{!! route('elfinder.index') !!}"></iframe>
+    </div>   
 </div>
 <button type="submit" class="btn btn-success">Créer</button>
 <button type="reset" class="btn btn-danger">Effacer le formulaire</button>
@@ -45,11 +43,5 @@
             </div>
         </div>
     </div>-->
-
-
-
-
-
-
 
 @stop
