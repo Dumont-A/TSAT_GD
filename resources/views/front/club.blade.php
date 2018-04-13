@@ -55,9 +55,8 @@
           <div class="gtco-container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">Le comité</h2>
-                 To Do
-
+               <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
+               {!! $contenu->sousmenus[1]->contenu !!}
               </div>
             </div>
           </div>
@@ -81,8 +80,8 @@
           <div class="gtco-container">
               <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">Les partenaires</h2>
-                To Do
+               <h2 class="text-center">{{ $contenu->sousmenus[3]->titre }}</h2>
+               {!! $contenu->sousmenus[3]->contenu !!}
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@
 {{ $contenu->titre }}
 @stop
 @section("sous_menu")
-  <div class="row menu-hidden" id="sous-menu">
+  <div class="row menu-hidden">
     <div class="col-md-3 col-sm-6">
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[0]->slug }}" ><span class="icon iconMyStyle">
@@ -17,7 +17,7 @@
       <div class="feature-center animate-box" data-animate-effect="fadeIn">
         <a href="#{{ $contenu->sousmenus[1]->slug }}"><span class="icon iconMyStyle">
          <i class="ti-briefcase"></i></span>
-        <h3 class="h3Menu">Le comité</h3></a>
+        <h3 class="h3Menu">{{ $contenu->sousmenus[1]->titre }}</h3></a>
         </a>
       </div>
     </div>
@@ -56,9 +56,9 @@
           <div class="gtco-container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">Le comité</h2>
-                 To Do
-                 
+               <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
+               {!! $contenu->sousmenus[1]->contenu !!}
+
               </div>
             </div>
           </div>
@@ -82,8 +82,8 @@
           <div class="gtco-container">
               <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
-               <h2 class="text-center">Les partenaires</h2>
-                To Do
+               <h2 class="text-center">{{ $contenu->sousmenus[3]->titre }}</h2>
+               {!! $contenu->sousmenus[3]->contenu !!}
               </div>
             </div>
           </div>
@@ -195,15 +195,15 @@
  $('#sous-menu a').on('click', function(evt) {
 
 // bloquer le comportement par défaut: on ne rechargera pas la page
-       evt.preventDefault(); 
+       evt.preventDefault();
        // enregistre la valeur de l'attribut  href dans la variable target
 	var target = $(this).attr('href');
-       /* le sélecteur $(html, body) permet de corriger un bug sur chrome 
+       /* le sélecteur $(html, body) permet de corriger un bug sur chrome
        et safari (webkit) */
 	$('html, body')
-       // on arrête toutes les animations en cours 
+       // on arrête toutes les animations en cours
        .stop()
-       /* on fait maintenant l'animation vers le haut (scrollTop) vers 
+       /* on fait maintenant l'animation vers le haut (scrollTop) vers
         notre ancre target */
        .animate({scrollTop: $(target).offset().top}, 800 );
     });
