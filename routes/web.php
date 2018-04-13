@@ -50,6 +50,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
         route('admin.dashboard');
     });
 
+    //FileManager El-finder
+    Route::get('el-finder' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
+
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
     Route::post('photo', 'PhotoController@store')->name('photo.store');
