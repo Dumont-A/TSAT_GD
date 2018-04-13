@@ -70,6 +70,7 @@ class UserController extends Controller {
             'email' => $request->get('email'),
             'telephone' => $request->get('telephone'),
             'password' => bcrypt($request->get('password')),
+            'commentaire' => $request->get('commentaire'),
             'est_admin' => $est_admin,
             'est_joueur' => $est_joueur,
             'est_arbitre' => $est_arbitre,
@@ -86,6 +87,21 @@ class UserController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function storeFront(Request $request){
+
+      $request->session()->flash('success', 'L\'utilisateur à été Ajouté !');
+      User::create([
+        'nom' => $request->input('nom'),
+        'prenom' => $request->input('prenom'),
+        'email' => $request->input('email'),
+        'telephone' => $request->input('telephone'),
+        'password' => bcrypt($request->input('password')),
+        'commentaire' => $request->input('commentaire'),
+      ]);
+      return redirect()->route("info-pratique");
+    }
+
     public function show($id) {
 
     }
@@ -140,6 +156,7 @@ class UserController extends Controller {
         $leUser->prenom = $request->get('prenom');
         $leUser->email = $request->get('email');
         $leUser->telephone = $request->get('telephone');
+        $leUser->commentaire = $request->get('commentaire');
 
         if ($request->get('password') !="") {
               $leUser->password = bcrypt($request->get('password'));
@@ -172,5 +189,7 @@ class UserController extends Controller {
 
         return redirect()->route("user.index");
     }
+
+
 
 }

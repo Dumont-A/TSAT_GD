@@ -26,7 +26,7 @@ class AddNullableAlbumIdToRencontre extends Migration
       */
      public function down()
      {
-          Schema::table('renctonres', function(Blueprint $table)
+          Schema::table('rencontres', function(Blueprint $table)
          {
 
          $table->integer('album_id')->change();

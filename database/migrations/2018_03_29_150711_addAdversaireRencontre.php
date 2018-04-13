@@ -26,7 +26,7 @@ class AddAdversaireRencontre extends Migration
       */
      public function down()
      {
-          Schema::table('renctonres', function(Blueprint $table)
+          Schema::table('rencontres', function(Blueprint $table)
          {
 
          $table->dropColumn('adversaire');
