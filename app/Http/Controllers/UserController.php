@@ -89,17 +89,16 @@ class UserController extends Controller {
      */
 
     public function storeFront(Request $request){
-
-      $request->session()->flash('success', 'L\'utilisateur à été Ajouté !');
       User::create([
-        'nom' => $request->input('nom'),
-        'prenom' => $request->input('prenom'),
+        'nom' => $request->get('nom'),
+        'prenom' => $request->get('prenom'),
         'email' => $request->input('email'),
         'telephone' => $request->input('telephone'),
         'password' => bcrypt($request->input('password')),
-        'commentaire' => $request->input('commentaire'),
+        'commentaire' => $request->get('commentaire'),
       ]);
       return redirect()->route("info-pratique");
+      //Ajouter une alerte pour afficher l'envoi de la création de membre
     }
 
     public function show($id) {

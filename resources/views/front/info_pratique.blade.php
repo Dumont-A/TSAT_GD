@@ -72,7 +72,7 @@
                     </div>
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                       <label for="email">Adresse e-mail :</label>
-                  {!! Form::text('email', null, ['class' => 'form-control', 'required']) !!}
+                  {!! Form::email('email', null, ['class' => 'form-control', 'required']) !!}
                      @if ($errors->has('email'))
                        <span class="help-block">
                          <strong>{{ $errors->first('email') }}</strong>
