@@ -8,6 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -15,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
+  <!-- Colorbox (pour el finder) -->
+  <link rel="stylesheet" href="colorbox.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -29,6 +32,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="{{url('css/dropzone.css') }}" >
 
 <link rel="stylesheet" href="{{url('css/style_back.css') }}" >
+
+<link href="{{url('css/colorbox.css') }}" rel="stylesheet">
 
 
 <!-- Toggle ON/OFF pour USER -->
@@ -397,6 +402,9 @@ $(function () {
 
 
 </script>
+<script type="text/javascript" src="{{url('js/jquery.colorbox-min.js')}}"></script>
+
+<script type="text/javascript" src="{{url('/packages/barryvdh/elfinder/js/standalonepopup.min.js')}}"></script>
 @yield('script')
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
