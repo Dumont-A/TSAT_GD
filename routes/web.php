@@ -30,7 +30,8 @@ Route::get('contact','PagesController@contact')->name("contact");
 
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-Route::get('galerie','FrontController@galerie')->name("galerie");
+Route::get('galerie','PagesController@galerie')->name("galerie");
+Route::get('showGalerie','PagesController@showGalerie')->name("showGalerie");
 
 
 //Route::resource('competitions', 'CompetitionController');

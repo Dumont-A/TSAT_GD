@@ -27,6 +27,7 @@ class PhotoController extends Controller {
         return view('admin.photo.create', compact('album'));
     }
 
+
     public function store(Request $request) {
         $request->session()->flash('success', 'L\'image à été Ajouté !');
 

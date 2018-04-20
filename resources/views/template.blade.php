@@ -55,6 +55,7 @@ URL: http://gettemplates.co
 
 	<!-- Modernizr JS -->
 	<script src="{{ url('js/modernizr-2.6.2.min.js')}}"></script>
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -404,12 +405,12 @@ URL: http://gettemplates.co
     @endif
     <script>
         $(document).ready(function(){
-            
+
             if ($("#checkModal").val()==1){
                 $("#modalLogin").modal();
             }
-            
-            
+
+
             $('{{$identifiant}}').click(function(){
                 $('{{$nom_modal}}').modal();
             });

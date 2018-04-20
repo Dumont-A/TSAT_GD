@@ -44,7 +44,7 @@
                             @foreach ($album->Photos as $uneImage)
                             <tr>
                                 <td>
-                                    <center><img src="{{ url('img/files/album') ."/". $uneImage["Titre"] }}" alt="img{{ $uneImage["id"] }}"></center>
+                                    <center><img src="{{ url('files/album') ."/". $uneImage["titre"] .".jpg" }}" alt="img{{ $uneImage["id"] }}"></center>
                                 </td>
                                 <td class="col-md-2" id="td{{ $uneImage["id"] }}">
                                     {{ $uneImage["titre"] }}
