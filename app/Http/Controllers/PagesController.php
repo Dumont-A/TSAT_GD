@@ -12,7 +12,9 @@ use App\Models\User;
 use App\Models\Message;
 use App\Models\Rencontre;
 use App\Models\Menu;
+use App\Mail\ContactEmail;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\ContactFormRequest;
 use Mapper;
 
 class PagesController extends Controller {
@@ -162,6 +164,29 @@ class PagesController extends Controller {
         }
         $leJoueur->save();
         return redirect()->route("profil");
+    }
+
+    public function store(Request $request)
+    {
+
+      $contact = [];
+
+      $contact['name'] = $request->get('name');
+      $contact['email'] = $request->get('email');
+      $contact['msg'] = $request->get('msg');
+
+      Mail::to(config('mail.support.address'))->send(new ContactEmail($contact));
+
+      flash('Votre message a été envoyé ! ')->success();
+
+      return redirect()->route('contact.create');
+
+    }
+
+    public function create()
+    {
+        $contenu=Menu::where("slug","contact")->first();
+        return view('front.contact')->with("contenu",$contenu);
     }
 
 
