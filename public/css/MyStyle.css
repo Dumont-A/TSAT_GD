@@ -6,10 +6,12 @@
     background: white;
     border-radius: 50%;}
 
-.feature-center .h3Menu{
-color:#FFF;
-font-size: 25px;
-}
+    .feature-center .h3Menu {
+        color: #d2027c;
+        font-size: 25px;
+        background-color: #ffffffb3;
+        border-radius: 20px;
+    }
 
 .row {
     margin-left: 0px;

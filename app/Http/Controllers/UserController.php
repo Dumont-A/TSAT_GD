@@ -70,6 +70,7 @@ class UserController extends Controller {
             'email' => $request->get('email'),
             'telephone' => $request->get('telephone'),
             'password' => bcrypt($request->get('password')),
+            'commentaire' => $request->get('commentaire'),
             'est_admin' => $est_admin,
             'est_joueur' => $est_joueur,
             'est_arbitre' => $est_arbitre,
@@ -86,6 +87,20 @@ class UserController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function storeFront(Request $request){
+      User::create([
+        'nom' => $request->get('nom'),
+        'prenom' => $request->get('prenom'),
+        'email' => $request->input('email'),
+        'telephone' => $request->input('telephone'),
+        'password' => bcrypt($request->input('password')),
+        'commentaire' => $request->get('commentaire'),
+      ]);
+      return redirect()->route("info-pratique");
+      //Ajouter une alerte pour afficher l'envoi de la création de membre
+    }
+
     public function show($id) {
 
     }
@@ -140,6 +155,7 @@ class UserController extends Controller {
         $leUser->prenom = $request->get('prenom');
         $leUser->email = $request->get('email');
         $leUser->telephone = $request->get('telephone');
+        $leUser->commentaire = $request->get('commentaire');
 
         if ($request->get('password') !="") {
               $leUser->password = bcrypt($request->get('password'));
@@ -172,5 +188,7 @@ class UserController extends Controller {
 
         return redirect()->route("user.index");
     }
+
+
 
 }
