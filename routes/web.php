@@ -29,6 +29,7 @@ Route::get('competition','PagesController@competition')->name("competition");
 Route::get('contact','PagesController@contact')->name("contact");
 Route::get('contact', 'PagesController@create')->name('contact.create');
 Route::post('contact', 'PagesController@store')->name('contact.store');
+Route::post('store-devenir-membre', 'PagesController@storeFront')->name('membre.store');
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 Route::get('galerie','PagesController@galerie')->name("galerie");
