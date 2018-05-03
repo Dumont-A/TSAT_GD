@@ -31,7 +31,8 @@ Route::get('contact', 'PagesController@create')->name('contact.create');
 Route::post('contact', 'PagesController@store')->name('contact.store');
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-Route::get('galerie','FrontController@galerie')->name("galerie");
+Route::get('galerie','PagesController@galerie')->name("galerie");
+Route::get('showGalerie','PagesController@showGalerie')->name("showGalerie");
 
 
 //Route::resource('competitions', 'CompetitionController');
@@ -52,7 +53,7 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     });
 
     //FileManager El-finder
-    Route::get('el-finder\{input_id}' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
+    Route::get('el-finder' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
 
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');

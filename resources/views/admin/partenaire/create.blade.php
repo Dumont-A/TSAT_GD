@@ -58,7 +58,6 @@
   <div class="row">
     <div class='form-group col-md-12'>
       <label for="input_id">Image</label>
-      <input type="text" id="input_id" name="input_id" value="">
       <a href="" class="popup_selector" data-inputid="input_id">Select Image</a>
     </div>
   </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Article;
+use App\Models\News;
 use App\Models\Photo;
 use App\Models\Album;
 use App\Models\SousMenu;
@@ -20,7 +20,10 @@ use Mapper;
 class PagesController extends Controller {
 
     public function accueil() {
-        return view('front.accueil');
+      $tab_news = News::all()->sortByDesc("created_at");
+
+      return view('front.accueil')
+                      ->with("tab_news", $tab_news);
     }
     public function club() {
 
@@ -68,13 +71,13 @@ class PagesController extends Controller {
 
     function galerie() {
         $lesAlbums = Album::with('photos')->get();
-        return view('site.galerie', compact('lesAlbums'));
+        return view('front.galerie')->with("lesAlbums", $lesAlbums);
     }
 
     function showGalerie($id) {
 
-        $album = Album::with('photos')->find($id);
-        return view('site.showGalerie', compact('album'));
+        $lesAlbums = Album::with('photos')->find($id);
+        return view('site.showGalerie', compact('lesAlbums'));
     }
 
     function coordonnee() {

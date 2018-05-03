@@ -20,7 +20,7 @@ class ContenuSeeder extends Seeder
           'slug' => 'competition',
       ]);
       DB::table('menus')->insert([
-          'titre' => 'Infos Pratique',
+          'titre' => 'Infos Pratiques',
           'slug' => 'info-pratique',
       ]);
       DB::table('menus')->insert([
