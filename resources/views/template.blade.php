@@ -144,7 +144,7 @@ URL: http://gettemplates.co
 	            </li>
 	            <li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 	            <li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
-	            {{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
+	             <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
 	          </ul>
 	        </div>
 	      </div>
