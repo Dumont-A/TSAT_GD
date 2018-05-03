@@ -90,12 +90,12 @@ class UserController extends Controller {
 
     public function storeFront(Request $request){
       User::create([
-        'nom' => $request->get('nom'),
-        'prenom' => $request->get('prenom'),
+        'nom' => $request->input('nom'),
+        'prenom' => $request->input('prenom'),
         'email' => $request->input('email'),
         'telephone' => $request->input('telephone'),
         'password' => bcrypt($request->input('password')),
-        'commentaire' => $request->get('commentaire'),
+        'commentaire' => $request->input('commentaire'),
       ]);
       return redirect()->route("info-pratique");
       //Ajouter une alerte pour afficher l'envoi de la création de membre

@@ -143,7 +143,7 @@ URL: http://gettemplates.co
 	            </li>
 	            <li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 	            <li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
-	            <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
+	            {{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
 	          </ul>
 	        </div>
 	      </div>
@@ -404,12 +404,12 @@ URL: http://gettemplates.co
     @endif
     <script>
         $(document).ready(function(){
-            
+
             if ($("#checkModal").val()==1){
                 $("#modalLogin").modal();
             }
-            
-            
+
+
             $('{{$identifiant}}').click(function(){
                 $('{{$nom_modal}}').modal();
             });
