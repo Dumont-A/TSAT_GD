@@ -36,6 +36,7 @@ class PhotoController extends Controller {
         $image->titre = $request->get('name');
         $image->description = $request->get('description');
         $image->album_id = $request->get('album_id');
+        $image->slug = str_slug($image->titre);
 
         $fichier = $request->file('image');
 

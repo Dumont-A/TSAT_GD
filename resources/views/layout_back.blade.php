@@ -73,7 +73,7 @@ desired effect
     <header class="main-header">
 
       <!-- Logo -->
-      <a href="{{ route("home") }}" class="logo">
+      <a href="{{ route("accueil") }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">TSAT GD</span>
         <!-- logo for regular state and mobile devices -->

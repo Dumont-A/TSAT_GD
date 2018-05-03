@@ -12,13 +12,11 @@
 */
 
 
-Route::get('/', function () {
-    return view('template');
-});
+Route::get('/', 'PagesController@accueil');
 
-Route::get('/home', function () {
-    return view('template');
-})->name("home");
+// Route::get('/home', function () {
+//     return view('template');
+// })->name("home");
 Auth::routes();
 
 Route::get('accueil','PagesController@accueil')->name("accueil");
