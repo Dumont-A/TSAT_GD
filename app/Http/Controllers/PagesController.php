@@ -59,6 +59,18 @@ class PagesController extends Controller {
         return view('site.index')
                         ->with("tab_articles", $lesArticles);
     }
+    public function storeFront(Request $request){
+      User::create([
+        'nom' => $request->input('nom'),
+        'prenom' => $request->input('prenom'),
+        'email' => $request->input('email'),
+        'telephone' => $request->input('telephone'),
+        'password' => bcrypt($request->input('password')),
+        'commentaire' => $request->input('commentaire'),
+      ]);
+      return redirect()->route("info-pratique");
+      //Ajouter une alerte pour afficher l'envoi de la création de membre
+    }
 
     /* function contact() {
         $leComite = Comite::with('Users')->get();

@@ -95,6 +95,7 @@ URL: http://gettemplates.co
 		@endif
 		<nav id="div_nav" class="gtco-nav" role="navigation">
 			<div class="row">
+<<<<<<< HEAD
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
@@ -218,6 +219,66 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 
+=======
+	      <div class="row">
+	        <div class="col-md-12 text-right gtco-contact">
+	          <ul class="">
+                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
+	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
+                    <li><a href="#"><i class="icon-mail2"></i></a></li>
+	          </ul>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-4 col-xs-12">
+	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="300" width="300"  >
+	        </div>
+	        <div class="col-xs-8 text-right menu-1">
+	          <ul>
+	            <li class="active"><a id="li_menu" href="{{route('accueil')}}">Accueil</a></li>
+	            <li class="has-dropdown">
+	              <a  id="li_menu" href="{{route('club')}}">Club</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
+	              </ul>
+	            </li>
+	            <li class="has-dropdown">
+	              <a id="li_menu" href="{{route('competition')}}">Compétitions</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Tournois</a></li>
+	                <li><a href="#">Les équipes</a></li>
+	                <li><a href="#">Les arbitres</a></li>
+	                <li><a href="#">Résultats</a></li>
+	              </ul>
+	            </li>
+	            <li class="has-dropdown">
+	              <a id="li_menu"  href="{{route('info-pratique')}}">Infos Pratiques</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
+	              </ul>
+	            </li>
+	            <li class="has-dropdown">
+	              <a id="li_menu" href="{{route('enseignement')}}">L'enseignement</a>
+	              <ul class="dropdown">
+	                <li><a href="#">L'équipe pédagogique</a></li>
+	                <li><a href="#">L'école de tennis</a></li>
+	                <li><a href="#">Les cours collectifs adultes</a></li>
+	                <li><a href="#">Les stages</a></li>
+	              </ul>
+	            </li>
+	            <li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
+	            <li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
+	            {{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
+	          </ul>
+	        </div>
+	      </div>
+>>>>>>> ea12b39ca295f7ec1db60cb9882bda0fefd81e54
 			</div>
 
 			<div class="row copyright">
