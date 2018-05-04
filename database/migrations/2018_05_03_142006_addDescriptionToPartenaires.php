@@ -13,7 +13,7 @@ class AddDescriptionToPartenaires extends Migration
      */
     public function up()
     {
-      Schema::table('partnaires', function(Blueprint $table)
+      Schema::table('partenaires', function(Blueprint $table)
           {
               $table->string('description')->nullable();
           });

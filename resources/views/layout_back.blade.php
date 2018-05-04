@@ -249,6 +249,9 @@ end task item
         <a href="{{ route("equipe.index") }}"><i class="fa fa-users"></i> <span>Equipes</span></a>
       </li>
       <li class="treeview">
+        <a href="{{ route("tournoi.index") }}"><i class="fa fa-trophy"></i> <span>Les Tournois</span></a>
+      </li>
+      <li class="treeview">
         <a href="{{ route("message.index") }}"><i class="fa fa-envelope-o"></i> <span>Messages</span>  </a>
       </li>
 
@@ -293,7 +296,6 @@ end task item
           <li><a href="{{ route("contenu.edit", ['slug' => 'stages']) }}">Les stages</a></li>
         </ul>
       </li>
-
       <li class="treeview">
         <a href="{{ route('photo.banque') }}"><i class="fa fa-picture-o"></i> <span>Ma banque d'image</span>  </a>
       </li>

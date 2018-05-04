@@ -16,4 +16,8 @@ class Album extends Model
     {
         return $this->belongsTo('App\Models\Rencontre');
     }
+    public function tournoi()
+    {
+        return $this->belongsTo('App\Models\Tournoi');
+    }
 }

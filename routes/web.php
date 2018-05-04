@@ -70,7 +70,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     // Articles
     //
     Route::resource('news', 'NewsController');
-
+    // Tournois
+    //
+    Route::resource('tournoi', 'TournoiController');
     // Equipes et Rencontres
     //
     Route::resource('equipe', 'EquipeController');
