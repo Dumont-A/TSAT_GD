@@ -2,49 +2,45 @@
 
 @section('title')
 <h1>
-    Liste des différents statuts
+    Modifier les coordonnées
+    <small>- Page de modification des coordonnées</small>
 </h1>
 @stop
 
 @section('content')
+
+
+<!-- Main content -->
 <div class="row">
     <div class="col-md-12">
-        <div class="row">
-            <div class="box">
-                <div class="box-header with-border">                
-                    <!-- /.box-header -->
-                    <div class="box-body">                    
-                        @foreach ($leComite as $unStatut)
-                        <table class="table table-bordered">
-                            <tr>
-                                <td class="col-md-6">{{$unStatut->fonction}}</td>
-                                <td class="col-md-6">
-                                    {!! Form::open(['route' => ["deleteStatut", $unStatut->id], 'method' => 'delete']) !!}
-                                    <button type="submit" class="btn btn-danger btn-circle btn-xs"><i class="fa fa-times"></i></button>
-                                    {!! Form::close() !!}  
-                                </td>
-                            </tr>
-                            @endforeach
-                            <tr>
-                                {!! Form::open(['route' => "coordonnee.store", 'method' => 'post']) !!}
-                                <td class="col-md-6"><input id="statut" type="text" class="form-control" name="statut" required autofocus></td>
-                                <td class="col-md-6">
-                                    <button type="submit" class="btn btn-success">Ajouter</button>
-                                </td>
-                                {!! Form::close() !!}  
-                            </tr>
-                        </table>
-                        {!! Form::open(['route' => "coordonnee.index", 'method' => 'get']) !!}
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Remplir les status</button>
-                        {!! Form::close() !!}
-                    </div>                
+        <div class="contenu">
+            <div class="box box-info">
+                {!! Form::open(['route' => ['news.update', $laNews["id"]], 'method' => 'put', 'files' => true]) !!}
+                <div class="box-header">
+                    <h3 class="box-title">  </h3>
+
+                    <div class="form-group">
+                        <label>Titre de l'article :  </label>
+                        <input class="form-control" value="{{ $laNews["titre"] }}" name="titre">
+                    </div>
+
                 </div>
+                <!-- /.box-header -->
+                <div class="box-body pad">
+
+                    <div class="form-group">
+                        {{ Form::textarea('editor', $laNews["contenu"],['id'=>'editor','class'=>'form-control','placeholder'=>'CkEditor']) }}
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg btn-block">Modifier</button>
+
+                {!! Form::close() !!}
             </div>
-        </div>
+            <!-- /.box -->
+        </div> <!-- contenu -->
     </div>
 </div>
-@endsection
 
-
-@section('script')
-@endsection
+@stop

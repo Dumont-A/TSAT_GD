@@ -57,6 +57,7 @@ class ContenuController extends Controller {
     ->with("contenu", $leContenu);
   }
 
+
   /**
   * Show the form for editing the specified resource.
   *

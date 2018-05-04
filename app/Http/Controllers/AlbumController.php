@@ -20,7 +20,6 @@ class AlbumController extends Controller
         $lesAlbums = Album::with('photos')->get();
         return view('admin.album.index', compact('lesAlbums'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -42,7 +41,7 @@ class AlbumController extends Controller
        /* $rules = array(
 
       'titre' => 'required',
-      
+
 
         );
         $validator = Validator::make(Input::all(), $rules);
@@ -52,15 +51,16 @@ class AlbumController extends Controller
             ->withErrors($validator)
             ->withInput();
         }*/
-            
-        
+
+
         $album = new Album();
 
         $album->titre = $request->get('name');
         $album->description = "description";
         $album->actif = true;
-        
-       
+        $album->slug = str_slug($album->titre);
+
+
         $album->save();
         $request->session()->flash('success', 'L\'album à été Ajouté !');
         return redirect()->route("album.index");
@@ -100,12 +100,12 @@ class AlbumController extends Controller
     public function update(Request $request, $id)
     {
         $request->session()->flash('success', 'L\'album à été Ajouté !');
-        
+
         $album = Album::find($id);
 
         $album->titre = $request->get('name');
         $album->description = "description";
-        $album->actif = true;             
+        $album->actif = true;
 
         $album->save();
         return redirect()->route("album.index");

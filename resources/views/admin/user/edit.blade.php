@@ -25,6 +25,9 @@
 {!! Form::label('password', 'password') !!}
 <input id="password" type="password" class="form-control" name="password" value="" >
 
+{!! Form::label('commentaire', 'commentaire') !!}
+{!! Form::textarea('commentaire', $leUser->commentaire, ['class'=> 'form-control', 'rows' => "3"] ) !!}
+
 
 
 

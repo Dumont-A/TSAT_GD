@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Article;
+use App\Models\News;
 use App\Models\Photo;
 use App\Models\Album;
 use App\Models\SousMenu;
@@ -12,13 +12,18 @@ use App\Models\User;
 use App\Models\Message;
 use App\Models\Rencontre;
 use App\Models\Menu;
+use App\Mail\ContactEmail;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\ContactFormRequest;
 use Mapper;
 
 class PagesController extends Controller {
 
     public function accueil() {
-        return view('front.accueil');
+      $tab_news = News::all()->sortByDesc("created_at");
+
+      return view('front.accueil')
+                      ->with("tab_news", $tab_news);
     }
     public function club() {
 
@@ -54,6 +59,18 @@ class PagesController extends Controller {
         return view('site.index')
                         ->with("tab_articles", $lesArticles);
     }
+    public function storeFront(Request $request){
+      User::create([
+        'nom' => $request->input('nom'),
+        'prenom' => $request->input('prenom'),
+        'email' => $request->input('email'),
+        'telephone' => $request->input('telephone'),
+        'password' => bcrypt($request->input('password')),
+        'commentaire' => $request->input('commentaire'),
+      ]);
+      return redirect()->route("info-pratique");
+      //Ajouter une alerte pour afficher l'envoi de la création de membre
+    }
 
     /* function contact() {
         $leComite = Comite::with('Users')->get();
@@ -66,13 +83,14 @@ class PagesController extends Controller {
 
     function galerie() {
         $lesAlbums = Album::with('photos')->get();
-        return view('site.galerie', compact('lesAlbums'));
+        return view('front.galerie')->with("lesAlbums", $lesAlbums);
     }
 
     function showGalerie($id) {
 
-        $album = Album::with('photos')->find($id);
-        return view('site.showGalerie', compact('album'));
+        $lesAlbums = Album::with('photos')->find($id);
+        dd($lesAlbums);
+        return view('site.showGalerie', compact('lesAlbums'));
     }
 
     function coordonnee() {
@@ -159,6 +177,29 @@ class PagesController extends Controller {
         }
         $leJoueur->save();
         return redirect()->route("profil");
+    }
+
+    public function store(Request $request)
+    {
+
+      $contact = [];
+
+      $contact['name'] = $request->get('name');
+      $contact['email'] = $request->get('email');
+      $contact['msg'] = $request->get('msg');
+
+      Mail::to(config('mail.support.address'))->send(new ContactEmail($contact));
+
+      flash('Votre message a été envoyé ! ')->success();
+
+      return redirect()->route('contact.create');
+
+    }
+
+    public function create()
+    {
+        $contenu=Menu::where("slug","contact")->first();
+        return view('front.contact')->with("contenu",$contenu);
     }
 
 

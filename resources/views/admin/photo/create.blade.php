@@ -24,28 +24,38 @@
 
 <div class="form-group">
     <label>Parcourir image :</label>
-    <input type="file" name="image">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"  src="{!! route('elfinder.index') !!}"></iframe>
+
+    </div>
+
 </div>
 <button type="submit" class="btn btn-success">Créer</button>
 <button type="reset" class="btn btn-danger">Effacer le formulaire</button>
+
+
+
 {!! Form::close() !!}
-<!--<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Uploading Image using dropzone.js and Laravel</h1>
-                {!! Form::open([ 'route' => "photo.store", 'files' => true, 'enctype' => 'multipart/form-data', 'class' => 'dropzone', 'id' => 'book-image' ]) !!}
-                <div>
-                    <h3>Upload Image</h3>
-                </div>
-                {!! Form::close() !!}
-            </div>
-        </div>
-    </div>-->
 
-
-
-
-
-
-
+@stop
+@section('script')
+  <script>
+  $('<div \>').dialog({modal: true, width: "80%", title: "Select your file", zIndex: 99999,
+         create: function(event, ui) {
+             $(this).elfinder({
+                 resizable: false,
+                 url: "path to connector",
+                 commandsOptions: {
+                   getfile: {
+                     oncomplete: 'destroy'
+                   }
+                 },
+                 getFileCallback: function(file) {
+                     document.getElementById('fileurl').value = file;
+                     jQuery('a.ui-dialog-titlebar-close[role="button"]').click();
+                 }
+             }).elfinder('instance')
+         }
+     });
+  </script>
 @stop

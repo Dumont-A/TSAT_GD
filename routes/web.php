@@ -12,13 +12,11 @@
 */
 
 
-Route::get('/', function () {
-    return view('template');
-});
+Route::get('/', 'PagesController@accueil');
 
-Route::get('/home', function () {
-    return view('template');
-})->name("home");
+// Route::get('/home', function () {
+//     return view('template');
+// })->name("home");
 Auth::routes();
 
 Route::get('accueil','PagesController@accueil')->name("accueil");
@@ -27,10 +25,13 @@ Route::get('info-pratique','PagesController@infoPratique')->name("info-pratique"
 Route::get('enseignement','PagesController@enseignement')->name("enseignement");
 Route::get('competition','PagesController@competition')->name("competition");
 Route::get('contact','PagesController@contact')->name("contact");
-
+Route::get('contact', 'PagesController@create')->name('contact.create');
+Route::post('contact', 'PagesController@store')->name('contact.store');
+Route::post('store-devenir-membre', 'PagesController@storeFront')->name('membre.store');
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
-Route::get('galerie','FrontController@galerie')->name("galerie");
+Route::get('galerie','PagesController@galerie')->name("galerie");
+Route::get('showGalerie','PagesController@showGalerie')->name("showGalerie");
 
 
 //Route::resource('competitions', 'CompetitionController');
@@ -50,6 +51,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
         route('admin.dashboard');
     });
 
+    //FileManager El-finder
+    Route::get('el-finder' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
+
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
     Route::post('photo', 'PhotoController@store')->name('photo.store');
@@ -62,6 +66,8 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     // Utilisateurs / Profil
     //
     Route::resource('user', 'UserController');
+
+    Route::post('info-pratique','UserController@storeFront')->name("user.storeFront");
 
     // Documents
     //
