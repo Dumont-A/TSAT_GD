@@ -304,12 +304,12 @@ URL: http://gettemplates.co
 </div>
 
 <!-- Modal de login -->
-<div class="modal fade" id="modalLogin" role="dialog">
+<div class="modal" id="modalLogin" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" id="loginClose" data-dismiss="modalLogin">&times;</button>
+				<button type="button" class="close" id="loginClose">&times;</button>
 				<h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
 			</div>
 			<div class="modal-body">
@@ -351,7 +351,7 @@ URL: http://gettemplates.co
 					</div>
 					<div class="form-group">
 						<div class="col-md-6">
-							<a class="btn btn-link" href="{{ route('password.request') }}">
+							<a class="btn btn-link" id="oubliMdp" href="javascript:void(0)">
 								Mot de passe oublié?
 							</a>
 						</div>
@@ -378,7 +378,7 @@ URL: http://gettemplates.co
 			<!-- Modal content -->
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" id="profilClose" class="close" data-dismiss="modalProfil">&times;</button>
+					<button type="button" id="profilClose" class="close">&times;</button>
 					<h4>Mon profil</h4>
 				</div>
 				<div class="row">
@@ -428,6 +428,52 @@ URL: http://gettemplates.co
 	</div>
 @endif
 <!-- FIN Modal de PROFIL -->
+<!-- DEBUT Modal de Reset Password -->
+    <div class="modal fade" id="modalPassword" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Réinitialiser le mot de passe</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
+                        {{ csrf_field() }}
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Envoyer lien
+                                </button>
+                            </div>
+                        </div>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Envoyer lien</button>
+                </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+<!-- FIN Modal de Reset Password -->
 
 <!-- jQuery -->
 <script src="{{ url('js/jquery.min.js')}}"></script>
@@ -485,6 +531,15 @@ $(document).ready(function(){
 
 	$('{{$identifiant}}').click(function(){
 		$('{{$nom_modal}}').modal();
+	});
+        
+        $('{{$identifiant}}Close').click(function(){
+		$('{{$nom_modal}}').modal('toggle');
+	});
+        
+        $('#oubliMdp').click(function(){
+		$('{{$nom_modal}}').modal('toggle');
+                $('#modalPassword').modal('toggle');
 	});
 });
 </script>
