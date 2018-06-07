@@ -89,6 +89,7 @@ class PagesController extends Controller {
     function showGalerie($id) {
 
         $lesAlbums = Album::with('photos')->find($id);
+        dd($lesAlbums);
         return view('site.showGalerie', compact('lesAlbums'));
     }
 

@@ -1253,6 +1253,7 @@
         },
         {
             "name": "nikic/php-parser",
+<<<<<<< HEAD
             "version": "v4.0.2",
             "source": {
                 "type": "git",
@@ -1263,6 +1264,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/35b8caf75e791ba1b2d24fec1552168d72692b12",
                 "reference": "35b8caf75e791ba1b2d24fec1552168d72692b12",
+=======
+            "version": "v4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3",
+                "reference": "e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3",
+>>>>>>> aea49e7eb5f438116bfd6b2352ab1098cf0a4e27
                 "shasum": ""
             },
             "require": {
@@ -1300,7 +1313,11 @@
                 "parser",
                 "php"
             ],
+<<<<<<< HEAD
             "time": "2018-06-03T11:33:10+00:00"
+=======
+            "time": "2018-03-25T17:35:16+00:00"
+>>>>>>> aea49e7eb5f438116bfd6b2352ab1098cf0a4e27
         },
         {
             "name": "paragonie/random_compat",
@@ -1496,6 +1513,7 @@
         },
         {
             "name": "psy/psysh",
+<<<<<<< HEAD
             "version": "v0.9.5",
             "source": {
                 "type": "git",
@@ -1506,6 +1524,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0951e91ac04ca28cf317f3997a0adfc319e80106",
                 "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106",
+=======
+            "version": "v0.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/psysh.git",
+                "reference": "4d969a0e08e1e05e7207c07cb4207017ecc9a331"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4d969a0e08e1e05e7207c07cb4207017ecc9a331",
+                "reference": "4d969a0e08e1e05e7207c07cb4207017ecc9a331",
+>>>>>>> aea49e7eb5f438116bfd6b2352ab1098cf0a4e27
                 "shasum": ""
             },
             "require": {
@@ -1564,7 +1594,11 @@
                 "interactive",
                 "shell"
             ],
+<<<<<<< HEAD
             "time": "2018-06-02T16:39:22+00:00"
+=======
+            "time": "2018-05-22T06:48:07+00:00"
+>>>>>>> aea49e7eb5f438116bfd6b2352ab1098cf0a4e27
         },
         {
             "name": "ramsey/uuid",
@@ -1648,6 +1682,7 @@
         },
         {
             "name": "studio-42/elfinder",
+<<<<<<< HEAD
             "version": "2.1.39",
             "source": {
                 "type": "git",
@@ -1658,6 +1693,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/f92460bdf9bb210296e2aaaf47fbe8a04c770937",
                 "reference": "f92460bdf9bb210296e2aaaf47fbe8a04c770937",
+=======
+            "version": "2.1.38",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Studio-42/elFinder.git",
+                "reference": "e5d1221cd876e8cca146886c590a08d721e00b4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/e5d1221cd876e8cca146886c590a08d721e00b4f",
+                "reference": "e5d1221cd876e8cca146886c590a08d721e00b4f",
+>>>>>>> aea49e7eb5f438116bfd6b2352ab1098cf0a4e27
                 "shasum": ""
             },
             "require": {
@@ -1702,7 +1749,11 @@
             ],
             "description": "File manager for web",
             "homepage": "http://elfinder.org",
+<<<<<<< HEAD
             "time": "2018-06-05T07:36:51+00:00"
+=======
+            "time": "2018-05-05T04:45:26+00:00"
+>>>>>>> aea49e7eb5f438116bfd6b2352ab1098cf0a4e27
         },
         {
             "name": "swiftmailer/swiftmailer",

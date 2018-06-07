@@ -12,13 +12,11 @@
 */
 
 
-Route::get('/', function () {
-    return view('template');
-});
+Route::get('/', 'PagesController@accueil');
 
-Route::get('/home', function () {
-    return view('template');
-})->name("home");
+// Route::get('/home', function () {
+//     return view('template');
+// })->name("home");
 Auth::routes();
 
 Route::get('accueil','PagesController@accueil')->name("accueil");
@@ -76,7 +74,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     // Articles
     //
     Route::resource('news', 'NewsController');
-
+    // Tournois
+    //
+    Route::resource('tournoi', 'TournoiController');
     // Equipes et Rencontres
     //
     Route::resource('equipe', 'EquipeController');

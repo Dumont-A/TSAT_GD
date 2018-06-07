@@ -58,6 +58,7 @@ class AlbumController extends Controller
         $album->titre = $request->get('name');
         $album->description = "description";
         $album->actif = true;
+        $album->slug = str_slug($album->titre);
 
 
         $album->save();
