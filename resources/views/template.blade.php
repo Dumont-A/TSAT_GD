@@ -99,7 +99,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
-							<li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
+							<li><a id="{{$identifiant}}" data-toggle="modal" data-target="#modalProfil" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 						</ul>
@@ -150,11 +150,7 @@ URL: http://gettemplates.co
 							</li>
 							<li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 							<li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
-<<<<<<< HEAD
-							<li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
-=======
 							{{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
->>>>>>> 932a9a7166b784164aeb0c1c41cbe603f423c147
 						</ul>
 					</div>
 				</div>
@@ -546,21 +542,12 @@ $(document).ready(function(){
 	$('{{$identifiant}}').click(function(){
 		$('{{$nom_modal}}').modal();
 	});
-<<<<<<< HEAD
 
-	$('{{$identifiant}}Close').click(function(){
-		$('{{$nom_modal}}').modal('toggle');
-	});
-
-	$('#oubliMdp').click(function(){
-=======
-        
         $('{{$identifiant}}Close').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
 	});
-        
+
         $('#oubliMdp').click(function(){
->>>>>>> 932a9a7166b784164aeb0c1c41cbe603f423c147
 		$('{{$nom_modal}}').modal('toggle');
 		$('#modalPassword').modal('toggle');
 	});

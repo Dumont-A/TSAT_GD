@@ -41,6 +41,47 @@
             <!-- /.box -->
         </div> <!-- contenu -->
     </div>
-</div>
+</div><table class="table table-bordered">
+    <thead class="thead-inverse">
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>News</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @forelse ($laNews->commentaires as $unCommentaire)
+        <tr id="row{{$unCommentaire->id}}">
+            <td class="col-md-1">
+                {{ $unCommentaire["id"] }}
+            </td>
+            <td class="col-md-10" id="td{{ $unCommentaire["id"] }}">
+                <a href="..." style="display:block;width:100%;height:100%;">
+                {{ $unCommentaire["titre"] }}
+                </a>
+            </td>
+            <td class="col-md-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        {!! Form::open(['route' => ["news.edit", $unCommentaire->id], 'method' => 'get']) !!}
+                        <button type="submit" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
+                        {!! Form::close() !!}
+                    </div>
+                    <div class="col-md-6">
+                        {!! Form::open(['route' => ["news.destroy", $unCommentaire->id], 'method' => 'delete', 'id' => "form".$unCommentaire->id]) !!}
+                        <button type="button" id="{{ $unCommentaire->id }}" class="btn btn-danger btn-circle jsDeleteButton" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-times"></i></button>
+                        {{-- <button id="btnDestroy" class="btn btn-default btn-app" type="button" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></button> --}}
+                        {!! Form::close() !!}
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+      @empty
+      @endforelse
+
+    </tbody>
+</table>
+
 
 @stop
