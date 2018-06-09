@@ -68,21 +68,6 @@ URL: http://gettemplates.co
 
 </head>
 <body>
-	@if (Session::has('error') || Session::has('errors'))
-		<input type="hidden" value="1" id="checkModal">
-	@else
-		<input type="hidden" value="0" id="checkModal">
-	@endif
-	@php ($connexionStatut = "Se connecter")
-	<!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
-	@if (Auth::check()) <!-- SI le user est connecté on change l'id pour la modal de profil -->
-		<!-- Définition des infos utilisateur pour modal profil -->
-		@php ($identifiant = "profil")
-		@php ($connexionStatut = Auth::user()->nom ." ". Auth::user()->prenom)
-	@else <!-- Si il est déconnecté, on change l'id pour la modal de connexion -->
-		@php ($identifiant = "login")
-	@endif
-	<div class="gtco-loader"></div>
 
 	<div id="page">
 
@@ -99,7 +84,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
-							<li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
+							{{-- <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li> --}}
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 						</ul>
@@ -150,7 +135,7 @@ URL: http://gettemplates.co
 							</li>
 							<li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 							<li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
-							{{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
+							 <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -531,11 +516,11 @@ $(document).ready(function(){
 	$('{{$identifiant}}').click(function(){
 		$('{{$nom_modal}}').modal();
 	});
-        
+
         $('{{$identifiant}}Close').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
 	});
-        
+
         $('#oubliMdp').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
                 $('#modalPassword').modal('toggle');

@@ -50,38 +50,6 @@
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
 
-               @if ($errors->any())
-                  <div class="alert alert-danger">
-                      <ul>
-                          @foreach ($errors->all() as $error)
-                              <li>{{ $error }}</li>
-                          @endforeach
-                      </ul>
-                  </div>
-               @endif
-
-               {!! Form::open(['route' => 'contact.store', 'class' => 'form']) !!}
-                  <div class="form-group">
-                     {!! Form::label('name', 'Nom : ') !!}
-                     {!! Form::text('name', null, ['class' => 'form-control']) !!}
-                  </div>
-                  <div class="form-group">
-                     {!! Form::label('prenom', 'Prénom : ') !!}
-                     {!! Form::text('prneom', null, ['class' => 'form-control']) !!}
-                  </div>
-                  <div class="form-group">
-                     {!! Form::label('email', 'Mail : ') !!}
-                     {!! Form::text('email', null, ['class' => 'form-control']) !!}
-                  </div>
-                  <div class="form-group">
-                     {!! Form::label('subject', 'Sujet : ') !!}
-                     {!! Form::text('subject', null, ['class' => 'form-control']) !!}
-                  </div>
-                  <div class="form-group">
-                     {!! Form::textarea('msg', null, ['class' => 'form-control']) !!}
-                  </div>
-               {!! Form::submit('Submit', ['class' => 'btn btn-info']) !!}
-               {!! Form::close() !!}
               </div>
             </div>
           </div>

@@ -182,17 +182,6 @@ class PagesController extends Controller {
     public function store(Request $request)
     {
 
-      $contact = [];
-
-      $contact['name'] = $request->get('name');
-      $contact['email'] = $request->get('email');
-      $contact['msg'] = $request->get('msg');
-
-      Mail::to(config('mail.support.address'))->send(new ContactEmail($contact));
-
-      flash('Votre message a été envoyé ! ')->success();
-
-      return redirect()->route('contact.create');
 
     }
 
