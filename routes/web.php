@@ -25,8 +25,6 @@ Route::get('info-pratique','PagesController@infoPratique')->name("info-pratique"
 Route::get('enseignement','PagesController@enseignement')->name("enseignement");
 Route::get('competition','PagesController@competition')->name("competition");
 Route::get('contact','PagesController@contact')->name("contact");
-Route::get('contact', 'PagesController@create')->name('contact.create');
-Route::post('contact', 'PagesController@store')->name('contact.store');
 Route::post('store-devenir-membre', 'PagesController@storeFront')->name('membre.store');
 
 

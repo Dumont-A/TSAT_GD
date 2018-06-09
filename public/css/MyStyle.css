@@ -1,3 +1,10 @@
+body.modal-open {
+    overflow: auto;
+}
+body.modal-open[style] {
+    padding-right: 0px !important;
+}
+
 #menu{
   padding-top:200px;
 }
