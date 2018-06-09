@@ -2,7 +2,7 @@
 
 @section('title')
 <h1>
-    Rédiger un commentaire pour la news {{$laNews->titre}}
+    Rédiger un commentaire pour la news : {{$laNews->titre}}
     <small>- Page de création de commentaire</small>
 </h1>
 @stop
@@ -22,7 +22,7 @@
                     <label>Titre du commentaire :  </label>
                     <input class="form-control" placeholder="Un titre" name="titre">
                 </div>
-                <input class="form-control" name="id_news" value="{{$laNews->id}}">
+
             </div>
             <!-- /.box-header -->
             <div class="box-body pad">
@@ -34,7 +34,7 @@
             </div>
 
             <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
-
+<input class="form-control" name="id_news" value="{{$laNews->id}}" style="visibility:hidden">
             {!! Form::close() !!}
         </div>
         <!-- /.box -->

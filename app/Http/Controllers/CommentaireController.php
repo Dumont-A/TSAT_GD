@@ -20,7 +20,12 @@ class CommentaireController extends Controller
       // return view('admin.commentaire.index')
       //                 ->with("lesCommentaires", $lesCommentaires);
     }
-
+    public function indexCommentaire($id_news)
+    {
+      $laNews= News::find($id_news);
+      $lesCommentaires = $laNews->commentaires();
+      return view('admin.commentaire.index')->with("lesCommentaires", $lesCommentaires)->with("laNews", $laNews);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -99,10 +104,13 @@ class CommentaireController extends Controller
      */
     public function destroy($id)
     {
+      
+    }
+    public function deleteCommentaire($id)
+    {
       $leCommentaire = Commentaire::find($id);
+      Commentaire::destroy($id);
 
-      $leCommentaire->delete();
-
-      return redirect()->route("commentaire.index");
+      return response()->json(["id"=>$id,"message"=> 'Le commentaire '. $leCommentaire->titre .' à été supprimé !']);
     }
 }

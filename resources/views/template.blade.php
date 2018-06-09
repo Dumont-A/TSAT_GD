@@ -68,10 +68,7 @@ URL: http://gettemplates.co
 
 </head>
 <body>
-@yield('content')
 
-<<<<<<< HEAD
-=======
 	<div id="page">
 
 		<!-- Si utilisateur est admin, on lui affiche le lien du back office -->
@@ -87,7 +84,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
-							<li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
+							{{-- <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li> --}}
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 						</ul>
@@ -138,7 +135,7 @@ URL: http://gettemplates.co
 							</li>
 							<li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 							<li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
-							 <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> 
+							 <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -354,7 +351,6 @@ URL: http://gettemplates.co
 		</div>
 	</div>
 @endif
->>>>>>> 4dc4894279d7f63edf609064978f64fac2d1506a
 <!-- FIN Modal de PROFIL -->
 <!-- DEBUT Modal de Reset Password -->
     <div class="modal fade" id="modalPassword" role="dialog" aria-hidden="true">
