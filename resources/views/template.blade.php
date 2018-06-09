@@ -68,6 +68,21 @@ URL: http://gettemplates.co
 
 </head>
 <body>
+	@if (Session::has('error') || Session::has('errors'))
+		<input type="hidden" value="1" id="checkModal">
+	@else
+		<input type="hidden" value="0" id="checkModal">
+	@endif
+	@php ($connexionStatut = "Se connecter")
+	<!-- PERMET DE CHANGER LE BOUTON SE CONNECTER EN NOM + PRENOM -->
+	@if (Auth::check()) <!-- SI le user est connecté on change l'id pour la modal de profil -->
+		<!-- Définition des infos utilisateur pour modal profil -->
+		@php ($identifiant = "profil")
+		@php ($connexionStatut = Auth::user()->nom ." ". Auth::user()->prenom)
+	@else <!-- Si il est déconnecté, on change l'id pour la modal de connexion -->
+		@php ($identifiant = "login")
+	@endif
+	<div class="gtco-loader"></div>
 
 	<div id="page">
 
@@ -84,7 +99,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
-							{{-- <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li> --}}
+							<li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 						</ul>
@@ -135,7 +150,11 @@ URL: http://gettemplates.co
 							</li>
 							<li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 							<li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
+<<<<<<< HEAD
 							<li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
+=======
+							{{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
+>>>>>>> 932a9a7166b784164aeb0c1c41cbe603f423c147
 						</ul>
 					</div>
 				</div>
@@ -203,6 +222,66 @@ URL: http://gettemplates.co
 						</ul>
 					</div>
 				</div>
+
+	      <div class="row">
+	        <div class="col-md-12 text-right gtco-contact">
+	          <ul class="">
+                    <li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
+	            <li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
+                    <li><a href="#"><i class="icon-mail2"></i></a></li>
+	          </ul>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-4 col-xs-12">
+	          <img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="300" width="300"  >
+	        </div>
+	        <div class="col-xs-8 text-right menu-1">
+	          <ul>
+	            <li class="active"><a id="li_menu" href="{{route('accueil')}}">Accueil</a></li>
+	            <li class="has-dropdown">
+	              <a  id="li_menu" href="{{route('club')}}">Club</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
+	              </ul>
+	            </li>
+	            <li class="has-dropdown">
+	              <a id="li_menu" href="{{route('competition')}}">Compétitions</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Tournois</a></li>
+	                <li><a href="#">Les équipes</a></li>
+	                <li><a href="#">Les arbitres</a></li>
+	                <li><a href="#">Résultats</a></li>
+	              </ul>
+	            </li>
+	            <li class="has-dropdown">
+	              <a id="li_menu"  href="{{route('info-pratique')}}">Infos Pratiques</a>
+	              <ul class="dropdown">
+	                <li><a href="#">Horaires</a></li>
+	                <li><a href="#">Devenir Membre</a></li>
+	                <li><a href="#">Réservation</a></li>
+	                <li><a href="#">Tarifs</a></li>
+	              </ul>
+	            </li>
+	            <li class="has-dropdown">
+	              <a id="li_menu" href="{{route('enseignement')}}">L'enseignement</a>
+	              <ul class="dropdown">
+	                <li><a href="#">L'équipe pédagogique</a></li>
+	                <li><a href="#">L'école de tennis</a></li>
+	                <li><a href="#">Les cours collectifs adultes</a></li>
+	                <li><a href="#">Les stages</a></li>
+	              </ul>
+	            </li>
+	            <li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
+	            <li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
+	            {{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
+	          </ul>
+	        </div>
+	      </div>
+
 			</div>
 
 			<div class="row copyright">
@@ -467,12 +546,21 @@ $(document).ready(function(){
 	$('{{$identifiant}}').click(function(){
 		$('{{$nom_modal}}').modal();
 	});
+<<<<<<< HEAD
 
 	$('{{$identifiant}}Close').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
 	});
 
 	$('#oubliMdp').click(function(){
+=======
+        
+        $('{{$identifiant}}Close').click(function(){
+		$('{{$nom_modal}}').modal('toggle');
+	});
+        
+        $('#oubliMdp').click(function(){
+>>>>>>> 932a9a7166b784164aeb0c1c41cbe603f423c147
 		$('{{$nom_modal}}').modal('toggle');
 		$('#modalPassword').modal('toggle');
 	});
