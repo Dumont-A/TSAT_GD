@@ -25,6 +25,6 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeButtons = 'About,ShowBlocks,Flash,PageBreak,Iframe,Anchor,Language,BidiRtl,BidiLtr,Checkbox,Form,HiddenField,SelectAll,PasteFromWord,Source';
 	
 	//Ajouté pour l'upload d'images
-	config.filebrowserImageBrowseUrl = '/elfinder/ckeditor';
+	config.filebrowserImageBrowseUrl = '/public/elfinder/ckeditor';
              
 };
