@@ -135,7 +135,7 @@ URL: http://gettemplates.co
 							</li>
 							<li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
 							<li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
-							 <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
+							<li><a id="li_menu" href="{{route('contact')}}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -353,50 +353,50 @@ URL: http://gettemplates.co
 @endif
 <!-- FIN Modal de PROFIL -->
 <!-- DEBUT Modal de Reset Password -->
-    <div class="modal fade" id="modalPassword" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Réinitialiser le mot de passe</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
-                        {{ csrf_field() }}
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Adresse e-mail</label>
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Envoyer lien
-                                </button>
-                            </div>
-                        </div>
-            </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                    <button type="submit" class="btn btn-primary">Envoyer lien</button>
-                </div>
-                    </form>
-            </div>
-        </div>
-    </div>
+<div class="modal fade" id="modalPassword" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Réinitialiser le mot de passe</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				@if (session('status'))
+					<div class="alert alert-success">
+						{{ session('status') }}
+					</div>
+				@endif
+				<form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
+					{{ csrf_field() }}
+					<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+						<label for="email" class="col-md-4 control-label">Adresse e-mail</label>
+						<div class="col-md-6">
+							<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+							@if ($errors->has('email'))
+								<span class="help-block">
+									<strong>{{ $errors->first('email') }}</strong>
+								</span>
+							@endif
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-6 col-md-offset-4">
+							<button type="submit" class="btn btn-primary">
+								Envoyer lien
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+					<button type="submit" class="btn btn-primary">Envoyer lien</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 <!-- FIN Modal de Reset Password -->
 
 <!-- jQuery -->
@@ -424,8 +424,19 @@ URL: http://gettemplates.co
 
 <script src="{{ url('js/main.js')}}"></script>
 
-  <script src="{{url('js/lightbox.min.js')}}"></script>
+<script src="{{url('js/lightbox.min.js')}}"></script>
+<script>
+$(function () {
+	// Replace the <textarea id="editor"> with a CKEditor
+	// instance, using default configuration.
+	CKEDITOR.replace('editor');
+	//bootstrap WYSIHTML5 - text editor
+	$(".textarea").wysihtml5();
 
+});
+
+
+</script>
 <script>
 $(document).ready(function() {
 	$('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -457,13 +468,13 @@ $(document).ready(function(){
 		$('{{$nom_modal}}').modal();
 	});
 
-        $('{{$identifiant}}Close').click(function(){
+	$('{{$identifiant}}Close').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
 	});
 
-        $('#oubliMdp').click(function(){
+	$('#oubliMdp').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
-                $('#modalPassword').modal('toggle');
+		$('#modalPassword').modal('toggle');
 	});
 });
 </script>
