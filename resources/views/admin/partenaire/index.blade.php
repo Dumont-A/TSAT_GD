@@ -52,7 +52,7 @@
                             @foreach ($lesPartenaires as $unPartenaire)
                             <tr>
                                 <td class="col-md-3" id="td{{ $unPartenaire["id"] }}">
-                                    <center><img width="50%" src="{{ url('img/partenaire') ."/". $unPartenaire->logo }}" alt="img{{ $unPartenaire["id"] }}"></center>
+                                    <center><img width="50%" src="{{ url($unPartenaire->logo) }}" alt="img{{ $unPartenaire["id"] }}"></center>
                                 </td>
                                 <td class="col-md-3" id="td{{ $unPartenaire["id"] }}">
                                     {{ $unPartenaire["nom"] }}
