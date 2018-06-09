@@ -29,9 +29,16 @@ Route::get('contact', 'PagesController@create')->name('contact.create');
 Route::post('contact', 'PagesController@store')->name('contact.store');
 Route::post('store-devenir-membre', 'PagesController@storeFront')->name('membre.store');
 
+
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 Route::get('galerie','PagesController@galerie')->name("galerie");
 Route::get('showGalerie','PagesController@showGalerie')->name("showGalerie");
+
+Route::resource('commentaire', 'CommentaireController');
+Route::get('commentaire/createCommentaire/{id}', 'CommentaireController@createCommentaire')->name('commentaire.createCommentaire')->where('id', '[0-9]+');
+
+// Route::get('commentaire', 'CommentaireController@index')->name('commentaire.index');
+// Route::post('commentaire', 'CommentaireController@store')->name('commentaire.store');
 
 
 //Route::resource('competitions', 'CompetitionController');
