@@ -129,17 +129,17 @@
                           <li id="row{{$unCommentaire->id}}" class="animate-box" data-animate-effect="fadeIn" style="background-color:rgb(210, 0, 123); width:100%; ">
                             <a class="color-1">
                               <div class="case-studies-summary">
-                                <h2>{{$unCommentaire->titre}}</h2>
+
+                                <h2>{{$unCommentaire->titre}} <span> {!! $unCommentaire->pseudo !!} </span></h2>
+
                                 <span>{!! $unCommentaire->contenu !!}</span>
 
-                                @if(auth::check())
-                                  @if (Auth::user()->est_admin == 1)
+
 
                                   </div>
                                 </a>
                               </li>
-                            @endif
-                          @endif
+
 
                         @empty
                           <span>Il n'y a pas de commentaire pour cette news</span>
@@ -188,15 +188,22 @@
 
                 <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
                 <input class="form-control" name="id_news" value="{{$laNews->id}}" style="visibility:hidden">
+                @if(Auth::check())
+                  @php ($pseudo = Auth::user()->nom ." ". Auth::user()->prenom)
+                  <input class="form-control" name="pseudo" value="{{$pseudo}}" style="visibility:hidden">
+                @else
+                  @php ($pseudo = "ANONYME")
+                  <input class="form-control" name="pseudo" value="{{$pseudo}}" style="visibility:hidden">
+                @endif
                 {!! Form::close() !!}
               </div>
               <!-- /.box -->
             </div>
           </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- FIN Modal de commentaire -->
+    <!-- FIN Modal de commentaire -->
 
   @stop

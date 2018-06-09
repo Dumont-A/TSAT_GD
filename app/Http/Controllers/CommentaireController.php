@@ -53,9 +53,8 @@ class CommentaireController extends Controller
 
       $leCommentaire->titre = $request->get('titre');
       $leCommentaire->contenu = $request->get('editor');
-
-      //pour le test
       $leCommentaire->news_id = $request->get('id_news');
+      $leCommentaire->pseudo = $request->get('pseudo');
 
 
       $leCommentaire->save();
@@ -104,7 +103,7 @@ class CommentaireController extends Controller
      */
     public function destroy($id)
     {
-      
+
     }
     public function deleteCommentaire($id)
     {

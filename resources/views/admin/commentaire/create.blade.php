@@ -35,6 +35,13 @@
 
         <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
         <input class="form-control" name="id_news" value="{{$laNews->id}}" style="visibility:hidden">
+        @if(Auth::check())
+          @php ($pseudo = Auth::user()->nom ." ". Auth::user()->prenom)
+          <input class="form-control" name="pseudo" value="{{$pseudo}}" style="visibility:hidden">
+        @else
+          @php ($pseudo = "ANONYME")
+          <input class="form-control" name="pseudo" value="{{$pseudo}}" style="visibility:hidden">
+        @endif
         {!! Form::close() !!}
       </div>
       <!-- /.box -->
