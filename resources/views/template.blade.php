@@ -95,7 +95,7 @@ URL: http://gettemplates.co
 		@endif
 		<nav id="div_nav" class="gtco-nav" role="navigation">
 			<div class="row">
-<<<<<<< HEAD
+
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
@@ -219,7 +219,6 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 
-=======
 	      <div class="row">
 	        <div class="col-md-12 text-right gtco-contact">
 	          <ul class="">
@@ -278,7 +277,7 @@ URL: http://gettemplates.co
 	          </ul>
 	        </div>
 	      </div>
->>>>>>> ea12b39ca295f7ec1db60cb9882bda0fefd81e54
+
 			</div>
 
 			<div class="row copyright">

@@ -58,7 +58,9 @@
   <div class="row">
     <div class='form-group col-md-12'>
       <label for="input_id">Image</label>
-      <a href="" class="popup_selector" data-inputid="input_id">Select Image</a>
+      <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
+      <label for="feature_image">Feature Image</label>
+<input type="text" id="feature_image" name="feature_image" value="">
     </div>
   </div>
 
