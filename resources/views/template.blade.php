@@ -99,7 +99,7 @@ URL: http://gettemplates.co
 				<div class="row">
 					<div class="col-md-12 text-right gtco-contact">
 						<ul class="">
-							<li><a id="{{$identifiant}}" data-toggle="modal" data-target="#modalProfil" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
+							<li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 							<li><a href="#"><i class="icon-mail2"></i></a></li>
 						</ul>
@@ -500,18 +500,6 @@ URL: http://gettemplates.co
 <script src="{{ url('js/main.js')}}"></script>
 
 <script src="{{url('js/lightbox.min.js')}}"></script>
-<script>
-$(function () {
-	// Replace the <textarea id="editor"> with a CKEditor
-	// instance, using default configuration.
-	CKEDITOR.replace('editor');
-	//bootstrap WYSIHTML5 - text editor
-	$(".textarea").wysihtml5();
-
-});
-
-
-</script>
 <script>
 $(document).ready(function() {
 	$('.js-scrollTo').on('click', function() { // Au clic sur un élément
