@@ -114,7 +114,11 @@
                     <h2>{{ $laNews->titre }}</h2>
                     <span>{!! $laNews->contenu !!}</span>
 
-                
+                    <button type="submit" class="btn btn-success btn-block" data-toggle="modal" data-target="#modalCommentaire">Commenter</button>
+
+
+                  </div>
+                </div>
                 <div class="box-body">
 
                   <div class="row row-pb-md">
@@ -153,7 +157,7 @@
 
     <!-- FIN Modal de news -->
 
-    {{-- <!-- Modal de commentaire -->
+    <!-- Modal de commentaire -->
 
     <div class="modal fade bd-example-modal-lg" id="modalCommentaire" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document" style="width:75%;">
@@ -177,7 +181,7 @@
                 <div class="box-body pad">
 
                   <div class="form-group">
-                    {{ Form::textarea('editor', '',['id'=>'editor','class'=>'form-control','placeholder'=>'CkEditor']) }}
+                    {{ Form::textarea('editor', '',['id'=>'editor','class'=>'form-control','placeholder'=>'Votre commentaire']) }}
                   </div>
 
                 </div>
@@ -193,19 +197,6 @@
     </div>
   </div>
 
-  <!-- FIN Modal de commentaire --> --}}
+  <!-- FIN Modal de commentaire -->
 
-  @stop
-  @section('script')
-    <script>
-    function masquer_div(id)
-    {
-      if (document.getElementById(id).style.display == 'none') {
-        document.getElementById(id).style.display = 'block';
-      }
-      else {
-        document.getElementById(id).style.display = 'none';
-      }
-    }
-  </script>
   @stop
