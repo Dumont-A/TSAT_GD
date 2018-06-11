@@ -53,7 +53,7 @@
     </thead>
     <tbody>
       @forelse ($laNews->commentaires as $unCommentaire)
-        
+
         <tr id="row{{$unCommentaire->id}}">
           <td class="col-md-1">
             {{ $unCommentaire["id"] }}

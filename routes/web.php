@@ -86,8 +86,8 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
 
     //CommentaireController
     //
-    Route::delete('commentaire/deleteCommentaire/{id}', 'CommentaireController@deleteCommentaire')->name('deleteCommentaire');
-    
+    Route::delete('commentaire/deleteCommentaire/{id}', 'CommentaireController@deleteCommentaire')->name('deleteCommentaire')->where('id', '[0-9]+');
+
     // Tournois
     //
     Route::resource('tournoi', 'TournoiController');
