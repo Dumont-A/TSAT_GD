@@ -443,7 +443,10 @@ URL: http://gettemplates.co
 <script src="{{ url('js/main.js')}}"></script>
 
 <script src="{{url('js/lightbox.min.js')}}"></script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f72843ae1a490de334bc11bcc8f8c33a7676fcff
 <script>
 $(document).ready(function() {
 	$('.js-scrollTo').on('click', function() { // Au clic sur un élément
