@@ -42,6 +42,7 @@ class NewsController extends Controller {
 
         $laNews->titre = $request->get('titre');
         $laNews->contenu = $request->get('editor');
+        $laNews->url = $request->get('url');
 
 
         $laNews->save();
@@ -55,7 +56,9 @@ class NewsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
+        // $uneNews = News::find($id);
         //
+        // return response()->json("uneNews"=> $uneNews);
     }
 
     /**
@@ -83,6 +86,7 @@ class NewsController extends Controller {
 
         $laNews->titre = $request->get('titre');
         $laNews->contenu = $request->get('editor');
+        $laNews->url = $request->get('url');
 
 
 

@@ -23,6 +23,10 @@
               <label>Titre de l'article :  </label>
               <input class="form-control" value="{{ $laNews["titre"] }}" name="titre">
             </div>
+            <div class="form-group">
+                <label>Url de l'image :  </label>
+                <input class="form-control" value="{{ $laNews["url"] }}" name="url ">
+            </div>
 
           </div>
           <!-- /.box-header -->

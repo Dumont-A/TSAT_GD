@@ -58,7 +58,7 @@ class CommentaireController extends Controller
 
 
       $leCommentaire->save();
-
+      return redirect()->back();
     }
 
     /**
